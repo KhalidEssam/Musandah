@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Header } from "./components/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { Services } from "./pages/Services";
+// import { Blogs } from "./pages/Blogs";
+// import { Articles } from "./pages/Articles";
+// import { Contact } from "./pages/Contact";
+// import { About } from "./pages/About";
+import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer";
+// import { NotFound } from "./pages/NotFound";
+import { useLanguage } from './hooks/useLanguage.ts';
+import { useEffect } from 'react';
+// import { ViewAllArticles } from "./components/ViewAllArticles";
+// import { KnowledgeCenter } from "./pages/KnowledgeCenter.tsx";
+import useDirection from "./hooks/useDirection.ts";
+import useFontFamily from "./hooks/useFontFamily";
+// import BlogDetails from "./pages/BlogDetails";
+// import ArticleDetails from "./pages/ArticleDetails";
+// import { ViewAllBlogs } from "./components/ViewAllBlogs.tsx";
+// import { TermsandConditions } from "./pages/TermsAndConditions";
+// import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
+// import TimedPopup from './components/SubscribeNow.tsx'
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { direction } = useLanguage();
+  useDirection();
+
+  useEffect(() => {
+    document.documentElement.dir = direction;
+  }, [direction]);
+  // useDynamicLangSwitch(); // activates automatic switching
+  useFontFamily(); // dynamically switches fonts
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Header />
+        <main className="container">
+          {/* <TimedPopup /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+
+            {/* <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/knowledge" element={<KnowledgeCenter />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blog/:slug" element={<BlogDetails />} />
+            <Route path="/blogs/all-blogs" element={<ViewAllBlogs />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/all-articles" element={<ViewAllArticles />} />
+            <Route path="/article/:id" element={<ArticleDetails />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms-and-conditions" element={<TermsandConditions />} />
+            <Route path="/faq" element={<FrequentQuestions />} /> */}
+            {/* <Route path="/test" element={<TestComp/>} /> */}
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+
+        </main>
+        <Footer />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
