@@ -1,4 +1,5 @@
 import "./App.css";
+import { VStack } from "@chakra-ui/react";
 import { Header } from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Services } from "./pages/Services";
@@ -21,7 +22,7 @@ import useFontFamily from "./hooks/useFontFamily";
 // import { TermsandConditions } from "./pages/TermsAndConditions";
 // import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
 // import TimedPopup from './components/SubscribeNow.tsx'
-
+import { Toaster } from "./components/ui/toaster.tsx";
 
 
 
@@ -36,10 +37,10 @@ function App() {
   useFontFamily(); // dynamically switches fonts
 
   return (
-    <>
+    <VStack minH="100vh" >
       <BrowserRouter>
         <Header />
-        <main className="container">
+        <main>
           {/* <TimedPopup /> */}
           <Routes>
             <Route path="/" element={<Home />} />
@@ -60,11 +61,11 @@ function App() {
             {/* <Route path="/test" element={<TestComp/>} /> */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
-
+          <Toaster />
         </main>
         <Footer />
       </BrowserRouter>
-    </>
+    </VStack>
   );
 }
 

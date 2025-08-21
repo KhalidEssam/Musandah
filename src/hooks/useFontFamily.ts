@@ -7,7 +7,9 @@ const useFontFamily = () => {
 
   useEffect(() => {
     const body = document.body;
-    body.style.fontFamily = lang === "ar" ? "'Cairo', sans-serif" : "'Jost', sans-serif";
+    body.style.fontFamily = lang === "ar" ? "'Somar Sans', sans-serif" : "'Jost', sans-serif";
+    body.style.fontStyle =  "normal";
+
   }, [lang]);
 };
 
