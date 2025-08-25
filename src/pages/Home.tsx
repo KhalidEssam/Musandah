@@ -191,36 +191,46 @@ export const Home = () => {
         </Box>
       </VStack>
 
-      <VStack h={"12.5rem"}>
-        <HStack>
-               <VStack></VStack>
-              <VStack></VStack>
+      <VStack w={"100vw"} h={"25rem"} >
+        <HStack p={8} w={"100vw"} h={"25rem"}  justifyContent={"space-between"} >
+          <VStack> dasdlaskjdklasdakls</VStack>
+          <VStack
+            bgImage={`url(WhyUs.jpg)`}
+            bgSize="cover"
+            bgPos={"center"}
+            bgRepeat="no-repeat"
+            border="1px solid #ddd"
+            h={"100%"}
+            w={"45vw"}
+            // position="absolute"
+          >
+
+dasdasda
+            </VStack>
         </HStack>
       </VStack>
-<Box display="flex" w="100%">
-  {/* Left / Hero Box */}
-  <Box
-    className="contact-hero"
-    bgImage={`url(Home3.jpg)`}
-    bgSize="cover"
-    bgRepeat="no-repeat"
-    border="1px solid #ddd"
-    flex="1"             // 👈 makes it stretch
-    display="flex"       // 👈 so VStack can center properly
-  alignItems="center"      // 👈 vertical center
-  justifyContent="center"  // 👈 horizontal center
-  >
-    <VStack color={useColorModeValue("#ffffffff", "gray.400")}>
-      <VisitsStats />
-    </VStack>
-  </Box>
-
-</Box>
+      <Box display="flex" w="100%">
+        {/* Left / Hero Box */}
+        <Box
+          className="contact-hero"
+          bgImage={`url(Home3.jpg)`}
+          bgSize="cover"
+          bgRepeat="no-repeat"
+          border="1px solid #ddd"
+          flex="1" // 👈 makes it stretch
+          display="flex" // 👈 so VStack can center properly
+          alignItems="center" // 👈 vertical center
+          justifyContent="center" // 👈 horizontal center
+        >
+          <VStack color={useColorModeValue("#ffffffff", "gray.400")}>
+            <VisitsStats />
+          </VStack>
+        </Box>
+      </Box>
 
       <VStack h={"12.5rem"}>
         <HStack>
-               <VStack></VStack>
-              <VStack></VStack>
+          <VStack></VStack>
         </HStack>
       </VStack>
       <Box
