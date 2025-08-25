@@ -42,7 +42,8 @@
   font-family: system-ui, Jost, Somar Sans, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 600;
-
+  width: 100vw;
+  overflow-x: hidden;
   color-scheme: dark light;
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
