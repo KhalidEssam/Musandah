@@ -18,3 +18,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.contact-hero {
+  background-position: center;
+  
+}
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
