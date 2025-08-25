@@ -117,7 +117,7 @@ export const Header = () => {
                     ref={menuRef}
                     top={"100px"}
                     left={0}
-                    // w="full"
+                    w="100%"
                     maxW={"90vw"}
                     justify="space-between"
                     align="stretch"

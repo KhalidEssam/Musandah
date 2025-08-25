@@ -44,9 +44,8 @@ export const ContactSection = ()=>{
         zIndex={10}
         pt={"2rem"}
         pb={"2rem"}
-
-        pr={{base:"1.5rem",lg:"6.5rem"}}
-        pl={{base:"1.5rem",lg:"6.5rem"}}
+        pr={{base:"0rem",lg:"6.5rem"}}
+        pl={{base:"0rem",lg:"6.5rem"}}
         maxW="100vw"
         minH="60vh"
         align={"start"}
