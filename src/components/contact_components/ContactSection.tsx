@@ -61,6 +61,8 @@ export const ContactSection = ()=>{
 
         {/* Content on top */}
         <VStack
+          maxW={{ base: "90vw", xl: "45%" }}
+
           zIndex={3}
           justifyContent={"space-between"}
           align={"Start"}
@@ -146,8 +148,9 @@ export const ContactSection = ()=>{
               bgColor={"white"}
               borderRadius={"2xl"}
               justifyContent={"space-around"}
-              height={"50vh"}
-              width={{ base: "100%", lg: "45%" }}
+              p={4}
+              width={{ base: "100%", xl: "45%" }}
+              maxW={{ base: "90vw", xl: "45%" }}
 
             >
               <Group  maxW={"90vw"} w={{ base: "md", lg: "xl" }} attached>
