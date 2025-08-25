@@ -42,7 +42,9 @@ export const ContactSection = ()=>{
         border="1px solid #ddd"
         left={0}
         zIndex={10}
-        pt={4}
+        pt={"2rem"}
+        pb={"2rem"}
+
         pr={{base:"1.5rem",lg:"6.5rem"}}
         pl={{base:"1.5rem",lg:"6.5rem"}}
         maxW="100vw"
@@ -61,8 +63,7 @@ export const ContactSection = ()=>{
 
         {/* Content on top */}
         <VStack
-          maxW={{ base: "90vw", xl: "45%" }}
-
+          maxW={{ base: "90vw", md: "98vw" }}
           zIndex={3}
           justifyContent={"space-between"}
           align={"Start"}
@@ -318,7 +319,7 @@ export const ContactSection = ()=>{
               </Box>
 
               <HStack
-              maxW={"90%"}
+                maxW={"90%"}
                 bgColor={"rgba(90, 119, 187, 0.1)"}
                 m={2}
                 p={4}

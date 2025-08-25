@@ -1,6 +1,6 @@
 
 import { ContactBanner } from "@/components/contact_components/ContactBanner";
-
+import { Box } from "@chakra-ui/react";
 export const Services = ()=>{
 
     return (
@@ -12,6 +12,8 @@ export const Services = ()=>{
         subtitle=""
         description=""
       />
+      <Box h="12.5rem"></Box>
+      
     </>
     )
 }

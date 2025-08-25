@@ -2,15 +2,22 @@ import { ContactSection } from "@/components/contact_components/ContactSection";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Image, HStack, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
-
+import { VisitsStats } from "@/components/home_components/VisitsStats";
 export const Home = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState<string | null>(null);
   const text = `في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت "منصة مساندة القانونية" لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.
     نحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.
     من هنا، تبدأ قصتنا.
     وسط هذا التحول الرقمي الذي تشهده المملكة، نشأت الحاجة إلى حلول قانونية حديثة تتماشى مع سرعة الواقع، وتُراعي تنوّع المجتمع، وتكسر الحواجز التقليدية أمام طالبي الخدمة القانونية.
     من هنا، جاءت "منصة مركز المساندة القانوني" كفكرة، ثم تحولت إلى منصة رقمية مبتكرة تُقدّم حلولًا قانونية شاملة عبر قنوات متعددة، وبتعاون مباشر مع شريك قانوني مرخّص يملك الصلاحية النظامية لتنفيذ وتقديم الخدمات.`;
 
+  const text2 = `
+              ابدأ رحلتك القانونية بثقة… من هنا تبدأ مساندتك
+              
+سواء كنت تبحث عن استشارة قانونية، أو تمثيل في قضية، أو ببساطة تريد أن تشعر بالأمان القانوني على مدار العام — "مساندة" هنا، خطوة بخطوة، وبالطريقة التي تناسبك.
+
+كل ما تحتاجه… أصبح في متناولك.
+`;
   return (
     <>
       <Box
@@ -63,6 +70,7 @@ export const Home = () => {
         align={"start"}
         p={{ base: "4rem 2rem", md: "4rem 6rem" }}
         gap={"1rem"}
+        bgColor={"rgba(247, 248, 252, 1)"}
       >
         <Box display="inline-block">
           <Text
@@ -90,29 +98,27 @@ export const Home = () => {
             </svg>
           </Box>
         </Box>
+        {/* Text 1 */}
         <Text
-          fontSize={"1rem"}
+          fontSize="1rem"
           fontWeight={400}
           color="rgba(95, 97, 102, 1)"
-          whiteSpace="pre-line" // ✅ preserves line breaks
-          lineClamp={expanded ? undefined : 3} // ✅ 3-line clamp
+          whiteSpace="pre-line"
+          lineClamp={expanded === "text1" ? undefined : 3}
         >
           {text}
         </Text>
-
         <Box
-          as={"button"}
-          outline={"none"}
-          bgColor={"transparent"}
+          as="button"
+          bg="transparent"
           color="blue.600"
           mt={2}
-          onClick={() => setExpanded(!expanded)}
+          onClick={() => setExpanded(expanded === "text1" ? null : "text1")}
         >
-          {expanded ? "إقرأ أقل" : "إقرأ المزيد"}
+          {expanded === "text1" ? "إقرأ أقل" : "إقرأ المزيد"}
         </Box>
-
         <Box gap={"3rem"}>
-          <Text color={"rgba(90, 119, 187, 1)"}>
+          <Text pb={8} color={"rgba(90, 119, 187, 1)"}>
             صُمّمت خدمات "مساندة" لتكون:
           </Text>
 
@@ -184,6 +190,96 @@ export const Home = () => {
           </HStack>
         </Box>
       </VStack>
+
+      <VStack h={"12.5rem"}>
+        <HStack>
+               <VStack></VStack>
+              <VStack></VStack>
+        </HStack>
+      </VStack>
+<Box display="flex" w="100%">
+  {/* Left / Hero Box */}
+  <Box
+    className="contact-hero"
+    bgImage={`url(Home3.jpg)`}
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    border="1px solid #ddd"
+    flex="1"             // 👈 makes it stretch
+    display="flex"       // 👈 so VStack can center properly
+  alignItems="center"      // 👈 vertical center
+  justifyContent="center"  // 👈 horizontal center
+  >
+    <VStack color={useColorModeValue("#ffffffff", "gray.400")}>
+      <VisitsStats />
+    </VStack>
+  </Box>
+
+</Box>
+
+      <VStack h={"12.5rem"}>
+        <HStack>
+               <VStack></VStack>
+              <VStack></VStack>
+        </HStack>
+      </VStack>
+      <Box
+        className="contact-hero"
+        bgImage={`url(Home2.png)`}
+        bgSize="cover"
+        bgRepeat="no-repeat"
+        border="1px solid #ddd"
+        position="absolute"
+        left={0}
+        zIndex={10}
+        w="100%"
+        h="35rem"
+      >
+        <VStack
+          className="overlay"
+          textAlign="center"
+          color={useColorModeValue("#ffffffff", "gray.400")}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap={"1.5rem"}
+        >
+          <Text fontSize="1.75rem" fontWeight={500}>
+            مساندة" ليست مجرد منصة…بل رفيقك القانوني الرقمي، الذي صُمّم ليكون في
+            صفك.{" "}
+          </Text>
+          {/* Text 2 */}
+          <Text
+            fontSize="1.25rem"
+            fontWeight={400}
+            whiteSpace="pre-line"
+            lineClamp={expanded === "text2" ? undefined : 3}
+          >
+            {text2}
+          </Text>
+          <Box
+            as="button"
+            bg="transparent"
+            color="blue.600"
+            mt={2}
+            onClick={() => setExpanded(expanded === "text2" ? null : "text2")}
+          >
+            {expanded === "text2" ? "إقرأ أقل" : "إقرأ المزيد"}
+          </Box>
+          <Box
+            as="button"
+            color={"white"}
+            borderRadius={"1rem"}
+            fontSize={"1.25rem"}
+            mt="1rem"
+            h={"4rem"}
+            bgColor={"rgba(90, 119, 187, 1)"}
+          >
+            ابدأ الآن{" "}
+          </Box>
+        </VStack>
+      </Box>
+      <Box h="36rem"></Box>
 
       <ContactSection />
     </>
