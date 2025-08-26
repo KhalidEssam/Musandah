@@ -3,8 +3,9 @@ import { HStack, VStack, Text, Box } from "@chakra-ui/react";
 export const VisitsStats = () => {
   return (
     <HStack
-    flexDir={{base:"column",md:"row"}}
-      bgColor={"rgba(90, 119, 187, 0.5)"}
+      flexDir={{ base: "column", md: "row" }}
+      bgColor={"rgba(90, 119, 187, 0.5) "}
+      backdropFilter="blur(25px)"
       p={"1.5rem"}
       borderRadius={"full"}
       verticalAlign={"center"}
@@ -29,7 +30,7 @@ export const VisitsStats = () => {
           />
         </svg>
 
-        <VStack fontSize={{base:"1.1rem", lg:"1.4rem"}}>
+        <VStack fontSize={{ base: "1.1rem", lg: "1.4rem" }}>
           <Text>+150</Text>
           <Text>عدد الزوار</Text>
         </VStack>
@@ -49,18 +50,22 @@ export const VisitsStats = () => {
           />
         </svg>
 
-        <VStack fontSize={{base:"1.1rem", lg:"1.4rem"}}>
+        <VStack fontSize={{ base: "1.1rem", lg: "1.4rem" }}>
           <Text>+80</Text>
           <Text>عدد المشتركين</Text>
         </VStack>
       </HStack>
-      <VStack mb={{base:"5%", md:"0"}} maxW={{base:"90%", md:"50%"}}>
-
-        <Text fontSize={{base:"1rem", lg:"1.3rem"}}>
+      <VStack mb={{ base: "5%", md: "0" }} maxW={{ base: "90%", md: "50%" }}>
+        <Text fontSize={{ base: "1rem", lg: "1.3rem" }}>
           انضم الآن إلى مساندة، وكن على دراية بحقوقك، مستعدًا للدفاع عنها، في
           الوقت والمكان المناسبين.
         </Text>
-        <Box as="button" w={"100%"} borderRadius={"2xl"} bgColor={"rgba(90, 119, 187, 1)"}>
+        <Box
+          as="button"
+          w={"100%"}
+          borderRadius={"2xl"}
+          bgColor={"rgba(90, 119, 187, 1)"}
+        >
           انضم الان
         </Box>
       </VStack>

@@ -3,6 +3,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Image, HStack, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { VisitsStats } from "@/components/home_components/VisitsStats";
+import { ServicesList } from "@/components/services_components/ServicesList";
 export const Home = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
   const text = `في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت "منصة مساندة القانونية" لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.
@@ -75,25 +76,23 @@ export const Home = () => {
         <Box display="inline-block">
           <Text
             color="rgba(46, 54, 81, 1)"
-            fontSize={{ base: "1rem", md: "1.75rem" }}
+            fontSize={{ base: "1.5rem", md: "1.75rem" }}
           >
             قصتنا تبدأ من هنا
           </Text>
 
           <Box w="100%">
             <svg
-              viewBox="0 0 666 25"
-              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 223 17"
               fill="none"
-              preserveAspectRatio="none" // 👈 stretches line with text width
-              //   style={{ width: "100%", height: "auto" }}
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1.98319 5.27582C112.477 0.639672 399.523 -2.36199 663.753 22.7206"
+                d="M1.90641 9.61274C38.5926 3.03096 133.738 -5.02933 220.83 15.3837"
                 stroke="#981C20"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </Box>
@@ -191,24 +190,95 @@ export const Home = () => {
         </Box>
       </VStack>
 
-      <VStack w={"100vw"} h={"25rem"} >
-        <HStack p={8} w={"100vw"} h={"25rem"}  justifyContent={"space-between"} >
-          <VStack> dasdlaskjdklasdakls</VStack>
-          <VStack
-            bgImage={`url(WhyUs.jpg)`}
-            bgSize="cover"
-            bgPos={"center"}
-            bgRepeat="no-repeat"
-            border="1px solid #ddd"
-            h={"100%"}
-            w={"45vw"}
-            // position="absolute"
+      <HStack
+        flexDir={{ base: "column", md: "row" }}
+        p={8}
+        mt={{ base: "1rem", md: "4rem" }}
+        mb={{ base: "1rem", md: "4rem" }}
+        w={"100vw"}
+        gap={"2.5rem"}
+        align="stretch" // 🔥 forces equal height
+        justifyContent={"space-around"}
+      >
+        <VStack align={"start"} gap={"2rem"}>
+          <VStack>
+            <Text
+              fontWeight={500}
+              fontSize={{ base: "1.5rem", md: "1.75rem" }}
+              color={"rgba(46, 54, 81, 1)"}
+            >
+              لماذا مساندة
+            </Text>
+            <svg
+              width="189"
+              height="17"
+              viewBox="0 0 189 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.90055 10.061C32.922 3.32987 113.339 -5.11866 186.836 14.936"
+                stroke="#981C20"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </VStack>
+          <Text
+            textAlign={"start"}
+            fontWeight={400}
+            fontSize={"1.2rem"}
+            color={"#5F6166"}
           >
-
-dasdasda
-            </VStack>
-        </HStack>
-      </VStack>
+            جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب
+            أكثر من اتصال.
+          </Text>
+          <VStack textAlign={"start"} align={"start"} gap={"1rem"}>
+            <HStack gap={"1rem"}>
+              <Image scale={"1.5"} src="why1.png" w={"3rem"} />
+              <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
+                تجربة رقمية متكاملة لا تتطلب الحضور
+              </Text>
+            </HStack>
+            <HStack gap={"1rem"}>
+              <Image scale={"1.5"} src="why2.png" w={"3rem"} />
+              <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
+                أسعار شفافة، وباقات تُغطي الاحتياج الحقيقي
+              </Text>
+            </HStack>
+            <HStack gap={"1rem"}>
+              <Image scale={"1.5"} src="why3.png" w={"3rem"} />
+              <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
+                استشارات وتمثيل قضائي تحت إشراف شريك قانوني مرخّص
+              </Text>
+            </HStack>
+            <HStack gap={"1rem"}>
+              <Image scale={"1.5"} src="why4.png" w={"3rem"} />
+              <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
+                دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة
+              </Text>
+            </HStack>
+            <HStack gap={"1rem"}>
+              <Image scale={"1.5"} src="why5.png" w={"3rem"} />
+              <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
+                تكامل مباشر مع "نفاذ"، و"ناجز"، و"أبشر" لتسهيل الإجراءات
+              </Text>
+            </HStack>
+          </VStack>
+        </VStack>
+        <VStack
+          borderRadius={"2xl"}
+          bgImage={`url(WhyUs.jpg)`}
+          bgSize="cover"
+          bgPos={"center"}
+          bgRepeat="no-repeat"
+          border="1px solid #ddd"
+          minH={"15rem"}
+          // flex="1"
+          w={{ base: "100%", md: "50%" }}
+        />
+      </HStack>
       <Box display="flex" w="100%">
         {/* Left / Hero Box */}
         <Box
@@ -228,10 +298,39 @@ dasdasda
         </Box>
       </Box>
 
-      <VStack h={"12.5rem"}>
-        <HStack>
-          <VStack></VStack>
-        </HStack>
+      <VStack p={8} align={"start"} gap={8} >
+        <VStack>
+          <Text
+            color={"rgba(46, 54, 81, 1)"}
+            fontSize={{ base: "1.4rem", md: "1.75rem" }}
+            fontWeight={500}
+          >
+            اعرف حقوقك قبل أن تحتاجها
+          </Text>
+          <svg
+            viewBox="0 0 371 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.9318 7.66254C63.2761 1.73077 222.533 -4.6395 368.804 17.3336"
+              stroke="#981C20"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </VStack>
+        <Text
+          color={"rgba(95, 97, 102, 1)"}
+          fontWeight={400}
+          fontSize={{ base: "1rem", md: "1.1rem" }}
+        >
+          في مساندة، صممنا باقات قانونية تغطي احتياجاتك المختلفة — من دعم أساسي
+          إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني
+        </Text>
+
+        <ServicesList />
       </VStack>
       <Box
         className="contact-hero"
@@ -255,12 +354,12 @@ dasdasda
           justifyContent="center"
           gap={"1.5rem"}
         >
-          <Text fontSize={{ base: "1.4rem", md:"1.75rem"  }} fontWeight={500}>
+          <Text fontSize={{ base: "1.4rem", md: "1.75rem" }} fontWeight={500}>
             مساندة" ليست مجرد منصة…بل رفيقك القانوني الرقمي، الذي صُمّم ليكون في
             صفك.{" "}
           </Text>
           <Text
-            fontSize={{ base: "1rem", md:"1.25rem"  }}
+            fontSize={{ base: "1rem", md: "1.25rem" }}
             fontWeight={400}
             whiteSpace="pre-line"
             lineClamp={expanded === "text2" ? undefined : 3}
@@ -290,6 +389,12 @@ dasdasda
         </VStack>
       </Box>
       <Box h="36rem"></Box>
+
+      <VStack h={"12.5rem"}>
+        <HStack>
+          <VStack></VStack>
+        </HStack>
+      </VStack>
 
       <ContactSection />
     </>

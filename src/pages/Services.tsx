@@ -1,10 +1,12 @@
 
 import { ContactBanner } from "@/components/contact_components/ContactBanner";
-import { Box } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
+import { ServicesList } from "@/components/services_components/ServicesList";
+
 export const Services = ()=>{
 
     return (
-    <>
+    <VStack gap={"5rem"} w={"100vw"}>
       <ContactBanner
       bgPos="0% /27%"
         img="Services.jpg"
@@ -14,6 +16,10 @@ export const Services = ()=>{
       />
       <Box h="12.5rem"></Box>
       
-    </>
+
+        <ServicesList />
+
+
+    </VStack>
     )
 }
