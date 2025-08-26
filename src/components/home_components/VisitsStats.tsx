@@ -65,6 +65,7 @@ export const VisitsStats = () => {
           w={"100%"}
           borderRadius={"2xl"}
           bgColor={"rgba(90, 119, 187, 1)"}
+          onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
         >
           انضم الان
         </Box>

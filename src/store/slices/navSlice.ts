@@ -19,7 +19,7 @@ const initialState: NavState = {
     { href: "/", label: "Home",en: "Home", ar: "الرئيسية" },
     { href: "/about", label: "About", en: "About", ar: "من نحن" },
     { href: "/services", label: "Services", en: "Services", ar: "خدماتنا" },
-    { href: "/knowledge", label: "Knowledge Center", en: "Knowledge Center", ar: "مركز المعرفة" },
+    { href: "/knowledge-center", label: "Knowledge Center", en: "Knowledge Center", ar: "مركز المعرفة" },
     // { href: "/blogs", label: "Blogs", en: "Blogs", ar: "المدونات" },
     // { href: "/articles", label: "Articles", en: "Articles", ar: "المقالات" },
     { href: "/faq", label: "FAQ", en: "FAQ", ar: "الاسئلة الشائعة" },

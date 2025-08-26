@@ -4,7 +4,15 @@ import { Box, Image, HStack, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { ServicesList } from "@/components/services_components/ServicesList";
+import { setActiveLink } from "@/store/slices/navSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export const Home = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
   const [expanded, setExpanded] = useState<string | null>(null);
   const text = `في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت "منصة مساندة القانونية" لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.
     نحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.
@@ -21,19 +29,6 @@ export const Home = () => {
 `;
   return (
     <>
-      {/* <Box
-        className="contact-hero"
-        bgImage={`url(Home.jpg)`}
-        bgSize="cover"
-        bgRepeat="no-repeat"
-        border="1px solid #ddd"
-        position="absolute"
-        left={0}
-        zIndex={10}
-        w="100%"
-        h="25rem"
-        transform="scaleX(-1)" // 👈 flip horizontally
-      > */}
       <Box
         className="contact-hero"
         position="relative" // Changed from absolute to relative
@@ -73,10 +68,10 @@ export const Home = () => {
           transform="scaleX(-1)"
           gap={"1.5rem"}
         >
-          <Text fontSize="2.5rem" fontWeight={500}>
+          <Text fontSize={{ base: "1.5rem", md: "2rem" }} fontWeight={500}>
             خدمات قانونية شاملة… في متناول يدك، خطوة بخطوة
           </Text>
-          <Text fontSize="1.2rem" fontWeight={400}>
+          <Text fontSize={{ base: "1rem", md: "1.25rem" }} fontWeight={400}>
             استشارات وتمثيل قضائي من شريك قانوني مرخص، بسرعة، أمان، وبالطريقة
             التي تناسبك.
           </Text>
@@ -88,6 +83,9 @@ export const Home = () => {
             mt="1rem"
             h={"4rem"}
             bgColor={"rgba(90, 119, 187, 1)"}
+            onClick={() => {
+              dispatch(setActiveLink("/services"));
+              navigate("/services");  }}
           >
             عرض التفاصيل
           </Box>
@@ -127,7 +125,7 @@ export const Home = () => {
         </Box>
         {/* Text 1 */}
         <Text
-          fontSize="1rem"
+          fontSize={{ base: "1.2rem", md: "1.4rem" }}
           fontWeight={400}
           color="rgba(95, 97, 102, 1)"
           whiteSpace="pre-line"
@@ -408,6 +406,7 @@ export const Home = () => {
             color={"white"}
             borderRadius={"1rem"}
             fontSize={"1.25rem"}
+            onClick={() => window.open("https://portal.lsc-sa.net/", "_blank")}
             mt="1rem"
             h={"4rem"}
             bgColor={"rgba(90, 119, 187, 1)"}
@@ -478,6 +477,10 @@ export const Home = () => {
             mt="1rem"
             h={"4rem"}
             bgColor={"rgba(90, 119, 187, 1)"}
+            onClick={() => {
+              dispatch(setActiveLink("/knowledge-center"));
+              navigate("/knowledge-center");
+            }}
           >
             استكشف مركز المعرفة
           </Box>

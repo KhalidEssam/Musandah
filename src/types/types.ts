@@ -60,6 +60,7 @@ export interface PlanProbs {
         icon: React.ReactElement; // Icon component
         color: string; // Color for the icon
     }; // Optional icon property
+    ref?: string;
 }
 
 export type TabContentItem = {

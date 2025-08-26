@@ -4,9 +4,11 @@ import { useState } from "react";
 type ServiceCardProps = {
   plan: PlanProbs;
 };
+import { useNavigate } from "react-router-dom";
 
 export const ServiceCard = ({ plan }: ServiceCardProps) => {
     const [isTouched, setIsTouched] = useState(false);
+const navigate = useNavigate();
 
   return (
     <VStack
@@ -49,7 +51,9 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
         zIndex={2}
         transition="all 0.3s ease" // 👈 smooth transition
       >
-        <Box as="button" bgColor="rgba(90, 119, 187, 1)" borderRadius={"2rem"} color="white" fontSize="lg" fontWeight="bold">
+        <Box as="button" bgColor="rgba(90, 119, 187, 1)" 
+        onClick={() =>navigate(`/services/${plan.ref}`)}
+        borderRadius={"2rem"} color="white" fontSize="lg" fontWeight="bold">
 التفاصيل والاشتراك 
        </Box>
       </VStack>

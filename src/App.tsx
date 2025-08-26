@@ -10,12 +10,13 @@ import { About } from "./pages/AbostUs.tsx";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./pages/NotFound";
-import { useLanguage } from './hooks/useLanguage.ts';
-import { useEffect } from 'react';
+import { useLanguage } from "./hooks/useLanguage.ts";
+import { useEffect } from "react";
 // import { ViewAllArticles } from "./components/ViewAllArticles";
-// import { KnowledgeCenter } from "./pages/KnowledgeCenter.tsx";
+import { KnowledgeCenter } from "./pages/KnowledgeCenter";
 import useDirection from "./hooks/useDirection.ts";
 import useFontFamily from "./hooks/useFontFamily";
+import { ServiceDetails } from "@/components/services_components/ServiceDetails.tsx";
 // import BlogDetails from "./pages/BlogDetails";
 // import ArticleDetails from "./pages/ArticleDetails";
 // import { ViewAllBlogs } from "./components/ViewAllBlogs.tsx";
@@ -23,8 +24,6 @@ import useFontFamily from "./hooks/useFontFamily";
 // import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
 // import TimedPopup from './components/SubscribeNow.tsx'
 import { Toaster } from "./components/ui/toaster.tsx";
-
-
 
 function App() {
   const { direction } = useLanguage();
@@ -46,7 +45,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            {/* <Route path="/knowledge" element={<KnowledgeCenter />} /> */}
+            <Route path="/services/:slug" element={<ServiceDetails />} />
+            <Route path="/knowledge-center" element={<KnowledgeCenter />} />
             {/* <Route path="/blogs" element={<Blogs />} /> */}
             {/* <Route path="/blog/:slug" element={<BlogDetails />} /> */}
             {/* <Route path="/blogs/all-blogs" element={<ViewAllBlogs />} /> */}

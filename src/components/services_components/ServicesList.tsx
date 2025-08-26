@@ -2,8 +2,22 @@ import { HStack } from "@chakra-ui/react"
 import { ServiceCard } from "./ServiceCard"
 import { type PlanProbs } from "../../types/types"
 export const ServicesList = () => {
-const plans: PlanProbs[] = [
+
+
+    return (
+        <HStack
+        w={"100%"} align={"stretch"} flexDir={{ base: "column", md: "row" }}  justifyContent={"space-around"}>
+            {plans.map((plan: PlanProbs, index: number) => (
+                <ServiceCard key={index} plan={plan} />
+            ))}
+        </HStack>
+    )
+}
+
+
+export const plans: PlanProbs[] = [
     {
+        ref: "gold-plan",
         title: {
             en: "Gold Plan",
             ar: "الباقة الذهبية",
@@ -61,6 +75,7 @@ const plans: PlanProbs[] = [
 
     },
     {
+        ref: "silver-plan",
         title: {
             en: "Silver Plan",
             ar: "الباقة الفضية",
@@ -104,10 +119,11 @@ const plans: PlanProbs[] = [
                 ar: "(تطبق بعض الاستثناءات – راجع شبكة التغطية الكاملة)"
             }
         ],
-        Image: "./silvershield.png",
+        Image: "silvershield.png",
 
     },
     {
+        ref: "bronze-plan",
         title: {
             en: "Bronze Plan",
             ar: "الباقة البرونزية",
@@ -148,17 +164,7 @@ const plans: PlanProbs[] = [
                 ar: "القضايا العمالية",
             },
         ],
-        Image: "./bronzeshield.png",
+        Image: "bronzeshield.png",
 
     },
 ];
-
-    return (
-        <HStack
-        w={"100%"} align={"stretch"} flexDir={{ base: "column", md: "row" }}  justifyContent={"space-around"}>
-            {plans.map((plan: PlanProbs, index: number) => (
-                <ServiceCard key={index} plan={plan} />
-            ))}
-        </HStack>
-    )
-}
