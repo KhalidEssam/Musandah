@@ -20,9 +20,21 @@ import { LangToggle } from './LangToggle';
 import { selectLanguage } from '../store/slices/languageSlice';
 import { useRef } from 'react'; // 👈 import React ref
 import { useOnClickOutside } from 'usehooks-ts';
+import { useEffect, useState } from "react";
 
 
 export const Header = () => {
+    const headerRef = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },  []);
     // Redux hooks
     const dispatch = useDispatch();
     const currentLanguage = useSelector(selectLanguage);
@@ -36,22 +48,22 @@ export const Header = () => {
         if (open) onClose();
     });
     return (
-        <HStack
-            as="header"
-            bg={useColorModeValue('white', 'gray.900')}
-            borderBottom="1px solid #ddd"
-            position="sticky"
-            justifyContent={'center'}
-            top={0}
-            zIndex={100}
-            w={'100%'}
-            p={4}
-
-        >
+<HStack
+      as="header"
+      ref={headerRef}
+      position="sticky"
+      top={0}
+      zIndex={100}
+      w="100%"
+      p={4}
+      justifyContent="center"
+      bg={scrolled ? "white" : useColorModeValue("white", "gray.900")}
+      transition="background-color 0.3s ease"
+    >
             {/* Header Row */}
             <HStack w={"fill"} justify="space-between" gap={'4rem'} align="center">
                 {/* Logo */}
-                <HStack gap={"4rem"} justify="space-between">
+                <HStack gap={"4rem"} justify="space-between" >
                     <RouterLink to="/" onClick={() => dispatch(setActiveLink('/'))}>
                         <Image
                             src={currentLanguage === 'en' ? '/logo-en.png' : '/logo-ar.png'}
@@ -97,7 +109,6 @@ export const Header = () => {
                     )) ||
                         (open && (
                             <IconButton
-                                border={'1px solid #ddd'}
                                 bgColor={'transparent'}
                                 color={'#4d7cb1'}
                                 aria-label="Toggle Menu"

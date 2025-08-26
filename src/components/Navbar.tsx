@@ -16,7 +16,7 @@ export const Navbar = () => {
       <Stack
         direction={{ base: "column", md: "column", lg: "row" }}
         gap={{ base: "1rem", md: "2rem", xl: "3.5rem" }}
-        bg={useColorModeValue("white", "gray.100")}
+        // bg={useColorModeValue("white", "gray.100")}
       >
         {links.map((link) => {
           return (
@@ -26,7 +26,7 @@ export const Navbar = () => {
                 fontSize="1.125rem"
                 lineHeight="100%"
                 fontWeight="500"
-                bg={useColorModeValue("white", "gray.400")}
+                bg={useColorModeValue("transparent", "gray.400")}
                 color={
                   activeLink === link.href
                     ? useColorModeValue("#4d7cb1", "gray.100")

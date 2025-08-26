@@ -136,7 +136,7 @@ export const ContactSection = ()=>{
           </VStack>
 
           <HStack
-            flexDir={{ base: "column", lg: "row" }}
+            flexDir={{ base: "column", md: "row" }}
             zIndex={4}
             justifyContent={"space-around"}
             align={"stretch"}
@@ -149,10 +149,10 @@ export const ContactSection = ()=>{
               bgColor={"white"}
               borderRadius={"2xl"}
               justifyContent={"space-around"}
-              width={{ base: "90%", xl: "45%" }}
+              width={{ base: "90%", md: "40%" , xl: "45%" }}
 
             >
-              <Group  maxW={"80vw"} w={{ base: "md", lg: "xl" }} attached>
+              <Group  maxW={"90%"} w={{ base: "md",  xl: "xl" }} attached>
                 <Field.Root>
                   <HStack width={"100%"}>
                     <VStack w={"50%"} align={"start"}>
@@ -247,7 +247,7 @@ export const ContactSection = ()=>{
             <VStack
               align={{base:"center", lg:"start"}}
               h={"100%"}
-              w={{ base: "90%", xl: "45%" }}
+              w={{ base: "90%", md: "50%" , xl: "45%" }}
             >
               <Box textAlign={"start"}>
                 <Box>

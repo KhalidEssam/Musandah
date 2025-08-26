@@ -26,14 +26,14 @@ export const About = () => {
         description=""
       />
       <Text
-        fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+        fontSize={{ base: "1.5rem", lg: "2rem" }}
         color={"rgba(46, 54, 81, 1)"}
       >
         تجربة قانونية مختلفة… تبدأ من فهمك، وتنتهي براحتك
       </Text>
 
-      <VStack gap={0} w={"90vw"}>
-        <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
+      <VStack gap={8} w={"90vw"}>
+        <HStack align={"stretch"} flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             bgImage={`url(about1.jpg)`}
             bgSize="cover"
@@ -46,13 +46,13 @@ export const About = () => {
           <VStack
             align={"start"}
             width={"100%"}
-            p={4}
+            p={ "5%" }
             bgColor={"rgba(237, 241, 255, 1)"}
           >
             <VStack align={"start"}>
-              <VStack>
+              <VStack >
                 <Text
-                  fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                  fontSize={{ base: "1.5rem", lg: "2rem" }}
                   color={"rgba(46, 54, 81, 1)"}
                 >
                   مساندة
@@ -74,8 +74,7 @@ export const About = () => {
               <Text
                 color={"rgba(95, 97, 102, 1)"}
                 fontWeight={400}
-                fontSize={{ base: "0.9rem", lg: "1rem" }}
-                textAlign={"start"}
+     fontSize={{ base: "1.2rem", lg: "1.5rem" }}                textAlign={"start"}
                 lineClamp={clamped ? 6 : undefined}
                 whiteSpace="pre-line"
               >
@@ -91,17 +90,17 @@ export const About = () => {
             </VStack>
           </VStack>
         </HStack>
-        <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
+        <HStack align={"stretch"} flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             align={"start"}
             width={"100%"}
-            p={4}
+             p={ "5%" }
             bgColor={"rgba(249, 240, 241, 1)"}
           >
             <VStack align={"start"}>
               <VStack>
                 <Text
-                  fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                  fontSize={{ base: "1.5rem", lg: "2rem" }}
                   color={"rgba(46, 54, 81, 1)"}
                 >
                   رؤيتنا
@@ -123,12 +122,12 @@ export const About = () => {
               <Text
                 color={"rgba(95, 97, 102, 1)"}
                 fontWeight={400}
-                fontSize={{ base: "0.9rem", lg: "1rem" }}
+                    fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
               >
-                أن نجعل الوصول إلى الخدمات القانونية في المملكة تجربة رقمية
-                متكاملة، عادلة، وميسّرة، لجميع الأفراد — دون تمييز، دون تعقيد،
-                ودون حواجز.
+                  
+أن نصنع تحولًا جذريًا في مفهوم الوصول إلى العدالة داخل المملكة، من خلال بناء تجربة قانونية رقمية شاملة تُراعي احتياجات الجميع — مواطنين، مقيمين، وزائرين — وتكسر الحواجز التقليدية المتمثلة في اللغة، أو التكاليف، أو محدودية الوصول.
+رؤيتنا أن تتحول الخدمة القانونية من عبء إلى طمأنينة… ومن إجراء معقد إلى تجربة ذكية، سريعة، ومنصفة، تصل للجميع دون تمييز، وفي أي وقت.
               </Text>
             </VStack>
           </VStack>
@@ -142,7 +141,7 @@ export const About = () => {
             w={{ base: "90%", md: "63.75rem" }}
           />
         </HStack>
-        <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
+        <HStack align={"stretch"} flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             bgImage={`url(about3.png)`}
             bgSize="cover"
@@ -150,18 +149,19 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
+            
             w={{ base: "90%", md: "63.75rem" }}
           />
           <VStack
             align={"start"}
             width={"100%"}
-            p={4}
+             p={ "5%" }
             bgColor={"rgba(237, 241, 255, 1)"}
           >
             <VStack align={"start"}>
               <VStack>
                 <Text
-                  fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                  fontSize={{ base: "1.5rem", lg: "2rem" }}
                   color={"rgba(46, 54, 81, 1)"}
                 >
                   رسالتنا
@@ -183,28 +183,33 @@ export const About = () => {
               <Text
                 color={"rgba(95, 97, 102, 1)"}
                 fontWeight={400}
-                fontSize={{ base: "0.9rem", lg: "1rem" }}
+                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
-              >
-                نحن نؤمن أن المعرفة القانونية ليست امتيازًا للنخبة، بل حق لكل
-                فرد. لذلك، نعمل على تقديم حلول قانونية رقمية ذكية، بالشراكة مع
-                جهة مرخصة، وبأسلوب يفهمه الناس ويثقون به — لنصنع بيئة قانونية
-                أكثر عدلًا، وشفافية، وتمكينًا.
+              >  
+في مركز المساندة، نؤمن أن الوصول إلى الحق لا يجب أن يكون صعبًا… وأن الفهم القانوني ليس حكرًا على المختصين.
+لذلك، صممنا منصتنا لتكون بوابة ذكية لكل من يبحث عن الأمان القانوني:
+
+بأسلوب بسيط وواضح يفهمه الجميع.
+
+وبأسعار معروفة ومعلنة دون مفاجآت.
+
+وبشراكة مع جهة قانونية معتمدة تضمن الموثوقية.
+نحن هنا لنجعل كل فرد يشعر أن لديه من يحمي حقوقه، يرشده، ويمثّله بثقة.
               </Text>
             </VStack>
           </VStack>
         </HStack>
-        <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
+        <HStack align={"stretch"} flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             align={"start"}
             width={"100%"}
-            p={4}
+            p={ "5%" }
             bgColor={"rgba(249, 240, 241, 1)"}
           >
             <VStack align={"start"}>
               <VStack>
                 <Text
-                  fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                  fontSize={{ base: "1.5rem", lg: "2rem" }}
                   color={"rgba(46, 54, 81, 1)"}
                 >
                   قيمنا
@@ -227,18 +232,22 @@ export const About = () => {
               <Text
                 color={"rgba(95, 97, 102, 1)"}
                 fontWeight={400}
-                fontSize={{ base: "0.9rem", lg: "1rem" }}
+                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
                 lineClamp={7}
                 whiteSpace="pre-line"
               >
-                `العدالة: نُعامل الجميع بإنصاف… دون تمييز في النوع، الجنسية، أو
-                اللغة. الخصوصية: كل استشارة، كل طلب، كل بياناتك — في أمان تام.
-                الشفافية: لا مفاجآت، لا تكاليف مخفية، لا تعقيد لغوي. الوصول:
-                خدماتنا في متناول يدك… وقتما احتجت، وبالطريقة التي تناسبك.
-                الاحترافية: نعمل مع جهة قانونية مرخصة، ونقدّم فقط ما نستطيع أن
-                نلتزم به.`
-              </Text>
+نؤمن أن العمل في المجال القانوني لا يكتمل إلا بمنظومة قيم واضحة، نعيشها في كل خدمة نقدمها:
+
+العدالة: نُعامل الجميع بإنصاف، دون تمييز في الجنس، الجنسية، أو اللغة.
+
+الخصوصية: جميع بياناتك، استفساراتك، ومعلوماتك محفوظة بسرية تامة في بيئة آمنة.
+
+الشفافية: لا رسوم خفية، لا شروط مبهمة — كل شيء واضح ومفهوم.
+
+الوصول: أينما كنت، ومتى ما احتجت، تجدنا معك… عبر تطبيق أو موقع، وباللغة التي تناسبك.
+
+الاحترافية: نعمل فقط مع جهات قانونية مرخصة، ونعد بما نستطيع تقديمه بكفاءة واستحقاق.              </Text>
             </VStack>
           </VStack>
           <VStack
@@ -251,7 +260,7 @@ export const About = () => {
             w={{ base: "90%", md: "63.75rem" }}
           />
         </HStack>
-        <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
+        <HStack align={"stretch"} flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             bgImage={`url(about5.png)`}
             bgSize="cover"
@@ -264,13 +273,13 @@ export const About = () => {
           <VStack
             align={"start"}
             width={"100%"}
-            p={4}
+            p={ "5%" }
             bgColor={"rgba(237, 241, 255, 1)"}
           >
             <VStack align={"start"}>
               <VStack>
                 <Text
-                  fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                  fontSize={{ base: "1.5rem", lg: "2rem" }}
                   color={"rgba(46, 54, 81, 1)"}
                 >
                   شريكنا القانوني
@@ -293,16 +302,14 @@ export const About = () => {
               <Text
                 color={"rgba(95, 97, 102, 1)"}
                 fontWeight={400}
-                fontSize={{ base: "0.9rem", lg: "1rem" }}
+                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
                 lineClamp={7}
                 whiteSpace="pre-line"
               >
-                `نفتخر بأن نقدم خدماتنا القانونية بالشراكة مع شركة تكامل
-                للمحاماة والاستشارات القانونية — وهي جهة مرخصة رسميًا وفق
-                الأنظمة المعمول بها في المملكة، وتضم نخبة من المحامين
-                والمستشارين المعتمدين في مجالات متعددة.`
-              </Text>
+
+مصداقيتنا تنطلق من قوة شراكاتنا، ونحن فخورون بأن خدماتنا القانونية تُقدّم بالشراكة مع شركة تكامل للمحاماة والاستشارات القانونية، وهي شركة مرخصة رسميًا في المملكة، وتضم فريقًا متميزًا من المحامين، والمستشارين القانونيين، أصحاب خبرة واسعة في المجالات الجنائية، العمالية، التجارية، الأسرية، والعديد من التخصصات الأخرى.
+هذه الشراكة تمثل العمود الفقري لكل خدمة قانونية نقدمها، وتضمن للعملاء الجودة، الموثوقية، والامتثال الكامل للأنظمة المعمول بها.              </Text>
             </VStack>
           </VStack>
         </HStack>

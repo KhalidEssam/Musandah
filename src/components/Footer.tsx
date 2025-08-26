@@ -36,21 +36,22 @@ export const Footer: FC = () => {
   return (
     <VStack
       as="footer"
-      minW={"100vw"}
-      mt={"auto"}
+      // minW={"100vw"}
       display={"flex"}
-      justifyContent={"space-around"}
+      w={"100vw"}
     >
       <HStack
-        minW={"100vw"}
-        mt={"auto"}
+        // minW={"100vw"}
+        w={"100%"}
         display={"flex"}
         bgColor={"#5A77BB"}
-        justifyContent={{ base: "center", lg: "space-around" }}
+        // justifyContent={{ base: "center", lg: "space-around" }}
         p={6}
         flexDir={{base:"column" , md:"row"}}
       >
-        <VStack color={"white"} textAlign={"start"} align={"start"} p={6}
+        <VStack color={"white"}
+         textAlign={"start"} align={"start"} p={6}
+         w={{ base: "100%", md: "40%" }}
        >
           <Text fontSize={"1.75rem"} fontWeight={"600"}>
             {lang === "en" ? "More news" : " المزيد من الأخبار"}
@@ -61,7 +62,7 @@ export const Footer: FC = () => {
               : "كن أول من يعرف آخر الأخبار القانونية، التحديثات التنظيمية، والعروض الحصرية من منصتنا"}
           </Text>
         </VStack>
-        <Group attached w="full" maxW="xl" minH={"15rem"} >
+        <Group attached w={{ base: "100%", md: "50%" }} maxW="xl" minH={"15rem"} >
           <Input minH={"90px"} border={"none"} fontSize={"1.2rem"} borderRadius={"2xl"} bgColor={"rgba(255, 255, 255, 0.1)"} flex="1" placeholder="ادخل بريدك الالكتروني" />
           <Box as="button" p={6} borderRadius={"2xl"} minH={"90px"} bg="white" color={"rgba(90, 119, 187, 1)"} boxShadow={"0px 10px 10px 0px rgba(16, 137, 255, 0.1)"}>
             {lang ==="en" ? "Subscribe":"اشترك"}
@@ -69,7 +70,7 @@ export const Footer: FC = () => {
         </Group>
       </HStack>
       <HStack
-        minW="100vw"
+        w={"100%"}
         mt="auto"
         display="flex"
         justifyContent="space-around"
