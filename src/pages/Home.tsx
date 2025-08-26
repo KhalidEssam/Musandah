@@ -226,7 +226,7 @@ export const Home = () => {
         align="stretch" // 🔥 forces equal height
         justifyContent={"space-around"}
       >
-        <VStack align={"start"} p={"8rem"} gap={"2rem"}>
+        <VStack align={"start"} p={{ base: "1rem", md: "4rem", lg: "8rem" }} gap={"2rem"}>
           <VStack >
             <Text
               fontWeight={500}
