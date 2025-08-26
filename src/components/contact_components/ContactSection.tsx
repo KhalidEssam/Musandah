@@ -139,7 +139,7 @@ export const ContactSection = ()=>{
             flexDir={{ base: "column", lg: "row" }}
             zIndex={4}
             justifyContent={"space-around"}
-            align={"start"}
+            align={"stretch"}
             mt={"3rem"}
             w={{base:"100vw",lg:"100%"}}
             maxW={"100vw"}
@@ -151,7 +151,7 @@ export const ContactSection = ()=>{
               justifyContent={"space-around"}
               p={4}
               width={{ base: "100%", xl: "45%" }}
-              maxW={{ base: "90vw", xl: "45%" }}
+              // maxW={{ base: "90vw", xl: "45%" }}
 
             >
               <Group  maxW={"90vw"} w={{ base: "md", lg: "xl" }} attached>
@@ -249,7 +249,7 @@ export const ContactSection = ()=>{
             <VStack
               align={{base:"center", lg:"start"}}
               h={"100%"}
-              w={{ base: "90%", lg: "45%" }}
+              w={{ base: "90%", xl: "45%" }}
             >
               <Box textAlign={"start"}>
                 <Box>
