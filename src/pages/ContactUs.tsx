@@ -11,7 +11,7 @@ export const Contact = () => {
   const lang = useSelector(selectLanguage);
 
   return (
-    <VStack>
+    <VStack w={"100vw"}>
       <ContactBanner
         bgPos="0% 37%"
         img="contact.png"

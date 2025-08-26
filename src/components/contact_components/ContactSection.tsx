@@ -40,12 +40,12 @@ export const ContactSection = ()=>{
         bgSize="cover"
         bgRepeat="no-repeat"
         border="1px solid #ddd"
-        left={0}
+        // left={0}
         zIndex={10}
         pt={"2rem"}
         pb={"2rem"}
-        pr={{base:"0rem",lg:"6.5rem"}}
-        pl={{base:"0rem",lg:"6.5rem"}}
+        pr={{base:"0.5rem",lg:"6.5rem"}}
+        pl={{base:"0.5rem",lg:"6.5rem"}}
         maxW="100vw"
         minH="60vh"
         align={"start"}
@@ -62,11 +62,12 @@ export const ContactSection = ()=>{
 
         {/* Content on top */}
         <VStack
-          maxW={{ base: "90vw", md: "98vw" }}
+          // maxW={{ base: "90vw", md: "100vw" }}
           zIndex={3}
           justifyContent={"space-between"}
           align={"Start"}
           w={"100vw"}
+          p={2}
         >
           <VStack>
             <Box display="inline-block">

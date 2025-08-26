@@ -29,7 +29,7 @@ export const VisitsStats = () => {
           />
         </svg>
 
-        <VStack fontSize={"1.4rem"}>
+        <VStack fontSize={{base:"1.1rem", lg:"1.4rem"}}>
           <Text>+150</Text>
           <Text>عدد الزوار</Text>
         </VStack>
@@ -49,13 +49,14 @@ export const VisitsStats = () => {
           />
         </svg>
 
-        <VStack fontSize={"1.4rem"}>
+        <VStack fontSize={{base:"1.1rem", lg:"1.4rem"}}>
           <Text>+80</Text>
           <Text>عدد المشتركين</Text>
         </VStack>
       </HStack>
-      <VStack maxW={"50%"}>
-        <Text fontSize={"1.25rem"}>
+      <VStack mb={{base:"5%", md:"0"}} maxW={{base:"90%", md:"50%"}}>
+
+        <Text fontSize={{base:"1rem", lg:"1.3rem"}}>
           انضم الآن إلى مساندة، وكن على دراية بحقوقك، مستعدًا للدفاع عنها، في
           الوقت والمكان المناسبين.
         </Text>

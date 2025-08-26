@@ -243,7 +243,8 @@ dasdasda
         left={0}
         zIndex={10}
         w="100%"
-        h="35rem"
+        minH="35rem"
+        h={"auto"}
       >
         <VStack
           className="overlay"
@@ -254,13 +255,12 @@ dasdasda
           justifyContent="center"
           gap={"1.5rem"}
         >
-          <Text fontSize="1.75rem" fontWeight={500}>
+          <Text fontSize={{ base: "1.4rem", md:"1.75rem"  }} fontWeight={500}>
             مساندة" ليست مجرد منصة…بل رفيقك القانوني الرقمي، الذي صُمّم ليكون في
             صفك.{" "}
           </Text>
-          {/* Text 2 */}
           <Text
-            fontSize="1.25rem"
+            fontSize={{ base: "1rem", md:"1.25rem"  }}
             fontWeight={400}
             whiteSpace="pre-line"
             lineClamp={expanded === "text2" ? undefined : 3}
