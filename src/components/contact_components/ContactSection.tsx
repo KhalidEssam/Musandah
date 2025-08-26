@@ -46,7 +46,7 @@ export const ContactSection = ()=>{
         pb={"2rem"}
         pr={{base:"0.5rem",lg:"6.5rem"}}
         pl={{base:"0.5rem",lg:"6.5rem"}}
-        maxW="100vw"
+        w="100%"
         minH="60vh"
         align={"start"}
         color={"rgba(46, 54, 81, 1)"}
@@ -149,12 +149,10 @@ export const ContactSection = ()=>{
               bgColor={"white"}
               borderRadius={"2xl"}
               justifyContent={"space-around"}
-              p={4}
-              width={{ base: "100%", xl: "45%" }}
-              // maxW={{ base: "90vw", xl: "45%" }}
+              width={{ base: "90%", xl: "45%" }}
 
             >
-              <Group  maxW={"90vw"} w={{ base: "md", lg: "xl" }} attached>
+              <Group  maxW={"80vw"} w={{ base: "md", lg: "xl" }} attached>
                 <Field.Root>
                   <HStack width={"100%"}>
                     <VStack w={"50%"} align={"start"}>

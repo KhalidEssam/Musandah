@@ -9,7 +9,7 @@ export const ServiceDetails = () => {
   useEffect(() => {});
 
   return (
-    <VStack w={"80vw"} m={"5rem"} align={"start"}>
+    <VStack w={{ base: "90%", md: "80%"}} mt={"2rem"} mr={"5%"} ml={"5%"} align={"start"}>
       <VStack>
         <Text>{filteredPlan?.title?.ar}</Text>
         <svg
@@ -36,7 +36,7 @@ export const ServiceDetails = () => {
 
       <VStack gap={"1rem"} justifyContent={"space-between"} w={"100%"}>
         <VStack
-          w={"80%"}
+          w={{ base: "100%", md: "80%" }}
           mt={"2rem"}
           borderRadius={"2xl"}
           shadow={"md"}
@@ -50,11 +50,11 @@ export const ServiceDetails = () => {
             h="8.5rem"
           />
           <VStack w={"100%"} align={"start"}>
-            <HStack w={"100%"}>
+            <HStack w={"100%"} flexDir={{ base: "column", md: "row" }}>
               <VStack
                 p={"1rem"}
                 align="start"
-                w={"50%"}
+                w={{ base: "100%", md: "50%" }}
                 bgColor={"rgba(247, 248, 252, 1)"}
               >
                 {filteredPlan?.description.map((description, index) => (
@@ -68,7 +68,7 @@ export const ServiceDetails = () => {
                 p={"1rem"}
                 align="start"
                 bgColor={"rgba(247, 248, 252, 1)"}
-                w={"50%"}
+                w={{ base: "100%", md: "50%" }}
               >
                 {filteredPlan?.description.map((description, index) => (
                   <HStack key={index}>

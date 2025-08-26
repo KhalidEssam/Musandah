@@ -428,7 +428,7 @@ export const Home = () => {
         pl={{ base: "2rem", md: "6rem" }}
         align={"start"}
       >
-        <VStack align={"start"} gap={"2rem"}>
+         <VStack align={"start"} gap={"2rem"}>
           <VStack>
             <Text
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
@@ -467,7 +467,7 @@ export const Home = () => {
             وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
           </Text>
         </VStack>
-        <VStack w={"100%"} align={"center"}>
+        <VStack w={"90%"}  align={"center"}>
           <Box
             boxAlign={"center"}
             as="button"
@@ -485,7 +485,7 @@ export const Home = () => {
             استكشف مركز المعرفة
           </Box>
         </VStack>
-      </VStack>
+      </VStack> 
 
       <ContactSection />
     </>
