@@ -90,9 +90,9 @@ export const Home = () => {
               <path
                 d="M1.90641 9.61274C38.5926 3.03096 133.738 -5.02933 220.83 15.3837"
                 stroke="#981C20"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Box>
@@ -315,9 +315,9 @@ export const Home = () => {
             <path
               d="M1.9318 7.66254C63.2761 1.73077 222.533 -4.6395 368.804 17.3336"
               stroke="#981C20"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </VStack>
@@ -417,9 +417,9 @@ export const Home = () => {
                 <path
                   d="M1.94937 6.34516C79.9545 0.85258 282.529 -4.37579 468.787 18.6514"
                   stroke="#981C20"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </VStack>
