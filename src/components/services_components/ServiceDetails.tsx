@@ -9,7 +9,7 @@ export const ServiceDetails = () => {
   useEffect(() => {});
 
   return (
-    <VStack w={{ base: "90%", md: "80%"}} mt={"2rem"} mr={"5%"} ml={"5%"} align={"start"}>
+    <VStack w={{ base: "90%", md: "80%"}} mt={"2rem"} mb={"2rem"} mr={"5%"} ml={"5%"} align={"start"}>
       <VStack>
         <Text>{filteredPlan?.title?.ar}</Text>
         <svg
@@ -26,6 +26,13 @@ export const ServiceDetails = () => {
           />
         </svg>
       </VStack>
+            <Text
+        fontWeight={400}
+        color={"rgba(90, 119, 187, 1)"}
+        fontSize={{ base: "1rem", lg: "1.2rem" }}
+      >
+        ``{filteredPlan?.text?.ar}``
+      </Text>
       <Text
         fontWeight={400}
         color={"rgba(95, 97, 102, 1)"}
@@ -41,7 +48,7 @@ export const ServiceDetails = () => {
           borderRadius={"2xl"}
           shadow={"md"}
           p={"2rem"}
-          gap={"1rem"}
+          gap={"3rem"}
         >
           <Image
             src={`/${filteredPlan?.Image}`}
@@ -49,31 +56,34 @@ export const ServiceDetails = () => {
             w="6rem"
             h="8.5rem"
           />
-          <VStack w={"100%"} align={"start"}>
-            <HStack w={"100%"} flexDir={{ base: "column", md: "row" }}>
+          <VStack w={"100%"} align={"start"} gap={"2rem"}>
+            <HStack w={"100%"} align={"stretch"} flexDir={{ base: "column", md: "row" }}>
               <VStack
                 p={"1rem"}
                 align="start"
                 w={{ base: "100%", md: "50%" }}
                 bgColor={"rgba(247, 248, 252, 1)"}
               >
+                <Text color={"rgba(46, 54, 81, 1)"}>ما الذي تحصل عليه؟</Text>
                 {filteredPlan?.description.map((description, index) => (
                   <HStack key={index}>
                     <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-                    <Text fontWeight={300}>{description.ar}</Text>
+                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{description.ar}</Text>
                   </HStack>
                 ))}
               </VStack>
               <VStack
                 p={"1rem"}
+                gap={"1rem"}
                 align="start"
                 bgColor={"rgba(247, 248, 252, 1)"}
                 w={{ base: "100%", md: "50%" }}
               >
-                {filteredPlan?.description.map((description, index) => (
+            <Text color={"rgba(46, 54, 81, 1)"}> {filteredPlan?.title?.ar} تناسب:</Text>
+                {filteredPlan?.whofor.map((whofor, index) => (
                   <HStack key={index}>
                     <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-                    <Text fontWeight={300}>{description.ar}</Text>
+                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{whofor.ar}</Text>
                   </HStack>
                 ))}
               </VStack>

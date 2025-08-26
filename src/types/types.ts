@@ -49,9 +49,10 @@ export interface TrustCardProps {
 
 export interface PlanProbs {
     title: { en: string; ar: string };
+    text?:{ en: string; ar: string };
     subtitle: { en: string; ar: string };
     description: { en: string; ar: string }[];
-    whofor: { en: string; ar: string };
+    whofor: { en: string; ar: string }[];
     info?: { en: string; ar: string };
     price?: { en: string; ar: string };
     features: { en: string; ar: string }[];
