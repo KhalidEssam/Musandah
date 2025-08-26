@@ -25,7 +25,6 @@ export const Services = () => {
         subtitle=""
         description=""
       />
-      <Box h="12.5rem"></Box>
       <VStack
         mt={"5%"}
         left={0}
@@ -36,8 +35,8 @@ export const Services = () => {
         position="absolute"
         align={"start"}
         rotateX={"180deg"}
-        width={{ base: "20vw", md: "40vw" }}
-        height={{ base: "20vw", md: "40vw" }}
+        width={{ base: "60vw", md: "40vw" }}
+        height={{ base: "70vw", md: "50vw" }}
       />
       <Box zIndex={1} w={"90%"}>
         <Text

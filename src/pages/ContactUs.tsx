@@ -20,7 +20,7 @@ export const Contact = () => {
         description=""
       />
 
-      <VStack mt={"290px"}  gap={"1.5rem"} mb={"5rem"}>
+      <VStack   gap={"1.5rem"} mb={"5rem"}>
         <>
           <Text
             fontSize={"1.75rem"}

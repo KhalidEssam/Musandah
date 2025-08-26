@@ -26,8 +26,6 @@ export const About = () => {
         subtitle=""
         description=""
       />
-      <Box h="12.5rem"></Box>
-
       <Text
         fontSize={{ base: "1.25rem", lg: "1.75rem" }}
         color={"rgba(46, 54, 81, 1)"}
