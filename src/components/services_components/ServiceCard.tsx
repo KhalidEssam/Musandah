@@ -30,6 +30,8 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
         position="absolute"
         top={0}          // 👈 explicit positioning
         left={0}         // 👈 explicit positioning
+        backdropFilter={ isTouched ? "blur(3px)" : "blur(0px)"}
+        backgroundColor={ isTouched ? "rgba(90, 119, 187, 0.5)" : "transparent"}
         opacity={isTouched ? 1 : 0}      // 👈 use opacity instead of display
         _hover={{
           opacity: 1,    // 👈 fade in on hover
