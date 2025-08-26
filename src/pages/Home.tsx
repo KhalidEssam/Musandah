@@ -95,7 +95,7 @@ export const Home = () => {
       <VStack
         textAlign={"start"}
         align={"start"}
-        p={{ base: "4rem 2rem", md: "4rem 6rem" }}
+        p={{ base: "4rem 2rem", md: "4rem 8rem" }}
         gap={"1rem"}
         bgColor={"rgba(247, 248, 252, 1)"}
       >
@@ -226,8 +226,8 @@ export const Home = () => {
         align="stretch" // 🔥 forces equal height
         justifyContent={"space-around"}
       >
-        <VStack align={"start"} gap={"2rem"}>
-          <VStack>
+        <VStack align={"start"} p={"8rem"} gap={"2rem"}>
+          <VStack >
             <Text
               fontWeight={500}
               fontSize={{ base: "1.5rem", md: "1.75rem" }}
@@ -260,7 +260,7 @@ export const Home = () => {
             جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب
             أكثر من اتصال.
           </Text>
-          <VStack textAlign={"start"} align={"start"} gap={"1rem"}>
+          <VStack textAlign={"start"} align={"start"}  gap={"1rem"}>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why1.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
@@ -324,7 +324,7 @@ export const Home = () => {
         </Box>
       </Box>
 
-      <VStack p={8} align={"start"} gap={8}>
+      <VStack p={"8%"} align={"start"} gap={8}>
         <VStack>
           <Text
             color={"rgba(46, 54, 81, 1)"}
