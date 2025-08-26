@@ -1,11 +1,13 @@
 import { VStack, Image, HStack, Circle, Text, Box } from "@chakra-ui/react";
 import { type PlanProbs } from "../../types/types";
-
+import { useState } from "react";
 type ServiceCardProps = {
   plan: PlanProbs;
 };
 
 export const ServiceCard = ({ plan }: ServiceCardProps) => {
+    const [isTouched, setIsTouched] = useState(false);
+
   return (
     <VStack
       role="group" // 👈 allows child to react to hover
@@ -28,7 +30,7 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
         position="absolute"
         top={0}          // 👈 explicit positioning
         left={0}         // 👈 explicit positioning
-        opacity={0}      // 👈 use opacity instead of display
+        opacity={isTouched ? 1 : 0}      // 👈 use opacity instead of display
         _hover={{
           opacity: 1,    // 👈 fade in on hover
           boxShadow: "0px 0.5rem 1rem rgba(0, 0, 0, 0.2)",
@@ -37,6 +39,8 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
           backdropFilter: "blur(3px)", 
           backgroundColor: "rgba(90, 119, 187, 0.5)", 
         }}
+      onTouchStart={() => setIsTouched(true)}
+      onTouchEnd={() => setIsTouched(false)}
         align="center"
         justify="center"
         borderRadius="xl"

@@ -21,7 +21,7 @@ export const Home = () => {
 `;
   return (
     <>
-      <Box
+      {/* <Box
         className="contact-hero"
         bgImage={`url(Home.jpg)`}
         bgSize="cover"
@@ -33,7 +33,36 @@ export const Home = () => {
         w="100%"
         h="25rem"
         transform="scaleX(-1)" // 👈 flip horizontally
+      > */}
+      <Box
+        className="contact-hero"
+        position="relative" // Changed from absolute to relative
+        left={0}
+        zIndex={10}
+        overflow="hidden" // Prevents image from overflowing
+        bgSize="cover"
+        bgRepeat="no-repeat"
+        w="100%"
+        h="25rem"
+        transform="scaleX(-1)" // 👈 flip horizontally
       >
+        {/* Background Image */}
+
+        <Image
+          src={`Home.jpg`}
+          alt={"Home image"}
+          loading={"eager"}
+          decoding={"async"}
+          fetchPriority={"high"}
+          position="absolute"
+          top={0}
+          left={0}
+          w="100%"
+          h="100%"
+          objectFit="cover" // Equivalent to bgSize="cover"
+          objectPosition={"center"} // Equivalent to bgPos
+          zIndex={-1} // Behind the text
+        />
         <VStack
           className="overlay"
           textAlign="center"
@@ -64,7 +93,6 @@ export const Home = () => {
           </Box>
         </VStack>
       </Box>
-      <Box h="25rem"></Box>
 
       <VStack
         textAlign={"start"}
@@ -401,46 +429,46 @@ export const Home = () => {
         pl={{ base: "2rem", md: "6rem" }}
         align={"start"}
       >
-          <VStack align={"start"} gap={"2rem"}>
-            <VStack>
-              <Text
-                fontSize={{ base: "1.25rem", lg: "1.75rem" }}
-                color={"rgba(46, 54, 81, 1)"}
-              >
-                الوعي القانوني هو خط دفاعك الأول
-              </Text>
-              <svg
-                viewBox="0 0 471 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.94937 6.34516C79.9545 0.85258 282.529 -4.37579 468.787 18.6514"
-                  stroke="#981C20"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </VStack>
+        <VStack align={"start"} gap={"2rem"}>
+          <VStack>
             <Text
-              fontSize={"1.25rem"}
-              fontWeight={500}
-              color={"rgba(90, 119, 187, 1)"}
+              fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+              color={"rgba(46, 54, 81, 1)"}
             >
-              في "مساندة"، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته, أن تعرف
-              حقوقك قبل أن تحتاجها، وأن تتخذ قراراتك بثقة لا بخوف أو تردد.
+              الوعي القانوني هو خط دفاعك الأول
             </Text>
-            <Text
-              fontSize={"1.15rem"}
-              fontWeight={400}
-              color={"rgba(95, 97, 102, 1)"}
+            <svg
+              viewBox="0 0 471 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية بلغة
-              مبسطة، وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
-            </Text>
+              <path
+                d="M1.94937 6.34516C79.9545 0.85258 282.529 -4.37579 468.787 18.6514"
+                stroke="#981C20"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </VStack>
-                  <VStack w={"100%"} align={"center"}>
+          <Text
+            fontSize={"1.25rem"}
+            fontWeight={500}
+            color={"rgba(90, 119, 187, 1)"}
+          >
+            في "مساندة"، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته, أن تعرف
+            حقوقك قبل أن تحتاجها، وأن تتخذ قراراتك بثقة لا بخوف أو تردد.
+          </Text>
+          <Text
+            fontSize={"1.15rem"}
+            fontWeight={400}
+            color={"rgba(95, 97, 102, 1)"}
+          >
+            من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية بلغة مبسطة،
+            وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
+          </Text>
+        </VStack>
+        <VStack w={"100%"} align={"center"}>
           <Box
             boxAlign={"center"}
             as="button"
@@ -453,8 +481,8 @@ export const Home = () => {
           >
             استكشف مركز المعرفة
           </Box>
-                  </VStack>
         </VStack>
+      </VStack>
 
       <ContactSection />
     </>

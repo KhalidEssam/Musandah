@@ -21,7 +21,7 @@ export const Services = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="Services.jpg"
-        title="تواصل معنا"
+        title="خدماتنا"
         subtitle=""
         description=""
       />
