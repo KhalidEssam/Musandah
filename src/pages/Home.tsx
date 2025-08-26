@@ -31,7 +31,7 @@ export const Home = () => {
         left={0}
         zIndex={10}
         w="100%"
-        h="35rem"
+        h="25rem"
         transform="scaleX(-1)" // 👈 flip horizontally
       >
         <VStack
@@ -64,7 +64,7 @@ export const Home = () => {
           </Box>
         </VStack>
       </Box>
-      <Box h="36rem"></Box>
+      <Box h="25rem"></Box>
 
       <VStack
         textAlign={"start"}
@@ -298,7 +298,7 @@ export const Home = () => {
         </Box>
       </Box>
 
-      <VStack p={8} align={"start"} gap={8} >
+      <VStack p={8} align={"start"} gap={8}>
         <VStack>
           <Text
             color={"rgba(46, 54, 81, 1)"}
@@ -390,11 +390,71 @@ export const Home = () => {
       </Box>
       <Box h="36rem"></Box>
 
-      <VStack h={"12.5rem"}>
-        <HStack>
-          <VStack></VStack>
-        </HStack>
-      </VStack>
+      <VStack
+        bgImage="url('/wave.svg')"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        bgPos="center"
+        pt={"4rem"}
+        pb={"4rem"}
+        pr={{ base: "2rem", md: "6rem" }}
+        pl={{ base: "2rem", md: "6rem" }}
+        align={"start"}
+      >
+          <VStack align={"start"} gap={"2rem"}>
+            <VStack>
+              <Text
+                fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+                color={"rgba(46, 54, 81, 1)"}
+              >
+                الوعي القانوني هو خط دفاعك الأول
+              </Text>
+              <svg
+                viewBox="0 0 471 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.94937 6.34516C79.9545 0.85258 282.529 -4.37579 468.787 18.6514"
+                  stroke="#981C20"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </VStack>
+            <Text
+              fontSize={"1.25rem"}
+              fontWeight={500}
+              color={"rgba(90, 119, 187, 1)"}
+            >
+              في "مساندة"، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته, أن تعرف
+              حقوقك قبل أن تحتاجها، وأن تتخذ قراراتك بثقة لا بخوف أو تردد.
+            </Text>
+            <Text
+              fontSize={"1.15rem"}
+              fontWeight={400}
+              color={"rgba(95, 97, 102, 1)"}
+            >
+              من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية بلغة
+              مبسطة، وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
+            </Text>
+          </VStack>
+                  <VStack w={"100%"} align={"center"}>
+          <Box
+            boxAlign={"center"}
+            as="button"
+            color={"white"}
+            borderRadius={"2rem"}
+            fontSize={"1.25rem"}
+            mt="1rem"
+            h={"4rem"}
+            bgColor={"rgba(90, 119, 187, 1)"}
+          >
+            استكشف مركز المعرفة
+          </Box>
+                  </VStack>
+        </VStack>
 
       <ContactSection />
     </>

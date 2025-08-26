@@ -87,7 +87,7 @@ export const Footer: FC = () => {
               width={{ base: "4rem", md: "6rem", lg: "8rem" }}
             />
           </ChakraLink>
-          <Text>{lang === "en" ? '" We protect you "' : '" نحميك "'}</Text>
+          <Text color={"981C20"}>{lang === "en" ? '" We protect you "' : '" نحميك "'}</Text>
         </VStack>
 
         {/* Links + Info + Social */}

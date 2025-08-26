@@ -6,7 +6,7 @@ const plans: PlanProbs[] = [
     {
         title: {
             en: "Gold Plan",
-            ar: "الخطة الذهبية",
+            ar: "الباقة الذهبية",
         },
         subtitle: {
             en: "The Gold Plan provides a full, integrated, and flexible legal experience — covering your needs in consultations, representation, and follow-ups, without worrying about cost or complexity.",
@@ -63,7 +63,7 @@ const plans: PlanProbs[] = [
     {
         title: {
             en: "Silver Plan",
-            ar: "الخطة الفضية",
+            ar: "الباقة الفضية",
         },
         subtitle: {
             en: "The Silver Plan offers flexible coverage that combines consultations and limited representation — with access to a licensed lawyer when needed, remotely or in person.",
@@ -110,7 +110,7 @@ const plans: PlanProbs[] = [
     {
         title: {
             en: "Bronze Plan",
-            ar: "الخطة البرونزية",
+            ar: "الباقة البرونزية",
         },
         subtitle: {
             en: "The Bronze Plan is your smart choice for minimal but sufficient legal coverage. Perfect for anyone facing a single legal question or case — with access to a licensed lawyer at symbolic pricing, and no commitment to expensive plans.",
