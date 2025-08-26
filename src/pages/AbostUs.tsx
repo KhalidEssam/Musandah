@@ -5,7 +5,7 @@ import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { useState } from "react";
 export const About = () => {
 
-  const [clamped, setClamped] = useState(false);
+  const [clamped, setClamped] = useState(true);
 
   const text= `في عالم تتغير فيه القوانين وتتسارع فيه الإجراءات، برز سؤال بسيط لكنه محوري: هل يتمكن الجميع — مواطنين ومقيمين — من الوصول الفعلي إلى الخدمات القانونية؟
 من هذا السؤال، بدأت رحلة "مساندة".

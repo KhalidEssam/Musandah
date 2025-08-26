@@ -44,7 +44,7 @@ export const Header = () => {
             justifyContent={'center'}
             top={0}
             zIndex={100}
-            w={'100VW'}
+            w={'100%'}
             p={4}
 
         >

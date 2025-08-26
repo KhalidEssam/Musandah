@@ -79,7 +79,7 @@ export const Footer: FC = () => {
         gap={{ base: 8, md: 0 }} // 🔹 Add spacing on mobile
       >
         {/* Logo Section */}
-        <VStack maxW={{ base: "100%", md: "25vw" }}>
+        <VStack maxW={{ base: "100%", md: "25%" }}>
           <ChakraLink href="/">
             <Image
               src={lang === "en" ? `/logo-en.png` : `/logo-ar.png`}
@@ -87,20 +87,20 @@ export const Footer: FC = () => {
               width={{ base: "4rem", md: "6rem", lg: "8rem" }}
             />
           </ChakraLink>
-          <Text color={"#971E20"}>{lang === "en" ? '" We protect you "' : '" نحميك "'}</Text>
+          <Text color={"#971E20"}>{lang === "en" ? ' We protect you ' : ' نحميك '}</Text>
         </VStack>
 
         {/* Links + Info + Social */}
         <HStack
-          minW={{ base: "100%", md: "50vw" }}
+          minW={{ base: "100%", md: "70vw" }}
           justifyContent="space-between"
           alignItems={{base:"center", md:"flex-start"}}
           flexDir={{ base: "column", md: "row" }} // 🔹 Vertical on small screens
           gap={{ base: 6, md: 0 }}
         >
           {/* Links */}
-          <VStack align={{base:"center", md:"flex-start"}}>
-            <Text fontSize="1rem" fontWeight="600" pb={4} textAlign="start">
+          <VStack gap={4} flexDir={"column"} maxH={"15rem"} flexWrap={"wrap"} align={{base:"center", md:"center"}}>
+            <Text fontSize="1.4rem" fontWeight="600" pb={4} textAlign="start">
               {lang === "ar" ? "روابط سريعة" : "Links"}
             </Text>
             {links?.map((link) => (
@@ -112,7 +112,7 @@ export const Footer: FC = () => {
                   <Text
                     textAlign="start"
                     width="100%"
-                    fontSize={{ base: "1rem", md: "1rem" }}
+                    fontSize={{ base: "1rem", md: "1.2rem" }}
                     fontWeight={400}
                     _hover={{
                       color: useColorModeValue("#4d7cb1", "gray.100"),
@@ -130,7 +130,7 @@ export const Footer: FC = () => {
 
           {/* Info */}
           <VStack align={{base:"center", md:"flex-start"}}>
-            <Text fontSize="1rem" fontWeight="600" pb={4} textAlign="start">
+            <Text fontSize="1.3rem" fontWeight="600" pb={4} textAlign="start">
               {lang === "ar" ? "المعلومات" : "Info"}
             </Text>
             <ChakraLink href="/terms-and-conditions">
@@ -138,7 +138,7 @@ export const Footer: FC = () => {
                 display="flex"
                 alignItems="center"
                 gap="0.5rem"
-                fontSize="0.9rem"
+                  fontSize={{ base: ".9rem", md: "1.1rem" }}
                 fontWeight="400"
                 color="black"
                 textAlign="start"
@@ -151,7 +151,7 @@ export const Footer: FC = () => {
                 display="flex"
                 alignItems="center"
                 gap="0.5rem"
-                fontSize="0.9rem"
+                  fontSize={{ base: ".9rem", md: "1.1rem" }}
                 fontWeight="400"
                 color="black"
                 textAlign="start"
@@ -163,7 +163,7 @@ export const Footer: FC = () => {
 
           {/* Social */}
           <VStack align={{base:"center", md:"flex-start"}}>
-            <Text fontSize="1rem" fontWeight="600" pb={4} textAlign="start">
+            <Text fontSize="1.4rem" fontWeight="600" pb={4} textAlign="start">
               {lang === "ar" ? "تابعنا" : "Follow us"}
             </Text>
             <HStack>

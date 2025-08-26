@@ -227,7 +227,7 @@ export const Home = () => {
         justifyContent={"space-around"}
       >
         <VStack align={"start"} p={{ base: "1rem", md: "4rem", lg: "8rem" }} gap={"2rem"}>
-          <VStack >
+          <VStack w={{ base: "90%", md: "50%"}} >
             <Text
               fontWeight={500}
               fontSize={{ base: "1.5rem", md: "1.75rem" }}
