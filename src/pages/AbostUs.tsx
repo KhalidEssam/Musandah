@@ -4,10 +4,9 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { useState } from "react";
 export const About = () => {
-
   const [clamped, setClamped] = useState(true);
 
-  const text= `في عالم تتغير فيه القوانين وتتسارع فيه الإجراءات، برز سؤال بسيط لكنه محوري: هل يتمكن الجميع — مواطنين ومقيمين — من الوصول الفعلي إلى الخدمات القانونية؟
+  const text = `في عالم تتغير فيه القوانين وتتسارع فيه الإجراءات، برز سؤال بسيط لكنه محوري: هل يتمكن الجميع — مواطنين ومقيمين — من الوصول الفعلي إلى الخدمات القانونية؟
 من هذا السؤال، بدأت رحلة "مساندة".
 خضنا بحثًا ميدانيًا، واستطلعنا آراء الناس، وواجهنا الحقائق:
 ·        صعوبة الوصول للمعلومة القانونية.
@@ -16,7 +15,7 @@ export const About = () => {
 ·        وغياب الثقة أو الفهم الكامل للإجراءات القانونية.
 من هنا، وُلدت "مساندة" — منصة رقمية قانونية وُضعت بعناية، لتكون حلًا واقعيًا ومتاحًا للجميع، بالشراكة مع جهة قانونية مرخصة.
 نحن لا نقدّم مجرد استشارات، بل نوفر تجربة قانونية شاملة تقوم على: الوضوح، الشفافية، الخصوصية، وسهولة الوصول.
-"مساندة" ليست بديلًا عن القانون، بل وسيلتك لفهمه، التعامل معه، والنجاح من خلاله — أينما كنت، وباللغة التي تفهمها، وبتكلفة تستطيع تحملها.`
+"مساندة" ليست بديلًا عن القانون، بل وسيلتك لفهمه، التعامل معه، والنجاح من خلاله — أينما كنت، وباللغة التي تفهمها، وبتكلفة تستطيع تحملها.`;
   return (
     <VStack gap={8}>
       <ContactBanner
@@ -33,7 +32,7 @@ export const About = () => {
         تجربة قانونية مختلفة… تبدأ من فهمك، وتنتهي براحتك
       </Text>
 
-      <VStack gap={8} w={"90vw"}>
+      <VStack gap={0} w={"90vw"}>
         <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
           <VStack
             bgImage={`url(about1.jpg)`}
@@ -42,7 +41,7 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
-            w={{ base: "90%", md: "33.75rem" }}
+            w={{ base: "90%", md: "63.75rem" }}
           />
           <VStack
             align={"start"}
@@ -77,15 +76,17 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "0.9rem", lg: "1rem" }}
                 textAlign={"start"}
-                lineClamp={ clamped ? 6 : undefined}       
+                lineClamp={clamped ? 6 : undefined}
                 whiteSpace="pre-line"
-
               >
-           
-           {text}
+                {text}
               </Text>
-              <Box as ="button" bgColor={"transparent"} onClick={() => setClamped(!clamped)}>
-                {clamped ? "قراءة المزيد" :  " اقرأ اقل"}
+              <Box
+                as="button"
+                bgColor={"transparent"}
+                onClick={() => setClamped(!clamped)}
+              >
+                {clamped ? "قراءة المزيد" : " اقرأ اقل"}
               </Box>
             </VStack>
           </VStack>
@@ -138,7 +139,7 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
-            w={{ base: "90%", md: "33.75rem" }}
+            w={{ base: "90%", md: "63.75rem" }}
           />
         </HStack>
         <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
@@ -149,7 +150,7 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
-            w={{ base: "90%", md: "33.75rem" }}
+            w={{ base: "90%", md: "63.75rem" }}
           />
           <VStack
             align={"start"}
@@ -228,9 +229,8 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "0.9rem", lg: "1rem" }}
                 textAlign={"start"}
-                lineClamp={7}           whiteSpace="pre-line"
-
-                
+                lineClamp={7}
+                whiteSpace="pre-line"
               >
                 `العدالة: نُعامل الجميع بإنصاف… دون تمييز في النوع، الجنسية، أو
                 اللغة. الخصوصية: كل استشارة، كل طلب، كل بياناتك — في أمان تام.
@@ -248,7 +248,7 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
-            w={{ base: "90%", md: "33.75rem" }}
+            w={{ base: "90%", md: "63.75rem" }}
           />
         </HStack>
         <HStack flexDir={{ base: "column", md: "row" }} gap={0} w={"90%"}>
@@ -259,7 +259,7 @@ export const About = () => {
             bgRepeat="no-repeat"
             border="1px solid #ddd"
             minH={"28rem"}
-            w={{ base: "90%", md: "33.75rem" }}
+            w={{ base: "90%", md: "63.75rem" }}
           />
           <VStack
             align={"start"}
@@ -295,8 +295,8 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "0.9rem", lg: "1rem" }}
                 textAlign={"start"}
-                lineClamp={7}           whiteSpace="pre-line"
-
+                lineClamp={7}
+                whiteSpace="pre-line"
               >
                 `نفتخر بأن نقدم خدماتنا القانونية بالشراكة مع شركة تكامل
                 للمحاماة والاستشارات القانونية — وهي جهة مرخصة رسميًا وفق
