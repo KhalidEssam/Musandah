@@ -39,6 +39,7 @@ export const TermsandConditions = () => {
             textAlign={'center'}
             mx={'auto'}
             mt={'2rem'}
+            maxW={"90vw"}
 
             dir={direction}
         >

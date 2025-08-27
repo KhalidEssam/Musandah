@@ -52,12 +52,6 @@ function App() {
             <Route path="/knowledge-center/:id" element={<ArticleDetails />} />
             <Route path="/articles" element={<ViewAllArtciles />} />
 
-
-            {/* <Route path="/blogs" element={<Blogs />} /> */}
-            {/* <Route path="/blog/:slug" element={<BlogDetails />} /> */}
-            {/* <Route path="/blogs/all-blogs" element={<ViewAllBlogs />} /> */}
-            {/* <Route path="/articles" element={<Articles />} /> */}
-            {/* <Route path="/articles/all-articles" element={<ViewAllArticles />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms-and-conditions" element={<TermsandConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
