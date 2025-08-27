@@ -39,7 +39,7 @@ export const TermsandConditions = () => {
             textAlign={'center'}
             mx={'auto'}
             mt={'2rem'}
-            maxW={"90vw"}
+            maxW={"90%"}
 
             dir={direction}
         >
@@ -51,7 +51,6 @@ export const TermsandConditions = () => {
                 alignItems={{ base: direction === 'ltr' ? 'flex-start' : 'flex-end', md: 'flex-start' }}
                 gap={{ base: '1rem', md: '2rem' }}
                 p="0.5rem"
-                // fontFamily={direction === 'rtl' ? 'Cairo' : 'Jost'}
             >
                 {links.map((link, index) => (
                     <Tabs.Trigger

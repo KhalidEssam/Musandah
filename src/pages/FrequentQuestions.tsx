@@ -1,30 +1,54 @@
-import { Box, Text } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
-import { selectLanguage, selectDirection } from "../store/slices/languageSlice"
-
-
+import { VStack, Text } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { selectLanguage, selectDirection } from "../store/slices/languageSlice";
+import FaqAccordion from "@/components/faq-components/FAQAccordion";
+import { ContactBanner } from "@/components/contact_components/ContactBanner";
 
 export const FrequentQuestions = () => {
-    const [faq, setFaq] = useState("")
-    const Lang = useSelector(selectLanguage);
-    const direction = useSelector(selectDirection);
-    useEffect(() => {
-        fetch(direction === 'rtl' ? `/docs/faq-ar.txt` : `/docs/faq.txt`)
-            .then((res) => res.text())
-            .then((data) => {
-                setFaq(data)
-            })
-            .catch((err) => console.error("Error loading terms:", err));
-    }, [Lang]);
-    return (
-        <Box color={"#4D7CB1"} p="2rem">
-            <Text
-                textAlign={direction === 'rtl' ? 'right' : 'left'}
-                whiteSpace="pre-wrap" // preserves line breaks and spaces
-                lineHeight="1.2"
-                fontSize="lg"
-            >{faq}</Text>
-        </Box>
-    )
-}
+  const Lang = useSelector(selectLanguage);
+  const direction = useSelector(selectDirection);
+
+  type FaqItem = {
+    question: string;
+    answer: string;
+  };
+
+  const [faq, setFaq] = useState<FaqItem[]>([]);
+
+  useEffect(() => {
+    fetch(direction === "rtl" ? `/docs/faq-ar.txt` : `/docs/faq.txt`)
+      .then((res) => res.text())
+      .then((data) => {
+        const items = data.split(/\d+\.\s/).filter(Boolean);
+        // Splits at "1. " , "2. " etc.
+        const parsedFaqs = items.map((item) => {
+          const [question, ...answer] = item.split("\n");
+          return {
+            question: question.trim(),
+            answer: answer.join("\n").trim(),
+          };
+        });
+        setFaq(parsedFaqs);
+      });
+  }, [Lang]);
+  return (
+    <VStack justify={"center"} color={"#4D7CB1"} gap="2rem" mb={"4rem"} w={"100vw"}>
+      <ContactBanner
+        bgPos="0% /27%"
+        img="faq.jpg"
+        title="الاسئلة الشائعة"
+        subtitle=""
+        description=""
+      />
+      <Text
+        fontSize={{ base: "1.25rem", lg: "1.5rem" }}
+        color={"rgba(46, 54, 81, 1)"}
+      >
+        كل ما يشغلك… نجيبك عنه ببساطة ووضوح.
+      </Text>
+
+      <FaqAccordion items={faq} />
+    </VStack>
+  );
+};

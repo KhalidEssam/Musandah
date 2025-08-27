@@ -51,13 +51,10 @@ function App() {
             <Route path="/knowledge-center" element={<KnowledgeCenter />} />
             <Route path="/knowledge-center/:id" element={<ArticleDetails />} />
             <Route path="/articles" element={<ViewAllArtciles />} />
-
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms-and-conditions" element={<TermsandConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
             <Route path="/faq" element={<FrequentQuestions />} /> 
-            {/* <Route path="/test" element={<TestComp/>} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Toaster />
