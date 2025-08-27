@@ -8,6 +8,10 @@ export type Slide = {
 
 export interface articleProbs {
     id: number;
+    subtitle?: {
+        en: string;
+        ar: string
+    };
     title: {
         en: string;
         ar: string

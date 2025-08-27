@@ -1,5 +1,5 @@
 import { ContactBanner } from "@/components/contact_components/ContactBanner";
-import { Box, VStack, Text, HStack } from "@chakra-ui/react";
+import { Box, VStack, Text, HStack, Circle } from "@chakra-ui/react";
 import { ServicesList } from "@/components/services_components/ServicesList";
 import { useState, useRef, useEffect } from "react";
 export const Services = () => {
@@ -13,9 +13,9 @@ export const Services = () => {
       setIsClamped(el.scrollHeight < el.clientHeight);
     }
   }, [clamping]);
-  const text=`الباقات عندنا ليست مجرد "عروض قانونية"
+  const text = `الباقات عندنا ليست مجرد "عروض قانونية"
   ؛ بل هي وسيلة لتقديم تجربة قانونية حقيقية، تبدأ بالتوجيه، وقد تنتهي بالتمثيل القضائي — ضمن باقة واضحة الشروط، معروفة المدى، ومناسبة للتكرار.
-كل باقة تم تصميمها بناءً على نماذج حقيقية من احتياجات الأفراد: من لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج متابعة قانونية طوال العام`
+كل باقة تم تصميمها بناءً على نماذج حقيقية من احتياجات الأفراد: من لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج متابعة قانونية طوال العام`;
   return (
     <VStack gap={"5rem"} w={"100vw"}>
       <ContactBanner
@@ -220,14 +220,13 @@ export const Services = () => {
           </Text>
 
           <Text
-
             // ref={textRef}
             fontSize={{ base: "1rem", md: "1.25rem" }}
             fontWeight={400}
             whiteSpace="pre-line"
             lineClamp={clamping ? 3 : undefined}
           >
- {text}
+            {text}
           </Text>
           {isClamped && (
             <Box
@@ -245,9 +244,159 @@ export const Services = () => {
         </VStack>
       </VStack>
 
-      <VStack w={"80vw"} m={8}>
-        {" "}
+      <VStack w={"80vw"} m={8} align={"start"} gap={8}>
+        <VStack align={"start"}>
+          <Text
+            color={"rgba(46, 54, 81, 1)"}
+            fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+          >
+            {" "}
+            اعرف حقوقك قبل أن تحتاجها{" "}
+          </Text>
+          <svg
+            viewBox="0 0 371 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.9318 7.66254C63.2761 1.73077 222.533 -4.6395 368.804 17.3336"
+              stroke="#981C20"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </VStack>{" "}
+        <Text
+          textAlign={"start"}
+          fontWeight={400}
+          color={"rgba(95, 97, 102, 1)"}
+          fontSize={{ base: "0.9rem", lg: "1.2rem" }}
+        >
+          في مساندة، صممنا باقات قانونية تغطي احتياجاتك المختلفة — من دعم أساسي
+          إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني
+        </Text>
         <ServicesList />
+      </VStack>
+
+      <VStack w={"100vw"} bgColor={"rgba(247, 248, 252, 1)"} p={{base:"1rem", md:"3rem"}} m={8} align={"start"} gap={8}>
+        <VStack align={"start"}>
+          <Text
+            color={"rgba(46, 54, 81, 1)"}
+            fontSize={{ base: "1.25rem", lg: "1.75rem" }}
+          >
+            {" "}
+            باقاتنا تتوسع... خطوة بخطوة{" "}
+          </Text>
+          <svg
+            viewBox="0 0 371 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.9318 7.66254C63.2761 1.73077 222.533 -4.6395 368.804 17.3336"
+              stroke="#981C20"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </VStack>{" "}
+        <Text
+          lineHeight={"2.5rem"}
+          whiteSpace={"pre-line"}
+          textAlign={"start"}
+          color={"rgba(95, 97, 102, 1)"}
+          fontWeight={400}
+          fontSize={{ base: "0.9rem", lg: "1.2rem" }}
+        >
+          {`نحن في "مساندة" لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة — تبدأ بالأهم والأكثر شيوعًا، وتتوسع لتشمل مختلف فئات المجتمع واحتياجاته.
+بدأنا بالباقات الأساسية التي تغطي القضايا العمالية والأحوال الشخصية، لكونها الأكثر حضورًا في واقع الأفراد.  `}{" "}
+        </Text>
+        <HStack w={"80%"} align={"stretch"} justifyContent={"space-between"}>
+          <VStack w={"45%"} align={"start"}>
+            <Text
+              color={"rgba(90, 119, 187, 1)"}
+              fontWeight={400}
+              fontSize={{ base: "0.9rem", lg: "1.25rem" }}
+            >
+              نعمل حاليًا على تطوير باقات جديدة تخدم:{" "}
+            </Text>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > أصحاب الأعمال والمشاريع الناشئة</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > المستقلين والمهنيين</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > المؤسسات والجمعيات غير الربحية</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > الفئات الضعيفة قانونيًا أو محدودي الدخل</Text>
+            </HStack>
+          </VStack>
+          <VStack w={"45%"} align={"start"}>
+            <Text
+              color={"rgba(90, 119, 187, 1)"}
+              fontWeight={400}
+              fontSize={{ base: "0.9rem", lg: "1.25rem" }}
+            >
+              كما سنطلق قريبًا خدمات متخصصة تشمل:{" "}
+            </Text>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > مراجعة وصياغة العقود التجارية</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > خدمات التحكيم والتسوية</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > التمثيل في القضايا العقارية والمالية والجنائية</Text>
+            </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+             <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                > حماية الملكية الفكرية</Text>
+            </HStack>
+          </VStack>
+        </HStack>
       </VStack>
     </VStack>
   );

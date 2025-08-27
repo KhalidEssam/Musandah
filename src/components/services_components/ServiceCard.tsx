@@ -7,8 +7,8 @@ type ServiceCardProps = {
 import { useNavigate } from "react-router-dom";
 
 export const ServiceCard = ({ plan }: ServiceCardProps) => {
-    const [isTouched, setIsTouched] = useState(false);
-const navigate = useNavigate();
+  const [isTouched, setIsTouched] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <VStack
@@ -27,35 +27,41 @@ const navigate = useNavigate();
     >
       {/* Overlay - now starts invisible but present in DOM */}
       <VStack
-        w="100%" 
-        h="100%" 
+        w="100%"
+        h="100%"
         position="absolute"
-        top={0}          // 👈 explicit positioning
-        left={0}         // 👈 explicit positioning
-        backdropFilter={ isTouched ? "blur(3px)" : "blur(0px)"}
-        backgroundColor={ isTouched ? "rgba(90, 119, 187, 0.5)" : "transparent"}
-        opacity={isTouched ? 1 : 0}      // 👈 use opacity instead of display
+        top={0} // 👈 explicit positioning
+        left={0} // 👈 explicit positioning
+        backdropFilter={isTouched ? "blur(3px)" : "blur(0px)"}
+        backgroundColor={isTouched ? "rgba(90, 119, 187, 0.5)" : "transparent"}
+        opacity={isTouched ? 1 : 0} // 👈 use opacity instead of display
         _hover={{
-          opacity: 1,    // 👈 fade in on hover
+          opacity: 1, // 👈 fade in on hover
           boxShadow: "0px 0.5rem 1rem rgba(0, 0, 0, 0.2)",
           cursor: "pointer",
           transform: "scale(1.05)",
-          backdropFilter: "blur(3px)", 
-          backgroundColor: "rgba(90, 119, 187, 0.5)", 
+          backdropFilter: "blur(3px)",
+          backgroundColor: "rgba(90, 119, 187, 0.5)",
         }}
-      onTouchStart={() => setIsTouched(true)}
-      onTouchEnd={() => setIsTouched(false)}
+        onTouchStart={() => setIsTouched(true)}
+        onTouchEnd={() => setIsTouched(false)}
         align="center"
         justify="center"
         borderRadius="xl"
         zIndex={2}
         transition="all 0.3s ease" // 👈 smooth transition
       >
-        <Box as="button" bgColor="rgba(90, 119, 187, 1)" 
-        onClick={() =>navigate(`/services/${plan.ref}`)}
-        borderRadius={"2rem"} color="white" fontSize="lg" fontWeight="bold">
-التفاصيل والاشتراك 
-       </Box>
+        <Box
+          as="button"
+          bgColor="rgba(90, 119, 187, 1)"
+          onClick={() => navigate(`/services/${plan.ref}`)}
+          borderRadius={"2rem"}
+          color="white"
+          fontSize="lg"
+          fontWeight="bold"
+        >
+          التفاصيل والاشتراك
+        </Box>
       </VStack>
 
       <Image src={plan.Image} alt={plan.title.en} w="6rem" h="8.5rem" />

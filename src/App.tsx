@@ -18,12 +18,13 @@ import useDirection from "./hooks/useDirection.ts";
 import useFontFamily from "./hooks/useFontFamily";
 import { ServiceDetails } from "@/components/services_components/ServiceDetails.tsx";
 // import BlogDetails from "./pages/BlogDetails";
-// import ArticleDetails from "./pages/ArticleDetails";
+import {ArticleDetails} from "@/components/knowledge_components/ArticleDetails.tsx";
 // import { ViewAllBlogs } from "./components/ViewAllBlogs.tsx";
 // import { TermsandConditions } from "./pages/TermsAndConditions";
 // import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
 // import TimedPopup from './components/SubscribeNow.tsx'
 import { Toaster } from "./components/ui/toaster.tsx";
+import { ViewAllArtciles } from "./components/knowledge_components/ViewAllArtciles.tsx";
 
 function App() {
   const { direction } = useLanguage();
@@ -47,12 +48,15 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetails />} />
             <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+            <Route path="/knowledge-center/:id" element={<ArticleDetails />} />
+            <Route path="/articles" element={<ViewAllArtciles />} />
+
+
             {/* <Route path="/blogs" element={<Blogs />} /> */}
             {/* <Route path="/blog/:slug" element={<BlogDetails />} /> */}
             {/* <Route path="/blogs/all-blogs" element={<ViewAllBlogs />} /> */}
             {/* <Route path="/articles" element={<Articles />} /> */}
             {/* <Route path="/articles/all-articles" element={<ViewAllArticles />} /> */}
-            {/* <Route path="/article/:id" element={<ArticleDetails />} /> */}
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/terms-and-conditions" element={<TermsandConditions />} /> */}
             {/* <Route path="/faq" element={<FrequentQuestions />} />  */}

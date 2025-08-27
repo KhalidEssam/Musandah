@@ -1,0 +1,19 @@
+
+import { HStack } from "@chakra-ui/react"
+import {ArticleCard} from "./ArticleCard"
+import type { articleProbs } from "@/types/types"
+
+
+
+export const ArticleList = ({articles}: {articles: articleProbs[]}) => {
+
+
+
+    return (
+        <HStack w={"100%"} flexDir={{ base: "column", md: "row" }} p={"2rem"} flexWrap={"wrap"} justifyContent={"space-between"} align={"stretch"}>
+            {articles.map((article: articleProbs) => (
+                <ArticleCard key={article.id} article={article} />
+            ))}
+        </HStack>
+    )
+}
