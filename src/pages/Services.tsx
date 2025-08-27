@@ -314,7 +314,7 @@ export const Services = () => {
 بدأنا بالباقات الأساسية التي تغطي القضايا العمالية والأحوال الشخصية، لكونها الأكثر حضورًا في واقع الأفراد.  `}{" "}
         </Text>
         <HStack w={"80%"} align={"stretch"} flexDir={{ base: "column", md: "row" }} justifyContent={"space-between"}>
-          <VStack w={"45%"} align={"start"}>
+          <VStack w={{ base: "100%", md: "45%" }} align={"start"}>
             <Text
               color={"rgba(90, 119, 187, 1)"}
               fontWeight={400}
@@ -355,7 +355,7 @@ export const Services = () => {
                 > الفئات الضعيفة قانونيًا أو محدودي الدخل</Text>
             </HStack>
           </VStack>
-          <VStack w={"45%"} align={"start"}>
+          <VStack w={{ base: "100%", md: "45%" }} align={"start"}>
             <Text
               color={"rgba(90, 119, 187, 1)"}
               fontWeight={400}
