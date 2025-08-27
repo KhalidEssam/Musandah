@@ -1,0 +1,76 @@
+Privacy Policy
+Effective Date: [Publication Date]
+1. Introduction
+At the “Legal Support Center,” we respect your privacy and are committed to protecting your personal data in accordance with the Saudi Personal Data Protection Law (PDPL) and related regulations. This policy explains how we collect and process your data, as well as your rights concerning privacy.
+2. Scope of Application
+This policy applies to all personal data collected by the platform through:
+•	Users during registration or subscription to services.
+•	Use of the website or mobile application (e.g., operational applications, logs, cookies).
+•	External sources such as payment providers or media services.
+3. Definitions
+•	Personal Data: Any information used to identify you, such as name, ID, email, phone number, legal record, photos, etc.
+•	Processing: Any action on personal data, such as collection, storage, modification, deletion, or analysis.
+•	Processor: Any party processing data on behalf of “Legal Support Center,” such as technical service providers.
+•	PDPL: The Personal Data Protection Law in Saudi Arabia.
+4. Data We Collect
+A. Data You Provide Yourself:
+•	Full name, ID/residency number, gender, date of birth.
+•	Employer (if any), phone number, email, address.
+•	Legal documents (e.g., authorizations, contracts, photos).
+•	Payment data (e.g., bank card) via secure gateways.
+B. Automatically Collected Data:
+•	Technical data such as IP address, device/browser type, browsing history, cookies.
+C. Third-Party Data:
+•	Identity verification data through “Nafath,” or identifiers linked to government services.
+5. Purposes of Data Collection & Legal Grounds
+We use your data for:
+1.	Providing and executing legal service packages (consultations, representation)
+2.	Managing accounts and subscriptions (creation, activation, alerts)
+3.	Payments and billing
+4.	Communication and technical support (emails, notifications)
+5.	Improving user experience and services (analytics, customer needs)
+6.	Legal and regulatory compliance (verification, litigation)
+Processing is based on:
+•	Explicit consent (for registration and account operation)
+•	Contractual necessity (for service delivery)
+•	Legitimate interest (service improvement, security)
+•	Legal compliance (government requests)
+6. Processing Principles and Legal Rights
+In accordance with PDPL and local regulatory practices:
+•	We process your data with your consent or for legal agreement execution.
+•	We apply the "minimal processing" principle — collecting only what is necessary.
+•	We implement technical and organizational security measures (encryption, access control, local backups).
+7. Data Storage and Retention
+•	Your data is stored on servers located within the Kingdom to enhance digital sovereignty.
+•	Data is retained as long as necessary for service delivery or legal compliance.
+•	After use, data is securely deleted, anonymized, or retained for legal archiving periods.
+8. Data Sharing
+Your data may be shared with:
+•	Our legal partners (e.g., Takamol Law Firm) for service execution.
+•	Electronic payment providers for secure processing.
+•	Government entities upon legal request or under anti-crime regulations.
+•	Legal processors such as hosting or technical support services.
+•	Anonymous data aggregation campaigns (statistics and analytics).
+We do not share your data with any other party or for marketing without your explicit consent.
+9. Cookies
+•	We use cookies to enhance user experience (session tracking, performance levels).
+•	By visiting the site, you acknowledge cookie usage; you may configure your browser to block them partially or entirely where applicable.
+10. Your Rights as a User
+Under PDPL, you have the right to:
+•	Access your personal data.
+•	Correct/inaccurate information.
+•	Request deletion of unjustified data.
+•	Object to processing based on legitimate interest.
+•	Withdraw consent at any time (unless legally restricted).
+•	Request data portability where permitted.
+11. Data Protection and Security
+•	We apply multiple security measures: encryption, access control, firewalls, secure backups within the Kingdom.
+•	Our teams conduct periodic reviews and testing to ensure technical infrastructure and data safety.
+•	While we strive for maximum protection, internet use carries inherent risks. We urge users to protect their passwords and credentials.
+12. Policy Updates
+•	We reserve the right to amend this policy at any time.
+•	Updates will be communicated clearly via the platform or email.
+•	Continued use after updates indicates acceptance of the new terms.
+13. Jurisdiction
+•	This policy is governed by PDPL and all applicable Saudi regulations.
+•	The courts of Riyadh shall have jurisdiction over any dispute arising from it.

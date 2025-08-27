@@ -1,0 +1,55 @@
+Service Level Agreement (SLA)
+Effective Date: To be determined
+Service Provider: Legal Support Center Platform
+Service Recipient: Client / User
+________________________________________
+Article 1: Definition of the Agreement
+This agreement forms an annex to the General Terms of Use of the Legal Support Center Platform. It defines the specific standards for the level of legal digital service delivery, including the platform’s responsiveness and obligations toward the client.
+________________________________________
+Article 2: Scope of Included Services
+This agreement covers the following legal services:
+•	Consultations (written, phone, video, in-person)
+•	Legal representation in specified cases (Personal Status, Labor)
+•	Drafting or reviewing legal documents
+•	Legal advisory support within the package
+________________________________________
+Article 3: Service Quality and Timelines
+Service Type	Response Time	Completion Time
+Written Consultation	Within 24 business hours	—
+Video / Phone Consultation	Within 48 business hours	—
+In-Person Consultation	As per scheduled appointment	—
+Drafting Contract / Memo	Within 3–5 business days	Upon request
+Case Initiation	—	Within 5 business days after complete documentation
+Business Days: Sunday to Thursday, 9:00 AM – 5:00 PM, excluding official holidays.
+________________________________________
+Article 4: Service Availability and Support
+•	The platform is available digitally 24/7.
+•	Technical support and communication are available Sunday to Thursday.
+•	Communication channels: email, phone, or the designated form.
+________________________________________
+Article 5: Platform’s Commitments
+1.	Ensure privacy and security in accordance with Saudi PDPL.
+2.	Deliver services within announced timeframes, with priority given to urgent cases.
+3.	Provide effective support channels to respond to requests or complaints within 2 business days.
+4.	Notify the user of any delays beyond the team’s control with stated reasons.
+________________________________________
+Article 6: Client’s Commitments
+1.	Provide accurate and complete information and documents.
+2.	Commit to scheduled appointments and confirm sessions in advance.
+3.	Refrain from disrupting service or misusing the system.
+4.	Respect timelines and delegate authority to the legal team when requested.
+________________________________________
+Article 7: Complaint Handling Procedure
+In case of delay or service deficiency:
+1.	The user must submit an official complaint via email within 7 days of the incident.
+2.	The platform commits to respond within 2 business days.
+3.	A specialized committee will review the complaint and may offer a compensatory session or extend the package, if necessary.
+________________________________________
+Article 8: Limitations of Liability
+•	The platform does not guarantee specific legal outcomes for any case or consultation.
+•	The platform is not liable for legal decisions or losses resulting from inaccurate information provided by the client.
+•	The platform is not obligated to handle any matters outside its scope (e.g., commercial, criminal, etc.).
+________________________________________
+Article 9: Term and Termination of the Agreement
+•	This agreement remains valid for the duration of the client’s active subscription to any service package.
+•	It shall automatically terminate upon cancellation, service expiration, or a material breach.

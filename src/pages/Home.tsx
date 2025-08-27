@@ -424,12 +424,14 @@ export const Home = () => {
         bgPos="center"
         pt={"4rem"}
         pb={"4rem"}
-        pr={{ base: "2rem", md: "6rem" }}
-        pl={{ base: "2rem", md: "6rem" }}
+
         align={"start"}
+        
       >
-         <VStack align={"start"} gap={"2rem"}>
-          <VStack>
+         <VStack             paddingInlineStart={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
+         paddingInlineEnd={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
+ align={"start"} gap={"2rem"}>
+          <VStack p={"2rem"} gap={"1rem"}>
             <Text
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}

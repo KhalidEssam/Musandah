@@ -20,8 +20,9 @@ import { ServiceDetails } from "@/components/services_components/ServiceDetails.
 // import BlogDetails from "./pages/BlogDetails";
 import {ArticleDetails} from "@/components/knowledge_components/ArticleDetails.tsx";
 // import { ViewAllBlogs } from "./components/ViewAllBlogs.tsx";
-// import { TermsandConditions } from "./pages/TermsAndConditions";
-// import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
+import { TermsandConditions } from "./pages/TermsAndConditions";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
 // import TimedPopup from './components/SubscribeNow.tsx'
 import { Toaster } from "./components/ui/toaster.tsx";
 import { ViewAllArtciles } from "./components/knowledge_components/ViewAllArtciles.tsx";
@@ -58,8 +59,10 @@ function App() {
             {/* <Route path="/articles" element={<Articles />} /> */}
             {/* <Route path="/articles/all-articles" element={<ViewAllArticles />} /> */}
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/terms-and-conditions" element={<TermsandConditions />} /> */}
-            {/* <Route path="/faq" element={<FrequentQuestions />} />  */}
+            <Route path="/terms-and-conditions" element={<TermsandConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+            <Route path="/faq" element={<FrequentQuestions />} /> 
             {/* <Route path="/test" element={<TestComp/>} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
