@@ -313,7 +313,7 @@ export const Services = () => {
           {`نحن في "مساندة" لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة — تبدأ بالأهم والأكثر شيوعًا، وتتوسع لتشمل مختلف فئات المجتمع واحتياجاته.
 بدأنا بالباقات الأساسية التي تغطي القضايا العمالية والأحوال الشخصية، لكونها الأكثر حضورًا في واقع الأفراد.  `}{" "}
         </Text>
-        <HStack w={"80%"} align={"stretch"} justifyContent={"space-between"}>
+        <HStack w={"80%"} align={"stretch"} flexDir={{ base: "column", md: "row" }} justifyContent={"space-between"}>
           <VStack w={"45%"} align={"start"}>
             <Text
               color={"rgba(90, 119, 187, 1)"}

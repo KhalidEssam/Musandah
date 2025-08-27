@@ -75,8 +75,8 @@ export const SwiperSlider = ({
   
   return (
     <Box
-      width="90%" // Full width container
-      maxWidth="1200px" // Limit maximum width
+      width="100vw" // Full width container
+      maxWidth={{ base: '90%', md: '80%', lg: '70%' }} // Limit maximum width
       mx="auto" // Center the slider
       px={{ base: '1rem', md: '2rem' }} // Better padding
       mb={8}
