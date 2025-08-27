@@ -26,6 +26,26 @@ export interface articleProbs {
     ref: string;
 }
 
+export interface procedureProbs {
+    id: number;
+    subtitle?: {
+        en: string;
+        ar: string
+    };
+    title: {
+        en: string;
+        ar: string
+    };
+    description: {
+        en: string;
+        ar: string
+    };
+    bgColor: string;
+    date: string;
+    featured?: boolean;
+    ref: string;
+}
+
 export interface BannerProps {
     title:string;
     subtitle:string;
@@ -76,16 +96,13 @@ export type TabContentItem = {
 
 export interface SingleSlide {
   id: number;
-  bgImage: string;
-  textColor: string;
   title: { en: string; ar: string };
   description: { en: string; ar: string };
-  buttonText: { en: string; ar: string };
+  date?: string;
 }
 
 export interface SwiperSliderProps {
   slides: SingleSlide[];
-  onLoginClick?: () => void;
 }
 
 

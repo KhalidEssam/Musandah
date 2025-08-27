@@ -45,7 +45,7 @@ export const Footer: FC = () => {
         w={"100%"}
         display={"flex"}
         bgColor={"#5A77BB"}
-        // justifyContent={{ base: "center", lg: "space-around" }}
+        justifyContent={{ base: "center", lg: "space-around" }}
         p={6}
         flexDir={{base:"column" , md:"row"}}
       >

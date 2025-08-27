@@ -17,9 +17,9 @@ export const ViewAllArtciles = () => {
             <path
               d="M1.9318 7.66254C63.2761 1.73077 222.533 -4.6395 368.804 17.3336"
               stroke="#981C20"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </VStack>
