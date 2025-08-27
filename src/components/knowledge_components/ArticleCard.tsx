@@ -12,7 +12,7 @@ export const ArticleCard = ({ article }: { article: articleProbs }) => {
       role="group" // 👈 allows child to react to hover
       gap="1rem"
       _hover={{ cursor: "pointer" }}
-      w={{ base: "90%", md: "40%", lg: "30%" }}
+      // w={{ base: "90%", md: "40%", lg: "30%" }}
       textAlign={"start"}
       position="relative" // 👈 needed for absolute child
       overflow="hidden"

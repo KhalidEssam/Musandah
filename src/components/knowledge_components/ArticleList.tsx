@@ -10,7 +10,7 @@ export const ArticleList = ({articles}: {articles: articleProbs[]}) => {
 
 
     return (
-        <HStack w={"100%"} flexDir={{ base: "column", md: "row" }} p={"2rem"} flexWrap={"wrap"} justifyContent={"space-between"} align={"stretch"}>
+        <HStack w={"100%"} flexDir={{ base: "column", md: "row" }}  flexWrap={"wrap"} justifyContent={"space-between"} align={"stretch"}>
             {articles.map((article: articleProbs) => (
                 <ArticleCard key={article.id} article={article} />
             ))}
