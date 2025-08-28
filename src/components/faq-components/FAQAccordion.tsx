@@ -1,14 +1,13 @@
-import { Accordion, For, Span, Stack } from "@chakra-ui/react";
+import { Accordion, For, Span, Stack, HStack, Text } from "@chakra-ui/react";
 import { selectDirection } from "@/store/slices/languageSlice";
 import { useSelector } from "react-redux";
-
 
 const FaqAccordion = ({
   items,
 }: {
   items: { question: string; answer: string }[];
 }) => {
-    const direction = useSelector(selectDirection);
+  const direction = useSelector(selectDirection);
   return (
     <Stack
       gap="8"
@@ -18,25 +17,57 @@ const FaqAccordion = ({
       borderRadius="md"
       textAlign="start"
     >
-      <For each={["md"]} >
+      <For each={["md"]}>
         {(size) => (
-          <Stack gap="2" key={size} >
-            <Accordion.Root size={size} collapsible defaultValue={["b"]} > 
+          <Stack gap="2" key={size}>
+            <Accordion.Root size={size} collapsible defaultValue={["b"]}>
               {items.map((key, index) => (
                 <Accordion.Item key={index} value={key.question}>
-                  <Accordion.ItemTrigger w={"100%"} justifyContent={"space-between"} textAlign={"start"} bgColor="inherit">
-                    <Accordion.ItemIndicator display={direction === "rtl" ? "block" : "none"} />
+                  <Accordion.ItemTrigger
+                    w={"100%"}
+                    justifyContent={"space-between"}
+                    textAlign={"start"}
+                    bgColor="inherit"
+                  >
+                    <Accordion.ItemIndicator
+                      display={direction === "rtl" ? "block" : "none"}
+                    />
 
-                    <Span
-                    textAlign={direction === "rtl" ? "right" : "left"}
-                      flex="1"
-                      color="rgba(46, 54, 81, 1)"
-                      bgColor="inherit"
-                    >
-                      {key.question}
+                    <Span>
+                      <HStack
+                        flex="1"
+                        color="rgba(46, 54, 81, 1)"
+                        bgColor="inherit"
+                        textAlign={direction === "rtl" ? "right" : "left"}
+                      >
+                        <Text display={direction === "rtl" ? "block" : "none"}>
+                          {" "}
+                          {key.question}{" "}
+                        </Text>
+
+                        <Text
+                          fontSize={{
+                            base: "1rem",
+                            md: "1.25rem",
+                            lg: "1.5rem",
+                          }}
+                          bgGradient="linear-gradient(to right, rgba(152, 28, 32, 1), rgba(90, 119, 187, 1))"
+                          bgClip="text"
+                          color="transparent" // This is crucial!
+                          fontWeight="bold"
+                        >
+                          {index + 1}
+                        </Text>
+
+                        <Text display={direction === "rtl" ? "none" : "block"}>
+                          {" "}
+                          {key.question}{" "}
+                        </Text>
+                      </HStack>
                     </Span>
-                    <Accordion.ItemIndicator display={direction === "rtl" ? "none" : "block"} />
-
+                    <Accordion.ItemIndicator
+                      display={direction === "rtl" ? "none" : "block"}
+                    />
                   </Accordion.ItemTrigger>
                   <Accordion.ItemContent>
                     <Accordion.ItemBody
