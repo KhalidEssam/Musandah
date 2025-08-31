@@ -1,6 +1,9 @@
 import { VStack, Image, HStack, Circle, Text, Box } from "@chakra-ui/react";
 import { type PlanProbs } from "../../types/types";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
+
 type ServiceCardProps = {
   plan: PlanProbs;
 };
@@ -9,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 export const ServiceCard = ({ plan }: ServiceCardProps) => {
   const [isTouched, setIsTouched] = useState(false);
   const navigate = useNavigate();
+  const lang = useSelector(selectLanguage);
 
   return (
     <VStack
@@ -60,19 +64,19 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
           fontSize="lg"
           fontWeight="bold"
         >
-          التفاصيل والاشتراك
+          {lang === "en" ? "Choose Plan" : " التفاصيل والاشتراك"}
         </Box>
       </VStack>
 
       <Image src={plan.Image} alt={plan.title.en} w="6rem" h="8.5rem" />
-      <Text>{plan.title.ar}</Text>
+      <Text>{ lang === "en" ? plan.title.en : plan.title.ar}</Text>
 
       <VStack align="start">
         <VStack align="start">
           {plan.description.map((description, index) => (
             <HStack key={index}>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-              <Text fontWeight={300}>{description.ar}</Text>
+              <Text fontWeight={300}>{ lang === "en" ? description.en : description.ar}</Text>
             </HStack>
           ))}
         </VStack>
@@ -81,7 +85,7 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
           {plan.features.map((feature, index) => (
             <HStack key={index}>
               <Image w="1rem" src="servicescale.png" alt="servicescale" />
-              <Text fontWeight={300}>{feature.ar}</Text>
+              <Text fontWeight={300}>{ lang === "en" ? feature.en : feature.ar}</Text>
             </HStack>
           ))}
         </VStack>
@@ -91,7 +95,7 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
         <Text fontSize="2rem" color="rgba(152, 28, 32, 1)">
           {plan.price?.ar}{" "}
         </Text>{" "}
-        ر.س / سنة
+          {lang === "en" ? "SAR / year" : "ريال / سنويًا"}
       </HStack>
     </VStack>
   );

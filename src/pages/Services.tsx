@@ -256,7 +256,7 @@ export const Services = () => {
             fontSize={{ base: "1.25rem", lg: "1.75rem" }}
           >
             {" "}
-            اعرف حقوقك قبل أن تحتاجها{" "}
+            {lang === "ar" ? " اعرف حقوقك قبل أن تحتاجها" : "Know your rights before you need them"}
           </Text>
           <svg
             viewBox="0 0 371 19"
@@ -277,9 +277,13 @@ export const Services = () => {
           fontWeight={400}
           color={"rgba(95, 97, 102, 1)"}
           fontSize={{ base: "0.9rem", lg: "1.2rem" }}
-        >
+        >          {
+            lang === "ar" ? `
           في مساندة، صممنا باقات قانونية تغطي احتياجاتك المختلفة — من دعم أساسي
-          إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني
+          إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني.` :
+            `
+          At Musanadah, we have designed legal packages that cover your various needs — from basic support to comprehensive coverage. Choose the package that suits you and always be legally secure.`
+          }
         </Text>
         <ServicesList />
       </VStack>

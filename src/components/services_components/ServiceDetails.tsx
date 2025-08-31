@@ -1,17 +1,19 @@
 import { VStack, Text, Box, HStack, Image, Circle } from "@chakra-ui/react";
 import { plans } from "./ServicesList";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
 
 export const ServiceDetails = () => {
+  const lang = useSelector(selectLanguage);
+
   const filteredPlan = plans.find(
     (plan) => plan.ref === window.location.pathname.split("/")[2]
   );
-  useEffect(() => {});
 
   return (
     <VStack w={{ base: "90%", md: "80%"}} mt={"2rem"} mb={"2rem"} mr={"5%"} ml={"5%"} align={"start"}>
       <VStack>
-        <Text>{filteredPlan?.title?.ar}</Text>
+        <Text>{  lang === "en" ? filteredPlan?.title?.en : filteredPlan?.title?.ar}</Text>
         <svg
           viewBox="0 0 201 17"
           fill="none"
@@ -31,14 +33,14 @@ export const ServiceDetails = () => {
         color={"rgba(90, 119, 187, 1)"}
         fontSize={{ base: "1rem", lg: "1.2rem" }}
       >
-        ``{filteredPlan?.text?.ar}``
+        {lang === "en" ? filteredPlan?.text?.en : filteredPlan?.text?.ar}
       </Text>
       <Text
         fontWeight={400}
         color={"rgba(95, 97, 102, 1)"}
         fontSize={{ base: "1rem", lg: "1.2rem" }}
       >
-        {filteredPlan?.subtitle?.ar}
+        { lang === "en" ? filteredPlan?.subtitle?.en : filteredPlan?.subtitle?.ar}
       </Text>
 
       <VStack gap={"1rem"} justifyContent={"space-between"} w={"100%"}>
@@ -64,11 +66,11 @@ export const ServiceDetails = () => {
                 w={{ base: "100%", md: "50%" }}
                 bgColor={"rgba(247, 248, 252, 1)"}
               >
-                <Text color={"rgba(46, 54, 81, 1)"}>ما الذي تحصل عليه؟</Text>
+                <Text color={"rgba(46, 54, 81, 1)"}>{lang == "ar" ? "ما الذي تحصل عليه؟" : "What will you get?"}</Text>
                 {filteredPlan?.description.map((description, index) => (
                   <HStack key={index}>
                     <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{description.ar}</Text>
+                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{  lang === "en" ? description.en : description.ar}</Text>
                   </HStack>
                 ))}
               </VStack>
@@ -79,11 +81,11 @@ export const ServiceDetails = () => {
                 bgColor={"rgba(247, 248, 252, 1)"}
                 w={{ base: "100%", md: "50%" }}
               >
-            <Text color={"rgba(46, 54, 81, 1)"}> {filteredPlan?.title?.ar} تناسب:</Text>
+            <Text color={"rgba(46, 54, 81, 1)"}> { lang === "en" ? filteredPlan?.title?.en + " matches" : filteredPlan?.title?.ar + " تناسب "} :</Text>
                 {filteredPlan?.whofor.map((whofor, index) => (
                   <HStack key={index}>
                     <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{whofor.ar}</Text>
+                    <Text fontWeight={300} fontSize={{ base: "0.8rem", lg: "0.8rem" }}>{ lang === "en" ? whofor.en : whofor.ar}</Text>
                   </HStack>
                 ))}
               </VStack>
@@ -97,7 +99,7 @@ export const ServiceDetails = () => {
                       src="/servicescale.png"
                       alt="servicescale"
                     />
-                    <Text fontWeight={300}>{feature.ar}</Text>
+                    <Text fontWeight={300}>{ lang === "en" ? feature.en : feature.ar}</Text>
                   </HStack>
                 ))}
               </VStack>
@@ -108,7 +110,7 @@ export const ServiceDetails = () => {
             <Text color={"rgba(176, 13, 13, 1)"} paddingInlineEnd={4}>
               {filteredPlan?.price?.ar}
             </Text>{" "}
-            ر.س / سنة
+            {lang === "en" ? "SAR / year" : "ريال / سنويًا"}
           </Box>
           <Box
             as="button"
@@ -119,7 +121,7 @@ export const ServiceDetails = () => {
             onClick={() => window.open("https://portal.lsc-sa.net/", "_blank")}
           >
             {" "}
-            اشترك الان
+            {lang === "en" ? "Subscribe Now" : "اشترك الآن"}
           </Box>
         </VStack>
       </VStack>

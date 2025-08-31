@@ -21,7 +21,7 @@ export const plans: PlanProbs[] = [
     ref: "gold-plan",
     text:{
 ar:"أعلى درجات التغطية القانونية للأفراد والعائلات",
-en:""
+en:" The highest levels of legal coverage for individuals and families"
     },
     title: {
       en: "Gold Plan",
@@ -96,7 +96,7 @@ en:""
     ref: "silver-plan",
         text:{
 ar:"حل قانوني متوازن لمن يبحث عن احترافية بتكلفة مدروسة",
-en:""
+en:" A balanced legal solution for those seeking professionalism at a reasonable cost"
     },
     title: {
       en: "Silver Plan",
@@ -159,7 +159,7 @@ en:""
     ref: "bronze-plan",
         text:{
 ar:"حماية قانونية أساسية… لمن يحتاج دعمًا سريعًا وفعّالًا",
-en:""
+en:"core legal protection... for those needing quick and effective support"
     },
     title: {
       en: "Bronze Plan",
