@@ -7,10 +7,12 @@ import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export const About = () => {
-  const [expandedSection, setExpandedSection] = useState(null);
+type SectionName = 'musanadah' | 'vision' | 'mission' | 'values' | 'legalPartner';
 
-  const toggleSection = (sectionName) => {
+export const About = () => {
+  const [expandedSection, setExpandedSection] = useState<SectionName | null>(null);
+
+  const toggleSection = (sectionName: SectionName) => {
     setExpandedSection(expandedSection === sectionName ? null : sectionName);
   };
 
