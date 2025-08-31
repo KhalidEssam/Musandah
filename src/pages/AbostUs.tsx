@@ -8,8 +8,11 @@ import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export const About = () => {
-  const [clamped, setClamped] = useState(true);
-  // const t = useTranslation();
+  const [expandedSection, setExpandedSection] = useState(null);
+
+  const toggleSection = (sectionName) => {
+    setExpandedSection(expandedSection === sectionName ? null : sectionName);
+  };
 
   return (
     <VStack gap={8}>
@@ -80,7 +83,7 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
-                lineClamp={clamped ? 6 : undefined}
+                lineClamp={expandedSection === 'musanadah' ? undefined : 6}
                 whiteSpace="pre-line"
               >
                 {useTranslation("aboutPage.musanadah.text")}
@@ -88,9 +91,9 @@ export const About = () => {
               <Box
                 as="button"
                 bgColor={"transparent"}
-                onClick={() => setClamped(!clamped)}
+                onClick={() => toggleSection('musanadah')}
               >
-                {clamped ? useTranslation("shared.readmore") : useTranslation("shared.readless")}
+                {expandedSection === 'musanadah' ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
               </Box>
             </VStack>
           </VStack>
@@ -109,6 +112,7 @@ export const About = () => {
                 <Text fontSize={{ base: "1.5rem", lg: "2rem" }} color={"rgba(46, 54, 81, 1)"}>
                   {useTranslation("aboutPage.vision.title")}
                 </Text>
+
                 <svg viewBox="0 0 132 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.89078 10.812C23.4156 3.83051 79.1414 -5.26891 129.846 14.185"
@@ -124,10 +128,18 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
+                lineClamp={expandedSection === 'vision' ? undefined : 6}
                 whiteSpace="pre-line"
               >
                 {useTranslation("aboutPage.vision.text")}
               </Text>
+              <Box
+                as="button"
+                bgColor={"transparent"}
+                onClick={() => toggleSection('vision')}
+              >
+                {expandedSection === 'vision' ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
+              </Box>
             </VStack>
           </VStack>
           <VStack
@@ -173,10 +185,18 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
+                lineClamp={expandedSection === 'mission' ? undefined : 6}
                 whiteSpace="pre-line"
               >
                 {useTranslation("aboutPage.mission.text")}
               </Text>
+              <Box
+                as="button"
+                bgColor={"transparent"}
+                onClick={() => toggleSection('mission')}
+              >
+                {expandedSection === 'mission' ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
+              </Box>
             </VStack>
           </VStack>
         </HStack>
@@ -204,10 +224,18 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
+                lineClamp={expandedSection === 'values' ? undefined : 6}
                 whiteSpace="pre-line"
               >
                 {useTranslation("aboutPage.values.text")}
               </Text>
+              <Box
+                as="button"
+                bgColor={"transparent"}
+                onClick={() => toggleSection('values')}
+              >
+                {expandedSection === 'values' ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
+              </Box>
             </VStack>
           </VStack>
           <VStack
@@ -253,10 +281,18 @@ export const About = () => {
                 fontWeight={400}
                 fontSize={{ base: "1.2rem", lg: "1.5rem" }}
                 textAlign={"start"}
+                lineClamp={expandedSection === 'legalPartner' ? undefined : 6}
                 whiteSpace="pre-line"
               >
                 {useTranslation("aboutPage.legalPartner.text")}
               </Text>
+              <Box
+                as="button"
+                bgColor={"transparent"}
+                onClick={() => toggleSection('legalPartner')}
+              >
+                {expandedSection === 'legalPartner' ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
+              </Box>
             </VStack>
           </VStack>
         </HStack>
