@@ -37,7 +37,7 @@ export const FrequentQuestions = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="faq.jpg"
-        title="الاسئلة الشائعة"
+        title= {Lang === "en" ? "Frequent Questions" : "الأسئلة الشائعة"}
         subtitle=""
         description=""
       />

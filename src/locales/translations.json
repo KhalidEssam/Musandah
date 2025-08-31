@@ -1,3 +1,125 @@
 {
-    
+    "shared":{
+        "title":{"en":"",
+        "ar": ""},
+        "description":{"en":"",
+        "ar": ""},
+        "keywords":{"en":"",
+        "ar": ""},
+        "readmore":{"en":"Read More",
+        "ar": " قراءة المزيد"},
+        "readless":{"en":"Read Less",
+        "ar": " قراءة اقل"},
+        "moredetails":{"en":"show details",
+        "ar": "عرض التفاصيل"}
+    },
+    "home":{
+        "title":{"en":"Musanadah is here, step by step, in the way that works best for you.",
+        "ar": "خدمات قانونية شاملة… في متناول يدك، خطوة بخطوة"},
+        "title2":{
+            "en":"Consultations and legal representation from a licensed legal partner, delivered quickly, securely, and in the way that suits you.",
+            "ar": "استشارات وتمثيل قضائي من شريك قانوني مرخص، بسرعة، أمان، وبالطريقة التي تناسبك."
+        },
+        "subtitle":{"en":" Our story starts here",
+        "ar": "قصتنا تبدأ من هنا"},
+        "designedforyou":{
+            "title":{
+            "en":" Musandah was designed to be:",
+            "ar": "صُمّمت خدمات 'مساند' لتكون:"
+        },
+            "cards":[
+            {
+                "title":{
+                "en":"Clear",
+                "ar": "واضحة"
+            },
+                "description":{
+                "en":"Easy direct acessability and No confusion in the steps",
+                "ar": "لا تعقيد في الوصول ولا غموض في الخطوات"
+            }
+        },
+        {
+                "title":{
+                "en":"Flexible",
+                "ar": "مرنة"
+            },
+                "description":{
+                "en":"Delivered in the way that works best for you (text, phone, video, in person)",
+                "ar": "(تستقبلك في وقتك، وبالطريقة التي تناسبك (كتابية، هاتفية، مرئية، حضورية"       }
+        },
+        {
+                "title":{
+                "en":"Fair",
+                "ar": "عادلة"
+            },
+                "description":{
+                "en":"Fairly priced while it covers real needs",
+                "ar": "بأسعار مدروسة وباقات تغطي احتياجات حقيقية"
+            }
+            
+        },
+        {
+            "title":{
+             "ar":"آمنة",
+             "en":"Secure"  
+            },
+            "description":{
+                "ar":"خصوصيتك مصانة، وبياناتك محمية، واتصالاتك مشفّرة",
+                "en":"Your privacy is protected, your data is secure, and your connections are encrypted"
+            }
+        },
+        {
+            "title":{
+                "ar":"مهنية",
+                "en":"Professional"
+            },
+            "description":{"ar":"جميع الخدمات تُقدّم عبر شريك قانوني معتمد ومرخّص",
+            "en":"All the services are provided through a licensed legal partner"}
+        }
+        ]
+    },
+  "paragraph1": {
+    "en": "In a land that believes in justice, and under leadership that puts people first, the 'Legal Support Center' was born to be the bridge between individuals and their rights — making access to legal services simple, safe, and available to all. \n Today, in the Kingdom of Saudi Arabia, we are living an exceptional phase of transformation. The country is confidently advancing toward Vision 2030, which believes that justice is not a privilege, but a right for everyone living on this land — whether citizen or resident. \n This is where our story begins. \nAmid this digital transformation taking place across the Kingdom, the need emerged for modern legal solutions that keep up with the speed of reality, respect the diversity of society, and break the traditional barriers in front of legal service seekers. \nFrom here, the idea of the “Legal Support Center Platform” emerged, and it evolved into an innovative digital platform that provides comprehensive legal solutions through multiple channels, in direct cooperation with a licensed legal partner authorized to deliver and execute services.",
+    "ar": "في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.\nنحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.\nمن هنا، تبدأ قصتنا.\nوسط هذا التحول الرقمي الذي تشهده المملكة، نشأت الحاجة إلى حلول قانونية حديثة تتماشى مع سرعة الواقع، وتُراعي تنوّع المجتمع، وتكسر الحواجز التقليدية أمام طالبي الخدمة القانونية.\nمن هنا، جاءت \"منصة مركز المساندة القانوني\" كفكرة، ثم تحولت إلى منصة رقمية مبتكرة تُقدّم حلولًا قانونية شاملة عبر قنوات متعددة، وبتعاون مباشر مع شريك قانوني مرخّص يملك الصلاحية النظامية لتنفيذ وتقديم الخدمات."
+  },
+  "paragraph2":{
+    "ar": "ابدأ رحلتك القانونية بثقة… من هنا تبدأ مساندتك.\n\nسواء كنت تبحث عن استشارة قانونية، أو تمثيل في قضية، أو ببساطة تريد أن تشعر بالأمان القانوني على مدار العام — \"مساندة\" هنا، خطوة بخطوة، وبالطريقة التي تناسبك.\n\nكل ما تحتاجه… أصبح في متناولك.",
+    "en": "Start your legal journey with confidence… this is where your support begins.\n\nWhether you’re seeking legal advice, representation in a case, or simply want peace of mind year-round — Musanadah is here, step by step, in the way that works best for you.\n\nEverything you need… is now within your reach."
+  },
+  "whyus":{
+    "title":{
+      "ar":" لماذا 'مساندة'؟",
+      "en":"Why Us?"
+    },
+    "paragraph":{
+        "ar":"            جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب أكثر من اتصال.",
+        "en":"            We make the law closest, the language clear, the cost reasonable, and access doesn't require more than a phone call."},
+        "subtitle":{"ar":"تجربة رقمية متكاملة لا تتطلب الحضور","en":"A fully digital experience — no need for physical presence"},
+        "subtitle1":{"ar":"أسعار شفافة، وباقات تُغطي الاحتياج الحقيقي","en":"Transparent pricing, with packages that reflect real needs"},
+        "subtitle2":{"ar":"استشارات وتمثيل قضائي تحت إشراف شريك قانوني مرخّص","en":"Legal consultations and court representation under a licensed legal partner"},
+        "subtitle3":{"ar":"دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة","en":"Multilingual support — because justice shouldn’t be bound by language"},
+        "subtitle4":{"ar":"تكامل مباشر مع 'نفاذ'، و'ناجز'، و'أبشر' لتسهيل الإجراءات","en":"Direct integration with ''Nafath'', ''Najiz'', and ''Absher'' to simplify procedures"}
+  }
+
+    },
+    "about":{
+        "title":{"en":"",
+        "ar": ""}
+    },
+    "services":{
+        "title":{"en":"",
+        "ar": ""}
+    },
+    "knowledge-center":{
+        "title":{"en":"",
+        "ar": ""}
+    },
+    "faq":{
+        "title":{"en":"",
+        "ar": ""}
+    },
+    "contact":{
+        "title":{"en":"",
+        "ar": ""}
+    }
 }

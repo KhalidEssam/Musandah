@@ -6,6 +6,8 @@ import type { articleProbs } from "@/types/types";
 import { ProceduresList } from "@/components/knowledge_components/ProceduresList";
 import type { procedureProbs } from "@/types/types";
 import { Tab } from "@/components/knowledge_components/Tab";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
 
 export const procedures: procedureProbs[] = [
   {
@@ -219,6 +221,8 @@ export const articles: articleProbs[] = [
 
 export const KnowledgeCenter = () => {
   const navigate = useNavigate();
+  const lang = useSelector(selectLanguage);
+
 
   const filteredArticles = articles.filter((article) => article.featured);
   return (
@@ -226,7 +230,7 @@ export const KnowledgeCenter = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="About.jpg"
-        title="مركز المعرفة"
+        title= {lang === "en" ? "Knowledge Center" : "مركز المعرفة"}
         subtitle=""
         description=""
       />

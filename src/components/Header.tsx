@@ -10,11 +10,9 @@ import {
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Link as RouterLink } from 'react-router-dom';
 import { MdMenu } from 'react-icons/md';
-// import { InputWithKbd } from './Searchbar';
 import { Navbar } from './Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveLink } from '@/store/slices/navSlice';
-// import type { RootState } from '@/store';
 import { FaXmark } from 'react-icons/fa6';
 import { LangToggle } from './LangToggle';
 import { selectLanguage } from '../store/slices/languageSlice';
@@ -26,6 +24,7 @@ import { useEffect, useState } from "react";
 export const Header = () => {
     const headerRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
+  const lang = useSelector(selectLanguage) === 'en';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,8 +88,10 @@ export const Header = () => {
                         onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
                         bgColor={"#5A77BB"} color={"white"}
                         _hover={{ cursor: "pointer", transform: "scale(1.02)" }}
-                    >                        تسجيل الدخول
-                    </Box>
+                    >                 
+{
+    lang ? 'Login' : 'تسجيل الدخول'
+}                    </Box>
                 )}
 
                 {/* Mobile Hamburger */}

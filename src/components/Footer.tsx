@@ -63,7 +63,7 @@ export const Footer: FC = () => {
           </Text>
         </VStack>
         <Group attached w={{ base: "100%", md: "50%" }} maxW="xl" minH={"15rem"} >
-          <Input minH={"90px"} border={"none"} fontSize={"1.2rem"} borderRadius={"2xl"} bgColor={"rgba(255, 255, 255, 0.1)"} flex="1" placeholder="ادخل بريدك الالكتروني" />
+          <Input minH={"90px"} border={"none"} fontSize={"1.2rem"} borderRadius={"2xl"} bgColor={"rgba(255, 255, 255, 0.1)"} flex="1" placeholder={lang === "en" ? "Enter your email" : "ادخل بريدك الالكتروني"} />
           <Box as="button" p={6} borderRadius={"2xl"} minH={"90px"} bg="white" color={"rgba(90, 119, 187, 1)"} boxShadow={"0px 10px 10px 0px rgba(16, 137, 255, 0.1)"}>
             {lang ==="en" ? "Subscribe":"اشترك"}
           </Box>
@@ -203,8 +203,11 @@ export const Footer: FC = () => {
         display={"flex"}
         justifyContent={"space-around"}
         p={4}
-      >
-        © جميع الحقوق محفوظة لمركز المساندة القانونية
+      >{
+        lang === "en"
+          ? "© 2025 Mosanda. All rights reserved."
+          : "© 2025 مسندة. جميع الحقوق محفوظة."
+      }
       </HStack>
     </VStack>
   );

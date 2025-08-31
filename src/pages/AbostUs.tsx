@@ -3,8 +3,11 @@ import { Box, VStack, Text, HStack } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
 export const About = () => {
-  const [clamped, setClamped] = useState(true);
+  const [clamped, setClamped ] = useState(true);
+  const lang = useSelector(selectLanguage);
 
   const text = `في عالم تتغير فيه القوانين وتتسارع فيه الإجراءات، برز سؤال بسيط لكنه محوري: هل يتمكن الجميع — مواطنين ومقيمين — من الوصول الفعلي إلى الخدمات القانونية؟
 من هذا السؤال، بدأت رحلة "مساندة".
@@ -21,7 +24,7 @@ export const About = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="About.jpg"
-        title="من نحن"
+        title= {lang === "en" ? "About Us" : "من نحن"}
         subtitle=""
         description=""
       />

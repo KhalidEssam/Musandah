@@ -5,8 +5,10 @@ import { useState } from "react";
 import { VisitsStats } from "@/components/home_components/VisitsStats";
 import { ServicesList } from "@/components/services_components/ServicesList";
 import { setActiveLink } from "@/store/slices/navSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "@/hooks/useTranslation";
+import { selectLanguage } from "@/store/slices/languageSlice";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -14,19 +16,9 @@ export const Home = () => {
 
 
   const [expanded, setExpanded] = useState<string | null>(null);
-  const text = `في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت "منصة مساندة القانونية" لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.
-    نحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.
-    من هنا، تبدأ قصتنا.
-    وسط هذا التحول الرقمي الذي تشهده المملكة، نشأت الحاجة إلى حلول قانونية حديثة تتماشى مع سرعة الواقع، وتُراعي تنوّع المجتمع، وتكسر الحواجز التقليدية أمام طالبي الخدمة القانونية.
-    من هنا، جاءت "منصة مركز المساندة القانوني" كفكرة، ثم تحولت إلى منصة رقمية مبتكرة تُقدّم حلولًا قانونية شاملة عبر قنوات متعددة، وبتعاون مباشر مع شريك قانوني مرخّص يملك الصلاحية النظامية لتنفيذ وتقديم الخدمات.`;
-
-  const text2 = `
-              ابدأ رحلتك القانونية بثقة… من هنا تبدأ مساندتك
-              
-سواء كنت تبحث عن استشارة قانونية، أو تمثيل في قضية، أو ببساطة تريد أن تشعر بالأمان القانوني على مدار العام — "مساندة" هنا، خطوة بخطوة، وبالطريقة التي تناسبك.
-
-كل ما تحتاجه… أصبح في متناولك.
-`;
+  const text = useTranslation("home.paragraph1");
+  const text2 = useTranslation("home.paragraph2");
+  const lang = useSelector(selectLanguage);
   return (
     <>
       <Box
@@ -69,11 +61,10 @@ export const Home = () => {
           gap={"1.5rem"}
         >
           <Text fontSize={{ base: "1.5rem", md: "2rem" }} fontWeight={500}>
-            خدمات قانونية شاملة… في متناول يدك، خطوة بخطوة
+            {useTranslation("home.title")}
           </Text>
           <Text fontSize={{ base: "1rem", md: "1.25rem" }} fontWeight={400}>
-            استشارات وتمثيل قضائي من شريك قانوني مرخص، بسرعة، أمان، وبالطريقة
-            التي تناسبك.
+            {useTranslation("home.title2")}
           </Text>
           <Box
             as="button"
@@ -85,9 +76,10 @@ export const Home = () => {
             bgColor={"rgba(90, 119, 187, 1)"}
             onClick={() => {
               dispatch(setActiveLink("/services"));
-              navigate("/services");  }}
+              navigate("/services");
+            }}
           >
-            عرض التفاصيل
+            {useTranslation("shared.moredetails")}
           </Box>
         </VStack>
       </Box>
@@ -104,7 +96,9 @@ export const Home = () => {
             color="rgba(46, 54, 81, 1)"
             fontSize={{ base: "1.5rem", md: "1.75rem" }}
           >
-            قصتنا تبدأ من هنا
+            {
+              useTranslation("home.subtitle")
+            }
           </Text>
 
           <Box w="100%">
@@ -140,11 +134,13 @@ export const Home = () => {
           mt={2}
           onClick={() => setExpanded(expanded === "text1" ? null : "text1")}
         >
-          {expanded === "text1" ? "إقرأ أقل" : "إقرأ المزيد"}
+          {expanded === "text1" ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
         </Box>
         <Box gap={"3rem"}>
           <Text pb={8} color={"rgba(90, 119, 187, 1)"}>
-            صُمّمت خدمات "مساندة" لتكون:
+            {
+            useTranslation("home.designedforyou.title")
+            }{" "}
           </Text>
 
           <HStack
@@ -160,56 +156,55 @@ export const Home = () => {
               <HStack>
                 <Image src="hamar.png" w={"3rem"} />
                 <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                  واضحة
+                  {useTranslation("home.designedforyou.cards.0.title")}
                 </Text>
               </HStack>
               <Text fontWeight={400} color={"rgba(95, 97, 102, 1)"}>
-                لا تعقيد في الوصول ولا غموض في الخطوات
+                {useTranslation("home.designedforyou.cards.0.description")}
               </Text>
             </VStack>
             <VStack>
               <HStack>
                 <Image src="hamar.png" w={"3rem"} />
                 <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                  مرنة
+                  {useTranslation("home.designedforyou.cards.1.title")}
                 </Text>
               </HStack>
               <Text fontWeight={400} color={"rgba(95, 97, 102, 1)"}>
-                تستقبلك في وقتك، وبالطريقة التي تناسبك (كتابية، هاتفية، مرئية،
-                حضورية)
+                {useTranslation("home.designedforyou.cards.1.description")}
               </Text>
             </VStack>
             <VStack>
               <HStack>
                 <Image src="hamar.png" w={"3rem"} />
                 <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                  عادلة
+                  {useTranslation("home.designedforyou.cards.2.title")}
                 </Text>
               </HStack>
               <Text fontWeight={400} color={"rgba(95, 97, 102, 1)"}>
-                بأسعار مدروسة وباقات تغطي احتياجات حقيقية
+                {useTranslation("home.designedforyou.cards.2.description")}
               </Text>
             </VStack>
             <VStack>
               <HStack>
                 <Image src="hamar.png" w={"3rem"} />
                 <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                  آمنة
+                  {useTranslation("home.designedforyou.cards.3.title")}
                 </Text>
               </HStack>
               <Text fontWeight={400} color={"rgba(95, 97, 102, 1)"}>
-                خصوصيتك مصانة، وبياناتك محمية، واتصالاتك مشفّرة
+                {useTranslation("home.designedforyou.cards.3.description")}
               </Text>
             </VStack>
             <VStack>
               <HStack>
                 <Image src="hamar.png" w={"3rem"} />
                 <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                  مهنية
+                  {useTranslation("home.designedforyou.cards.4.title")}
                 </Text>
               </HStack>
               <Text fontWeight={400} color={"rgba(95, 97, 102, 1)"}>
-                جميع الخدمات تُقدّم عبر شريك قانوني معتمد ومرخّص
+                {useTranslation("home.designedforyou.cards.4.description")}
               </Text>
             </VStack>
           </HStack>
@@ -227,13 +222,14 @@ export const Home = () => {
         justifyContent={"space-around"}
       >
         <VStack align={"start"} p={{ base: "1rem", md: "4rem", lg: "8rem" }} gap={"2rem"}>
-          <VStack w={{ base: "90%", md: "50%"}} >
+          <VStack w={{ base: "90%", md: "50%" }} >
             <Text
               fontWeight={500}
               fontSize={{ base: "1.5rem", md: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}
             >
-              لماذا مساندة
+{
+              useTranslation("home.whyus.title")}
             </Text>
             <svg
               width="189"
@@ -257,38 +253,37 @@ export const Home = () => {
             fontSize={"1.2rem"}
             color={"#5F6166"}
           >
-            جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب
-            أكثر من اتصال.
+            { useTranslation("home.whyus.paragraph") }
           </Text>
-          <VStack textAlign={"start"} align={"start"}  gap={"1rem"}>
+          <VStack textAlign={"start"} align={"start"} gap={"1rem"}>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why1.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                تجربة رقمية متكاملة لا تتطلب الحضور
+{                useTranslation("home.whyus.subtitle")}
               </Text>
             </HStack>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why2.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                أسعار شفافة، وباقات تُغطي الاحتياج الحقيقي
+                {useTranslation("home.whyus.subtitle1")}
               </Text>
             </HStack>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why3.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                استشارات وتمثيل قضائي تحت إشراف شريك قانوني مرخّص
+                {useTranslation("home.whyus.subtitle2")}
               </Text>
             </HStack>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why4.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة
+                {useTranslation("home.whyus.subtitle3")}
               </Text>
             </HStack>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why5.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-                تكامل مباشر مع "نفاذ"، و"ناجز"، و"أبشر" لتسهيل الإجراءات
+                {useTranslation("home.whyus.subtitle4")}
               </Text>
             </HStack>
           </VStack>
@@ -381,8 +376,12 @@ export const Home = () => {
           gap={"1.5rem"}
         >
           <Text fontSize={{ base: "1.4rem", md: "1.75rem" }} fontWeight={500}>
+            {
+              lang === "ar" ? `
             مساندة" ليست مجرد منصة…بل رفيقك القانوني الرقمي، الذي صُمّم ليكون في
-            صفك.{" "}
+            صفك.` : `
+            Musanadah is not just a platform... but your digital legal companion, designed to be on your side.`
+            }
           </Text>
           <Text
             fontSize={{ base: "1rem", md: "1.25rem" }}
@@ -399,7 +398,7 @@ export const Home = () => {
             mt={2}
             onClick={() => setExpanded(expanded === "text2" ? null : "text2")}
           >
-            {expanded === "text2" ? "إقرأ أقل" : "إقرأ المزيد"}
+            {expanded === "text2" ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
           </Box>
           <Box
             as="button"
@@ -426,11 +425,11 @@ export const Home = () => {
         pb={"4rem"}
 
         align={"start"}
-        
+
       >
-         <VStack             paddingInlineStart={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
-         paddingInlineEnd={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
- align={"start"} gap={"2rem"}>
+        <VStack paddingInlineStart={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
+          paddingInlineEnd={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
+          align={"start"} gap={"2rem"}>
           <VStack p={"2rem"} gap={"1rem"}>
             <Text
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
@@ -469,7 +468,7 @@ export const Home = () => {
             وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
           </Text>
         </VStack>
-        <VStack w={"90%"}  align={"center"}>
+        <VStack w={"90%"} align={"center"}>
           <Box
             boxAlign={"center"}
             as="button"
@@ -487,7 +486,7 @@ export const Home = () => {
             استكشف مركز المعرفة
           </Box>
         </VStack>
-      </VStack> 
+      </VStack>
 
       <ContactSection />
     </>

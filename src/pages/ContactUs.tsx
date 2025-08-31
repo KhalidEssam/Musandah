@@ -15,7 +15,7 @@ export const Contact = () => {
       <ContactBanner
         bgPos="0% 37%"
         img="contact.png"
-        title="تواصل معنا"
+        title= {lang === "en" ? "Contact Us" : "تواصل معنا"}
         subtitle=""
         description=""
       />

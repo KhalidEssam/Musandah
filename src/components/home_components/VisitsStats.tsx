@@ -1,6 +1,9 @@
+import { selectLanguage } from "@/store/slices/languageSlice";
 import { HStack, VStack, Text, Box } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 
 export const VisitsStats = () => {
+  const lang = useSelector(selectLanguage);
   return (
     <HStack
       flexDir={{ base: "column", md: "row" }}
@@ -32,7 +35,7 @@ export const VisitsStats = () => {
 
         <VStack fontSize={{ base: "1.1rem", lg: "1.4rem" }}>
           <Text>+150</Text>
-          <Text>عدد الزوار</Text>
+          <Text>{lang === "en" ? "Number of Visits" : " عدد الزيارات"}</Text>
         </VStack>
       </HStack>
       <HStack>
@@ -52,13 +55,16 @@ export const VisitsStats = () => {
 
         <VStack fontSize={{ base: "1.1rem", lg: "1.4rem" }}>
           <Text>+80</Text>
-          <Text>عدد المشتركين</Text>
+          <Text>
+            {lang === "en" ? "Subscribed Users" : " عدد المستخدمين المشتركين"}
+          </Text>
         </VStack>
       </HStack>
       <VStack mb={{ base: "5%", md: "0" }} maxW={{ base: "90%", md: "50%" }}>
         <Text fontSize={{ base: "1rem", lg: "1.3rem" }}>
-          انضم الآن إلى مساندة، وكن على دراية بحقوقك، مستعدًا للدفاع عنها، في
-          الوقت والمكان المناسبين.
+          {lang === "en"
+            ? "Join Musanadah now, be aware of your rights, ready to defend them, at the right time and place."
+            : "          انضم الآن إلى مساندة، وكن على دراية بحقوقك، مستعدًا للدفاع عنها، في الوقت والمكان المناسبين." }
         </Text>
         <Box
           as="button"
@@ -67,7 +73,7 @@ export const VisitsStats = () => {
           bgColor={"rgba(90, 119, 187, 1)"}
           onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
         >
-          انضم الان
+{          lang === "en" ? "Join now" : "انضم الان" }
         </Box>
       </VStack>
     </HStack>

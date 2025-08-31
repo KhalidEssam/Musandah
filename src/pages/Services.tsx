@@ -2,10 +2,15 @@ import { ContactBanner } from "@/components/contact_components/ContactBanner";
 import { Box, VStack, Text, HStack, Circle } from "@chakra-ui/react";
 import { ServicesList } from "@/components/services_components/ServicesList";
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
+
 export const Services = () => {
   const [clamping, setClamping] = useState(true);
   const [isClamped, setIsClamped] = useState(true);
   const textRef = useRef<HTMLDivElement>(null);
+  const lang = useSelector(selectLanguage);
+
   useEffect(() => {
     if (textRef.current) {
       const el = textRef.current;
@@ -21,7 +26,7 @@ export const Services = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="Services.jpg"
-        title="خدماتنا"
+        title= {lang === "en" ? "Our Services" : "خدماتنا"}
         subtitle=""
         description=""
       />
