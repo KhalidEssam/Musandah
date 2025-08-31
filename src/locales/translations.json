@@ -102,10 +102,68 @@
   }
 
     },
-    "about":{
-        "title":{"en":"",
-        "ar": ""}
+    
+  "aboutPage": {
+    "bannerTitle": {
+      "ar": "من نحن",
+      "en": "About Us"
     },
+    "headline": {
+      "ar": "تجربة قانونية مختلفة… تبدأ من فهمك، وتنتهي براحتك",
+      "en": "A different legal experience… starting with your understanding, ending with your peace of mind"
+    },
+    "musanadah": {
+      "title": {
+        "ar": "مساندة",
+        "en": "Musanadah"
+      },
+      "text": {
+        "ar": "في عالم تتغير فيه القوانين وتتسارع فيه الإجراءات، برز سؤال بسيط لكنه محوري:\nهل يتمكن الجميع — مواطنين ومقيمين — من الوصول الفعلي إلى الخدمات القانونية؟\nمن هذا السؤال، بدأت رحلة \"مساندة\".\nخضنا بحثًا ميدانيًا، واستطلعنا آراء الناس، وواجهنا الحقائق:\n· صعوبة الوصول للمعلومة القانونية.\n· تردد وخوف من التعامل مع الجهات الرسمية.\n· عوائق اللغة، التكاليف، والوقت.\n· وغياب الثقة أو الفهم الكامل للإجراءات القانونية.\nمن هنا، وُلدت \"مساندة\" — منصة رقمية قانونية وُضعت بعناية، لتكون حلًا واقعيًا ومتاحًا للجميع، بالشراكة مع جهة قانونية مرخصة.\nنحن لا نقدّم مجرد استشارات، بل نوفر تجربة قانونية شاملة تقوم على:\nالوضوح، الشفافية، الخصوصية، وسهولة الوصول.\n\"مساندة\" ليست بديلًا عن القانون، بل وسيلتك لفهمه، التعامل معه، والنجاح من خلاله — أينما كنت، وباللغة التي تفهمها، وبتكلفة تستطيع تحملها.",
+        "en": "In a world where laws are changing and procedures are accelerating, a simple yet fundamental question arose:\nCan everyone — citizens and residents — truly access legal services?\nFrom this question, the journey of \"Musanadah\" began.\nWe conducted field research, gathered public opinions, and faced the realities:\n· Difficulty in accessing legal information.\n· Hesitation and fear in dealing with official authorities.\n· Barriers of language, costs, and time.\n· Lack of trust or full understanding of legal procedures.\nFrom here, \"Musanadah\" was born — a carefully designed digital legal platform to provide realistic and accessible solutions for all, in partnership with a licensed legal entity.\nWe don’t just provide consultations, we deliver a comprehensive legal experience built on:\nClarity, transparency, privacy, and accessibility.\n\"Musanadah\" is not a substitute for the law, but your means to understand it, engage with it, and succeed through it — wherever you are, in the language you understand, and at a cost you can afford."
+      }
+    },
+    "vision": {
+      "title": {
+        "ar": "رؤيتنا",
+        "en": "Our Vision"
+      },
+      "text": {
+        "ar": "أن نصنع تحولًا جذريًا في مفهوم الوصول إلى العدالة داخل المملكة، من خلال بناء تجربة قانونية رقمية شاملة تُراعي احتياجات الجميع — مواطنين، مقيمين، وزائرين — وتكسر الحواجز التقليدية المتمثلة في اللغة، أو التكاليف، أو محدودية الوصول.\nرؤيتنا أن تتحول الخدمة القانونية من عبء إلى طمأنينة… ومن إجراء معقد إلى تجربة ذكية، سريعة، ومنصفة، تصل للجميع دون تمييز، وفي أي وقت.",
+        "en": "To create a transformative shift in how justice is accessed across the Kingdom — by building a fully digital legal experience that considers the needs of everyone: citizens, residents, and visitors.\nWe aim to break down traditional barriers like language, cost, and limited access, turning legal services from a burden into peace of mind — and from a complicated process into a smart, fast, and fair experience that reaches everyone, without discrimination, at any time."
+      }
+    },
+    "mission": {
+      "title": {
+        "ar": "رسالتنا",
+        "en": "Our Mission"
+      },
+      "text": {
+        "ar": "في مركز المساندة، نؤمن أن الوصول إلى الحق لا يجب أن يكون صعبًا… وأن الفهم القانوني ليس حكرًا على المختصين.\nلذلك، صممنا منصتنا لتكون بوابة ذكية لكل من يبحث عن الأمان القانوني:\n\nبأسلوب بسيط وواضح يفهمه الجميع.\n\nوبأسعار معروفة ومعلنة دون مفاجآت.\n\nوبشراكة مع جهة قانونية معتمدة تضمن الموثوقية.\n\nنحن هنا لنجعل كل فرد يشعر أن لديه من يحمي حقوقه، يرشده، ويمثّله بثقة.",
+        "en": "At Legal Support Center, we believe that access to justice shouldn’t be difficult — and that legal understanding is not exclusive to specialists.\nThat’s why we’ve designed our platform to be a smart gateway for anyone seeking legal security:\n\nWith a simple, clear approach everyone can understand.\n\nWith transparent, upfront pricing — no surprises.\n\nIn partnership with a licensed legal entity that ensures trust and reliability.\n\nWe’re here to make every individual feel protected, guided, and confidently represented."
+      }
+    },
+    "values": {
+      "title": {
+        "ar": "قيمنا",
+        "en": "Our Values"
+      },
+      "text": {
+        "ar": "نؤمن أن العمل في المجال القانوني لا يكتمل إلا بمنظومة قيم واضحة، نعيشها في كل خدمة نقدمها:\n\nالعدالة: نُعامل الجميع بإنصاف، دون تمييز في الجنس، الجنسية، أو اللغة.\n\nالخصوصية: جميع بياناتك، استفساراتك، ومعلوماتك محفوظة بسرية تامة في بيئة آمنة.\n\nالشفافية: لا رسوم خفية، لا شروط مبهمة — كل شيء واضح ومفهوم.\n\nالوصول: أينما كنت، ومتى ما احتجت، تجدنا معك… عبر تطبيق أو موقع، وباللغة التي تناسبك.\n\nالاحترافية: نعمل فقط مع جهات قانونية مرخصة، ونعد بما نستطيع تقديمه بكفاءة واستحقاق.",
+        "en": "We believe that true legal service is built on a foundation of clear, lived values — reflected in everything we deliver:\n\nJustice: We treat everyone fairly, without discrimination based on gender, nationality, or language.\n\nPrivacy: Your data, inquiries, and personal information are handled with absolute confidentiality in a secure environment.\n\nTransparency: No hidden fees, no vague terms — everything is clear and straightforward.\n\nAccessibility: Wherever you are, whenever you need us — we’re with you… via app, website, and in your preferred language.\n\nProfessionalism: We work only with licensed legal partners, and we deliver on what we promise — with skill and integrity."
+      }
+    },
+    "legalPartner": {
+      "title": {
+        "ar": "شريكنا القانوني",
+        "en": "Our Legal Partner"
+      },
+      "text": {
+        "ar": "مصداقيتنا تنطلق من قوة شراكاتنا، ونحن فخورون بأن خدماتنا القانونية تُقدّم بالشراكة مع شركة تكامل للمحاماة والاستشارات القانونية، وهي شركة مرخصة رسميًا في المملكة، وتضم فريقًا متميزًا من المحامين، والمستشارين القانونيين، أصحاب خبرة واسعة في المجالات الجنائية، العمالية، التجارية، الأسرية، والعديد من التخصصات الأخرى.\n\nهذه الشراكة تمثل العمود الفقري لكل خدمة قانونية نقدمها، وتضمن للعملاء الجودة، الموثوقية، والامتثال الكامل للأنظمة المعمول بها.",
+        "en": "Our credibility stems from the strength of our partnerships. We are proud to deliver our legal services in collaboration with Takamul Legal Consultancy, a law firm officially licensed in Saudi Arabia and home to a distinguished team of lawyers and legal consultants with deep expertise across criminal, labor, commercial, family, and various other legal fields.\n\nThis partnership forms the backbone of every legal service we provide — ensuring our clients receive solutions that are high-quality, reliable, and fully compliant with the laws and regulations in force."
+      }
+    }
+  }
+,
     "services":{
         "title":{"en":"",
         "ar": ""}
