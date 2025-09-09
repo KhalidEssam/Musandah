@@ -415,7 +415,7 @@ export const Home = () => {
             h={"4rem"}
             bgColor={"rgba(90, 119, 187, 1)"}
           >
-            ابدأ الآن{" "}
+            {lang === "ar" ? " ابدأ الآن" : "Start Now"}
           </Box>
         </VStack>
       </Box>
