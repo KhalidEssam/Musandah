@@ -8,22 +8,22 @@ import type { procedureProbs } from "@/types/types";
 import { Tab } from "@/components/knowledge_components/Tab";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "@/store/slices/languageSlice";
-
+import { useTranslation } from "@/hooks/useTranslation";
 export const procedures: procedureProbs[] = [
   {
     id: 1,
     title: {
-      en: "",
+      en: "Filing a Labor Lawsuit Online",
       ar: "رفع دعوى عمالية إلكترونيًا",
     },
     bgColor: "rgba(247, 234, 230, 1)",
     description: {
-      en: "",
-      ar: "",
+      en: "Step-by-step guidance for submitting a labor lawsuit electronically through official platforms, from complaint filing to case registration.",
+      ar: "إرشادات خطوة بخطوة لتقديم دعوى عمالية عبر المنصات الرسمية، من تقديم الشكوى وحتى قيد الدعوى.",
     },
     subtitle: {
       ar: "سابتايتل: خطوات واضحة من الشكوى حتى قيد الدعوى عبر المنصات الرسمية.",
-      en: "",
+      en: "Clear steps from complaint submission to case registration through official platforms.",
     },
     featured: true,
     date: "",
@@ -32,16 +32,16 @@ export const procedures: procedureProbs[] = [
   {
     id: 2,
     title: {
-      en: "",
+      en: "Submitting a Complaint to a Government Authority",
       ar: "تقديم شكوى لجهة حكومية",
     },
     bgColor: "rgba(237, 241, 255, 1)",
     description: {
-      en: "",
-      ar: "",
+      en: "Guidance on drafting, submitting, and following up on official complaints using the appropriate government platform.",
+      ar: "إرشادات لصياغة وتقديم ومتابعة الشكاوى الرسمية عبر المنصة الحكومية المناسبة.",
     },
     subtitle: {
-      en: "",
+      en: "Drafting the complaint, submitting it through the proper platform, and tracking it using a reference number.",
       ar: "صياغة الشكوى، التقديم عبر المنصة المناسبة، والمتابعة برقم مرجعي.",
     },
     featured: true,
@@ -51,17 +51,17 @@ export const procedures: procedureProbs[] = [
   {
     id: 3,
     title: {
-      en: "",
+      en: "Issuing an Electronic Power of Attorney",
       ar: "إصدار توكيل إلكتروني",
     },
     bgColor: "rgba(231, 242, 235, 1)",
     description: {
-      en: "",
-      ar: "",
+      en: "Simplified steps to issue or cancel a power of attorney online via the Ministry of Justice portal.",
+      ar: "خطوات مبسطة لإصدار أو إلغاء التوكيل إلكترونيًا عبر بوابة وزارة العدل.",
     },
     subtitle: {
       ar: "إصدار أو إلغاء التوكيل بسهولة عبر بوابة العدل بخطوات مبسطة.",
-      en: "",
+      en: "Easily issue or cancel a power of attorney online through the Ministry of Justice portal.",
     },
     featured: true,
     date: "",
@@ -70,16 +70,16 @@ export const procedures: procedureProbs[] = [
   {
     id: 4,
     title: {
-      en: "",
+      en: "Electronic Lease Contract",
       ar: "عقد إيجار إلكتروني",
     },
     bgColor: "rgba(242, 233, 246, 1)",
     description: {
-      en: "",
-      ar: "",
+      en: "Register your residential lease contract through the official platform to safeguard the rights of both parties.",
+      ar: "تسجيل عقد الإيجار السكني عبر المنصة الرسمية لحماية حقوق الطرفين.",
     },
     subtitle: {
-      en: "",
+      en: "Registering the residential lease contract through the official platform to protect the rights of both parties.",
       ar: "تسجيل العقد السكني عبر المنصة الرسمية لحماية حقوق الطرفين.",
     },
     featured: true,
@@ -87,6 +87,7 @@ export const procedures: procedureProbs[] = [
     ref: "",
   },
 ];
+
 
 export const articles: articleProbs[] = [
   {
@@ -149,7 +150,7 @@ export const articles: articleProbs[] = [
     featured: true,
     subtitle: {
       ar: "تعرّف على الكلمات الأساسية التي تفتح لك فهم أوسع لعالم القانون وتختصر عليك الطريق.",
-      en: "",
+      en: " Learn the key terms that open up a broader understanding of the legal world and shorten your path.",
     },
 
     image: "./article2.jpg",
@@ -165,7 +166,7 @@ export const articles: articleProbs[] = [
     featured: true,
     subtitle: {
       ar: "اعرف متى يكفيك استشارة سريعة، ومتى تحتاج محامٍ يمثلّك أمام المحكمة.",
-      en: "",
+      en: " Learn when you need a quick consultation, and when you need a lawyer to represent you before the court.",
     },
     description: {
       en: "A Power of Attorney (POA) allows you to delegate legal authority to someone else. Learn when it's necessary, the types of POA, and how to issue one electronically according to Saudi regulations.",
@@ -230,7 +231,7 @@ export const KnowledgeCenter = () => {
       <ContactBanner
         bgPos="0% /27%"
         img="About.jpg"
-        title= {lang === "en" ? "Knowledge Center" : "مركز المعرفة"}
+        title={lang === "en" ? "Knowledge Center" : "مركز المعرفة"}
         subtitle=""
         description=""
       />
@@ -240,7 +241,7 @@ export const KnowledgeCenter = () => {
         fontSize={{ base: "1.25rem", lg: "1.75rem" }}
         color={"rgba(46, 54, 81, 1)"}
       >
-        في "مساندة"، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته.
+        {useTranslation("knowledge-center.subtitle")}
       </Text>
       <VStack align={"start"} w={"100%"} p={"4rem"}>
         <HStack
@@ -254,7 +255,7 @@ export const KnowledgeCenter = () => {
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}
             >
-              مقالات قانونية مبسطة
+              {useTranslation("knowledge-center.title")}
             </Text>
             <svg
               viewBox="0 0 223 17"
@@ -281,7 +282,7 @@ export const KnowledgeCenter = () => {
             fontSize={{ base: "1.25rem", lg: "1.75rem" }}
             onClick={() => navigate("/articles")}
           >
-            عرض الكل
+            {useTranslation("knowledge-center.showall")}
           </Box>
         </HStack>
         <Text
@@ -289,8 +290,8 @@ export const KnowledgeCenter = () => {
           fontWeight={400}
           fontSize={{ base: "1rem", lg: "1.1rem" }}
         >
-          مقالات قصيرة وواضحة تشرح لك المفاهيم القانونية بلغة سهلة وبأمثلة من
-          الحياة اليومية.
+          {useTranslation("knowledge-center.subtitle1")}
+
         </Text>
         {/* <HStack> */}
 
@@ -334,13 +335,10 @@ export const KnowledgeCenter = () => {
           gap={"1.5rem"}
         >
           <Text fontSize={{ base: "1.2rem", md: "2rem" }} fontWeight={500}>
-            الوعي ليس رفاهية… بل حماية حقيقية تبدأ من الفهم, تابع مركز المعرفة،
-            وكن دائمًا في الجانب الآمن من المعلومة.{" "}
+            {useTranslation("knowledge-center.title2")}
           </Text>
           <Text fontSize={{ base: "1rem", md: "1.25rem" }} fontWeight={400}>
-            أن تعرف حقوقك قبل أن تحتاجها. وأن تتخذ قراراتك بثقة، لا بخوف أو
-            تردد. من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية — بلغة
-            مبسطة، وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.{" "}
+            {useTranslation("knowledge-center.subtitle2")}
           </Text>
         </VStack>
       </VStack>
@@ -359,8 +357,7 @@ export const KnowledgeCenter = () => {
             fontSize={{ base: "1.5rem", lg: "2rem" }}
             fontWeight={600}
           >
-            {" "}
-            إجراءات وخطوات{" "}
+            {lang === "en" ? "Legal procedures" : "  إجراءات وخطوات"}
           </Text>
           <svg
             viewBox="0 0 228 17"
@@ -381,9 +378,7 @@ export const KnowledgeCenter = () => {
           fontSize={{ base: "1rem", lg: "1.4rem" }}
           fontWeight={400}
         >
-          {" "}
-          أدلة عملية تشرح لك كيف تُنجز معاملاتك القانونية خطوة بخطوة — من
-          التقديم الإلكتروني وحتى المتابعة.
+          {lang === "ar" ? " أدلة عملية تشرح لك كيف تُنجز معاملاتك القانونية خطوة بخطوة — من التقديم الإلكتروني وحتى المتابعة." : " Practical guides that explain how to complete your legal transactions step by step — from electronic submission to follow-up."}
         </Text>
 
         <ProceduresList procedures={procedures} />
@@ -401,7 +396,7 @@ export const KnowledgeCenter = () => {
             fontSize={{ base: "1.5rem", lg: "2rem" }}
             fontWeight={600}
           >
-            أحدث القوانين والتشريعات
+            {lang === "en" ? "Lates laws and regulations" : " أحدث القوانين والتشريعات"}
           </Text>
           <svg
             viewBox="0 0 228 17"
@@ -422,17 +417,15 @@ export const KnowledgeCenter = () => {
           fontSize={{ base: "1rem", lg: "1.4rem" }}
           fontWeight={400}
         >
-          {" "}
-          أدلة عملية تشرح لك كيف تُنجز معاملاتك القانونية خطوة بخطوة — من
-          التقديم الإلكتروني وحتى المتابعة.{" "}
+          {lang === "ar" ? " أدلة عملية تشرح لك كيف تُنجز معاملاتك القانونية خطوة بخطوة — من التقديم الإلكتروني وحتى المتابعة." : " Practical guides that explain how to complete your legal transactions step by step — from electronic submission to follow-up."}
         </Text>
-        <VStack  w={"100%"} justifyContent={"space-around"}  >
+        <VStack w={"100%"} justifyContent={"space-around"}  >
           <Tab
             links={[
               { en: "All", ar: "الكل" },
               { en: "Personal", ar: "الاحوال الشخصية " },
-              { en: "Contacts", ar: "العقود" }, 
-              {en:"Labor",ar:"العمل"}
+              { en: "Contacts", ar: "العقود" },
+              { en: "Labor", ar: "العمل" }
             ]}
             contents={[
               [
@@ -443,7 +436,7 @@ export const KnowledgeCenter = () => {
                     en: " Multilingual support — because justice shouldn’t be bound by language",
                     ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
                   },
-                  date:"16 مارس 2025",
+                  date: "16 مارس 2025",
                 },
                 {
                   id: 8,
@@ -452,7 +445,7 @@ export const KnowledgeCenter = () => {
                     en: " Multilingual support — because justice shouldn’t be bound by language",
                     ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
                   },
-                  date:"16 مارس 2025",
+                  date: "16 مارس 2025",
                 },
                 {
                   id: 9,
@@ -461,66 +454,7 @@ export const KnowledgeCenter = () => {
                     en: " Multilingual support — because justice shouldn’t be bound by language",
                     ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
                   },
-                  date:"16 مارس 2025",
-                },
-              ],
-              [
-                {
-                  id: 6,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
-                },
-                {
-                  id: 8,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
-                },
-                {
-                  id: 9,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
-                },
-              ],
-              
-              [
-                {
-                  id: 6,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
-                },
-                {
-                  id: 8,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
-                },
-                {
-                  id: 9,
-                  title: { en: "Support", ar: "قوانين الزواج 2025" },
-                  description: {
-                    en: " Multilingual support — because justice shouldn’t be bound by language",
-                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
-                  },
-                  date:"16 مارس 2025",
+                  date: "16 مارس 2025",
                 },
               ],
               [
@@ -540,7 +474,7 @@ export const KnowledgeCenter = () => {
                     en: " Multilingual support — because justice shouldn’t be bound by language",
                     ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
                   },
-                  date:"16 مارس 2025",
+                  date: "16 مارس 2025",
                 },
                 {
                   id: 9,
@@ -549,7 +483,66 @@ export const KnowledgeCenter = () => {
                     en: " Multilingual support — because justice shouldn’t be bound by language",
                     ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
                   },
-                  date:"16 مارس 2025",
+                  date: "16 مارس 2025",
+                },
+              ],
+
+              [
+                {
+                  id: 6,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
+                },
+                {
+                  id: 8,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
+                },
+                {
+                  id: 9,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
+                },
+              ],
+              [
+                {
+                  id: 6,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
+                },
+                {
+                  id: 8,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
+                },
+                {
+                  id: 9,
+                  title: { en: "Support", ar: "قوانين الزواج 2025" },
+                  description: {
+                    en: " Multilingual support — because justice shouldn’t be bound by language",
+                    ar: " أحدث التعديلات المتعلقة بالزواج والحقوق الأسرية، بلغة واضحة ومبسطة تناسب الجميع.",
+                  },
+                  date: "16 مارس 2025",
                 },
               ],
             ]}
