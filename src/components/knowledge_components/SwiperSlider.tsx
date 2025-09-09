@@ -61,7 +61,7 @@ const SlideCard = ({
           transition="all 0.3s ease"
           pointerEvents="auto"
         >
-          اكتشف التفاصيل
+          {lang === 'ar' ? 'اكتشف التفاصيل' : 'Discover Details'}
         </Button>
       </Box>
     </Box>
