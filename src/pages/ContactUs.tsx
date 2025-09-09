@@ -11,7 +11,7 @@ export const Contact = () => {
   const lang = useSelector(selectLanguage);
 
   return (
-    <VStack w={"100vw"}>
+    <VStack >
       <ContactBanner
         bgPos="0% 37%"
         img="contact.png"
@@ -27,14 +27,14 @@ export const Contact = () => {
             fontWeight={600}
             color={"rgba(46, 54, 81, 1)"}
           >
-            تواصل معنا... لأننا لا نكتفي بالاستماع، بل نفهم
+            {lang === "en" ? "Contact Us ... we don't just listen, we understand you" : " تواصل معنا... لأننا لا نكتفي بالاستماع، بل نفهم"}
           </Text>
           <Text
             fontSize={"1.5rem"}
             fontWeight={400}
             color={"rgba(46, 54, 81, 1)"}
           >
-            ولهذا، صممنا طرق التواصل لتكون:
+            {lang === "ar" ? "ولهذا، صممنا طرق التواصل لتكون:" : "That's why we designed communication channels to be:"}
           </Text>
         </>
 
@@ -67,7 +67,7 @@ export const Contact = () => {
               fontWeight={600}
               color={"rgba(46, 54, 81, 1)"}
             >
-              {lang === "ar" ? "واضحة" : ""}
+              {lang === "ar" ? "واضحة" : "Clear"}
             </Text>
           </HStack>
           <HStack>
@@ -88,7 +88,7 @@ export const Contact = () => {
               fontWeight={600}
               color={"rgba(46, 54, 81, 1)"}
             >
-              {lang === "ar" ? "سريعة" : ""}
+              {lang === "ar" ? "سريعة" : " Quick"}
             </Text>
           </HStack>
           <HStack>
@@ -109,7 +109,7 @@ export const Contact = () => {
               fontWeight={600}
               color={"rgba(46, 54, 81, 1)"}
             >
-              {lang === "ar" ? "مضمونة الرد" : ""}
+              {lang === "ar" ? "مضمونة الرد" : " Guaranteed response"}
             </Text>
           </HStack>
           <HStack>
@@ -130,7 +130,7 @@ export const Contact = () => {
               fontWeight={600}
               color={"rgba(46, 54, 81, 1)"}
             >
-              {lang === "ar" ? "مبنية على الاحترام و الخصوصية" : ""}
+              {lang === "ar" ? "مبنية على الاحترام و الخصوصية" : " Built uppon respect and privacy"}
             </Text>
           </HStack>
         </HStack>

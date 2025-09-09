@@ -139,7 +139,7 @@ export const Home = () => {
         <Box gap={"3rem"}>
           <Text pb={8} color={"rgba(90, 119, 187, 1)"}>
             {
-            useTranslation("home.designedforyou.title")
+              useTranslation("home.designedforyou.title")
             }{" "}
           </Text>
 
@@ -228,8 +228,8 @@ export const Home = () => {
               fontSize={{ base: "1.5rem", md: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}
             >
-{
-              useTranslation("home.whyus.title")}
+              {
+                useTranslation("home.whyus.title")}
             </Text>
             <svg
               width="189"
@@ -253,13 +253,13 @@ export const Home = () => {
             fontSize={"1.2rem"}
             color={"#5F6166"}
           >
-            { useTranslation("home.whyus.paragraph") }
+            {useTranslation("home.whyus.paragraph")}
           </Text>
           <VStack textAlign={"start"} align={"start"} gap={"1rem"}>
             <HStack gap={"1rem"}>
               <Image scale={"1.5"} src="why1.png" w={"3rem"} />
               <Text fontWeight={500} color={"rgba(46, 54, 81, 1)"}>
-{                useTranslation("home.whyus.subtitle")}
+                {useTranslation("home.whyus.subtitle")}
               </Text>
             </HStack>
             <HStack gap={"1rem"}>
@@ -351,7 +351,7 @@ export const Home = () => {
             lang === "ar" ? `
           في مساندة، صممنا باقات قانونية تغطي احتياجاتك المختلفة — من دعم أساسي
           إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني.` :
-            `
+              `
           At Musanadah, we have designed legal packages that cover your various needs — from basic support to comprehensive coverage. Choose the package that suits you and always be legally secure.`
           }
         </Text>
@@ -432,7 +432,9 @@ export const Home = () => {
         align={"start"}
 
       >
-        <VStack paddingInlineStart={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
+        <VStack
+          textAlign={"start"}
+          paddingInlineStart={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
           paddingInlineEnd={{ base: "2rem", md: "1rem", lg: "7rem", xl: "9rem" }}
           align={"start"} gap={"2rem"}>
           <VStack p={"2rem"} gap={"1rem"}>
@@ -440,7 +442,7 @@ export const Home = () => {
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}
             >
-              الوعي القانوني هو خط دفاعك الأول
+              {useTranslation("shared.mission")}
             </Text>
             <svg
               viewBox="0 0 471 21"
@@ -461,16 +463,17 @@ export const Home = () => {
             fontWeight={500}
             color={"rgba(90, 119, 187, 1)"}
           >
-            في "مساندة"، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته, أن تعرف
-            حقوقك قبل أن تحتاجها، وأن تتخذ قراراتك بثقة لا بخوف أو تردد.
-          </Text>
+            {
+              useTranslation("home.infopart.subtitle1")
+            }          </Text>
           <Text
             fontSize={"1.15rem"}
             fontWeight={400}
             color={"rgba(95, 97, 102, 1)"}
           >
-            من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية بلغة مبسطة،
-            وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية.
+            {
+              useTranslation("home.infopart.subtitle2")
+            }
           </Text>
         </VStack>
         <VStack w={"90%"} align={"center"}>
@@ -488,7 +491,7 @@ export const Home = () => {
               navigate("/knowledge-center");
             }}
           >
-            استكشف مركز المعرفة
+            {useTranslation("shared.discoverknowledge")}
           </Box>
         </VStack>
       </VStack>

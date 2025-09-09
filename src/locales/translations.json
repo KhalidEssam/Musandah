@@ -1,108 +1,198 @@
 {
-    "shared":{
-        "title":{"en":"",
-        "ar": ""},
-        "description":{"en":"",
-        "ar": ""},
-        "keywords":{"en":"",
-        "ar": ""},
-        "readmore":{"en":"Read More",
-        "ar": " قراءة المزيد"},
-        "readless":{"en":"Read Less",
-        "ar": " قراءة اقل"},
-        "moredetails":{"en":"show details",
-        "ar": "عرض التفاصيل"}
+  "shared": {
+    "title": {
+      "en": "",
+      "ar": ""
     },
-    "home":{
-        "title":{"en":"Musanadah is here, step by step, in the way that works best for you.",
-        "ar": "خدمات قانونية شاملة… في متناول يدك، خطوة بخطوة"},
-        "title2":{
-            "en":"Consultations and legal representation from a licensed legal partner, delivered quickly, securely, and in the way that suits you.",
-            "ar": "استشارات وتمثيل قضائي من شريك قانوني مرخص، بسرعة، أمان، وبالطريقة التي تناسبك."
-        },
-        "subtitle":{"en":" Our story starts here",
-        "ar": "قصتنا تبدأ من هنا"},
-        "designedforyou":{
-            "title":{
-            "en":" Musandah was designed to be:",
-            "ar": "صُمّمت خدمات 'مساند' لتكون:"
-        },
-            "cards":[
-            {
-                "title":{
-                "en":"Clear",
-                "ar": "واضحة"
-            },
-                "description":{
-                "en":"Easy direct acessability and No confusion in the steps",
-                "ar": "لا تعقيد في الوصول ولا غموض في الخطوات"
-            }
+    "description": {
+      "en": "",
+      "ar": ""
+    },
+    "keywords": {
+      "en": "",
+      "ar": ""
+    },
+    "readmore": {
+      "en": "Read More",
+      "ar": " قراءة المزيد"
+    },
+    "readless": {
+      "en": "Read Less",
+      "ar": " قراءة اقل"
+    },
+    "moredetails": {
+      "en": "show details",
+      "ar": "عرض التفاصيل"
+    },
+    "mission": {
+      "en": " The legal mind is your first line of defense",
+      "ar": " الوعي القانوني هو خط دفاعك الأول"
+    },
+    "discoverknowledge": {
+      "en": "Discover our knowledge center",
+      "ar": "اكتشف مركز المعرفة"
+    },
+    "email": {
+      "en": "Email",
+      "ar": "البريد الالكتروني"
+    },
+    "followus": {
+      "en": " Your follow supports us",
+      "ar": "متابعتك دعم لنا"
+    },
+    "respect": {
+      "en": "We respect your time and privacy — all your conversations and information are kept and encrypted, and only experts can access them.",
+      "ar": "نحن نحترم وقتك وخصوصيتك — جميع محادثاتك ومعلوماتك محفوظة ومشفرة، ولا يتم الاطلاع عليها إلا من قبل المختصين."
+    },
+    "sendmsg": {
+      "en": "Send your message and we'll get back to you within 24 hours",
+      "ar": "أرسل استفسارك وسنرد عليك خلال 24 ساعة"
+    },
+    "fullname": {
+      "en": "Full Name",
+      "ar": "الاسم الكامل"
+    },
+    "phone": {
+      "en": "Phone number",
+      "ar": "رقم الهاتف"
+    },
+    "msg": {
+      "en": "Message",
+      "ar": "الرسالة"
+    },
+    "send": {
+      "en": "Send",
+      "ar": "ارسل"
+    },
+    "ContactTitle": {
+      "en": "Reach out… because we don’t just listen — we understand.",
+      "ar": "تواصل معنا... لأننا لا نكتفي بالاستماع، بل نفهم الاحتياج"
+    },
+    "ContactsubTitle": {
+      "en": "At Musanadah, there are no “small” questions or “unimportant” inquiries. Every message we receive means that someone is looking for clarity, support, or simply legal peace of mind.",
+      "ar": "في مساندة لا توجد أسئلة صغيرة أو استفسارات غير مهمة, كل تواصل يعني لنا أن هناك من يبحث عن فهم، عن دعم، أو حتى عن طمأنينة قانونية."
+    }
+  },
+  "home": {
+    "title": {
+      "en": "Musanadah is here, step by step, in the way that works best for you.",
+      "ar": "خدمات قانونية شاملة… في متناول يدك، خطوة بخطوة"
+    },
+    "title2": {
+      "en": "Consultations and legal representation from a licensed legal partner, delivered quickly, securely, and in the way that suits you.",
+      "ar": "استشارات وتمثيل قضائي من شريك قانوني مرخص، بسرعة، أمان، وبالطريقة التي تناسبك."
+    },
+    "subtitle": {
+      "en": " Our story starts here",
+      "ar": "قصتنا تبدأ من هنا"
+    },
+    "designedforyou": {
+      "title": {
+        "en": " Musandah was designed to be:",
+        "ar": "صُمّمت خدمات 'مساند' لتكون:"
+      },
+      "cards": [
+        {
+          "title": {
+            "en": "Clear",
+            "ar": "واضحة"
+          },
+          "description": {
+            "en": "Easy direct acessability and No confusion in the steps",
+            "ar": "لا تعقيد في الوصول ولا غموض في الخطوات"
+          }
         },
         {
-                "title":{
-                "en":"Flexible",
-                "ar": "مرنة"
-            },
-                "description":{
-                "en":"Delivered in the way that works best for you (text, phone, video, in person)",
-                "ar": "(تستقبلك في وقتك، وبالطريقة التي تناسبك (كتابية، هاتفية، مرئية، حضورية"       }
+          "title": {
+            "en": "Flexible",
+            "ar": "مرنة"
+          },
+          "description": {
+            "en": "Delivered in the way that works best for you (text, phone, video, in person)",
+            "ar": "(تستقبلك في وقتك، وبالطريقة التي تناسبك (كتابية، هاتفية، مرئية، حضورية"
+          }
         },
         {
-                "title":{
-                "en":"Fair",
-                "ar": "عادلة"
-            },
-                "description":{
-                "en":"Fairly priced while it covers real needs",
-                "ar": "بأسعار مدروسة وباقات تغطي احتياجات حقيقية"
-            }
-            
+          "title": {
+            "en": "Fair",
+            "ar": "عادلة"
+          },
+          "description": {
+            "en": "Fairly priced while it covers real needs",
+            "ar": "بأسعار مدروسة وباقات تغطي احتياجات حقيقية"
+          }
         },
         {
-            "title":{
-             "ar":"آمنة",
-             "en":"Secure"  
-            },
-            "description":{
-                "ar":"خصوصيتك مصانة، وبياناتك محمية، واتصالاتك مشفّرة",
-                "en":"Your privacy is protected, your data is secure, and your connections are encrypted"
-            }
+          "title": {
+            "ar": "آمنة",
+            "en": "Secure"
+          },
+          "description": {
+            "ar": "خصوصيتك مصانة، وبياناتك محمية، واتصالاتك مشفّرة",
+            "en": "Your privacy is protected, your data is secure, and your connections are encrypted"
+          }
         },
         {
-            "title":{
-                "ar":"مهنية",
-                "en":"Professional"
-            },
-            "description":{"ar":"جميع الخدمات تُقدّم عبر شريك قانوني معتمد ومرخّص",
-            "en":"All the services are provided through a licensed legal partner"}
+          "title": {
+            "ar": "مهنية",
+            "en": "Professional"
+          },
+          "description": {
+            "ar": "جميع الخدمات تُقدّم عبر شريك قانوني معتمد ومرخّص",
+            "en": "All the services are provided through a licensed legal partner"
+          }
         }
-        ]
+      ]
     },
-  "paragraph1": {
-    "en": "In a land that believes in justice, and under leadership that puts people first, the 'Legal Support Center' was born to be the bridge between individuals and their rights — making access to legal services simple, safe, and available to all. \n Today, in the Kingdom of Saudi Arabia, we are living an exceptional phase of transformation. The country is confidently advancing toward Vision 2030, which believes that justice is not a privilege, but a right for everyone living on this land — whether citizen or resident. \n This is where our story begins. \nAmid this digital transformation taking place across the Kingdom, the need emerged for modern legal solutions that keep up with the speed of reality, respect the diversity of society, and break the traditional barriers in front of legal service seekers. \nFrom here, the idea of the “Legal Support Center Platform” emerged, and it evolved into an innovative digital platform that provides comprehensive legal solutions through multiple channels, in direct cooperation with a licensed legal partner authorized to deliver and execute services.",
-    "ar": "في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.\nنحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.\nمن هنا، تبدأ قصتنا.\nوسط هذا التحول الرقمي الذي تشهده المملكة، نشأت الحاجة إلى حلول قانونية حديثة تتماشى مع سرعة الواقع، وتُراعي تنوّع المجتمع، وتكسر الحواجز التقليدية أمام طالبي الخدمة القانونية.\nمن هنا، جاءت \"منصة مركز المساندة القانوني\" كفكرة، ثم تحولت إلى منصة رقمية مبتكرة تُقدّم حلولًا قانونية شاملة عبر قنوات متعددة، وبتعاون مباشر مع شريك قانوني مرخّص يملك الصلاحية النظامية لتنفيذ وتقديم الخدمات."
+    "paragraph1": {
+      "en": "In a land that believes in justice, and under leadership that puts people first, the 'Legal Support Center' was born to be the bridge between individuals and their rights — making access to legal services simple, safe, and available to all. \n Today, in the Kingdom of Saudi Arabia, we are living an exceptional phase of transformation. The country is confidently advancing toward Vision 2030, which believes that justice is not a privilege, but a right for everyone living on this land — whether citizen or resident. \n This is where our story begins. \nAmid this digital transformation taking place across the Kingdom, the need emerged for modern legal solutions that keep up with the speed of reality, respect the diversity of society, and break the traditional barriers in front of legal service seekers. \nFrom here, the idea of the “Legal Support Center Platform” emerged, and it evolved into an innovative digital platform that provides comprehensive legal solutions through multiple channels, in direct cooperation with a licensed legal partner authorized to deliver and execute services.",
+      "ar": "في أرضٍ تؤمن بالعدالة، وتحت قيادةٍ وضعت الإنسان أولاً، وُلدت لتكون الجسر بين الأفراد وحقوقهم، ولتجعل الوصول إلى الخدمات القانونية أمرًا بسيطًا، آمنًا، ومتاحًا للجميع.\nنحن نعيش اليوم في المملكة العربية السعودية مرحلة استثنائية من التحول، حيث تسير البلاد بخطى واثقة نحو رؤية 2030، التي تؤمن بأن العدالة ليست امتيازًا، بل حق لكل من يعيش على أرض هذا الوطن — مواطنًا كان أم مقيمًا.\nمن هنا، تبدأ قصتنا.\nوسط هذا التحول الرقمي الذي تشهده المملكة، نشأت الحاجة إلى حلول قانونية حديثة تتماشى مع سرعة الواقع، وتُراعي تنوّع المجتمع، وتكسر الحواجز التقليدية أمام طالبي الخدمة القانونية.\nمن هنا، جاءت \"منصة مركز المساندة القانوني\" كفكرة، ثم تحولت إلى منصة رقمية مبتكرة تُقدّم حلولًا قانونية شاملة عبر قنوات متعددة، وبتعاون مباشر مع شريك قانوني مرخّص يملك الصلاحية النظامية لتنفيذ وتقديم الخدمات."
+    },
+    "paragraph2": {
+      "ar": "ابدأ رحلتك القانونية بثقة… من هنا تبدأ مساندتك.\n\nسواء كنت تبحث عن استشارة قانونية، أو تمثيل في قضية، أو ببساطة تريد أن تشعر بالأمان القانوني على مدار العام — \"مساندة\" هنا، خطوة بخطوة، وبالطريقة التي تناسبك.\n\nكل ما تحتاجه… أصبح في متناولك.",
+      "en": "Start your legal journey with confidence… this is where your support begins.\n\nWhether you’re seeking legal advice, representation in a case, or simply want peace of mind year-round — Musanadah is here, step by step, in the way that works best for you.\n\nEverything you need… is now within your reach."
+    },
+    "whyus": {
+      "title": {
+        "ar": " لماذا 'مساندة'؟",
+        "en": "Why Us?"
+      },
+      "paragraph": {
+        "ar": "            جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب أكثر من اتصال.",
+        "en": "            We make the law closest, the language clear, the cost reasonable, and access doesn't require more than a phone call."
+      },
+      "subtitle": {
+        "ar": "تجربة رقمية متكاملة لا تتطلب الحضور",
+        "en": "A fully digital experience — no need for physical presence"
+      },
+      "subtitle1": {
+        "ar": "أسعار شفافة، وباقات تُغطي الاحتياج الحقيقي",
+        "en": "Transparent pricing, with packages that reflect real needs"
+      },
+      "subtitle2": {
+        "ar": "استشارات وتمثيل قضائي تحت إشراف شريك قانوني مرخّص",
+        "en": "Legal consultations and court representation under a licensed legal partner"
+      },
+      "subtitle3": {
+        "ar": "دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة",
+        "en": "Multilingual support — because justice shouldn’t be bound by language"
+      },
+      "subtitle4": {
+        "ar": "تكامل مباشر مع 'نفاذ'، و'ناجز'، و'أبشر' لتسهيل الإجراءات",
+        "en": "Direct integration with ''Nafath'', ''Najiz'', and ''Absher'' to simplify procedures"
+      }
+    },
+    "infopart": {
+      "subtitle1": {
+        "en": " At Musanadah, we don’t just offer solutions — we make sure you understand the reasoning behind them. ",
+        "ar": "في مساندة، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته, أن تعرف حقوقك قبل أن تحتاجها، وأن تتخذ قراراتك بثقة لا بخوف أو تردد. "
+      },
+      "subtitle2": {
+        "en": "That’s why the Knowledge Center was created — your daily legal library, written in plain language, filled with real-life examples, and explained in a way that requires no legal background. ",
+        "ar": " من هنا، جاء مركز المعرفة ليكون مكتبتك القانونية اليومية بلغة مبسطة، وأمثلة واقعية، وشرح لا يتطلب خلفية قانونية."
+      }
+    }
   },
-  "paragraph2":{
-    "ar": "ابدأ رحلتك القانونية بثقة… من هنا تبدأ مساندتك.\n\nسواء كنت تبحث عن استشارة قانونية، أو تمثيل في قضية، أو ببساطة تريد أن تشعر بالأمان القانوني على مدار العام — \"مساندة\" هنا، خطوة بخطوة، وبالطريقة التي تناسبك.\n\nكل ما تحتاجه… أصبح في متناولك.",
-    "en": "Start your legal journey with confidence… this is where your support begins.\n\nWhether you’re seeking legal advice, representation in a case, or simply want peace of mind year-round — Musanadah is here, step by step, in the way that works best for you.\n\nEverything you need… is now within your reach."
-  },
-  "whyus":{
-    "title":{
-      "ar":" لماذا 'مساندة'؟",
-      "en":"Why Us?"
-    },
-    "paragraph":{
-        "ar":"            جعلنا القانون أقرب، واللغة أوضح، والتكلفة معقولة، والوصول لا يتطلب أكثر من اتصال.",
-        "en":"            We make the law closest, the language clear, the cost reasonable, and access doesn't require more than a phone call."},
-        "subtitle":{"ar":"تجربة رقمية متكاملة لا تتطلب الحضور","en":"A fully digital experience — no need for physical presence"},
-        "subtitle1":{"ar":"أسعار شفافة، وباقات تُغطي الاحتياج الحقيقي","en":"Transparent pricing, with packages that reflect real needs"},
-        "subtitle2":{"ar":"استشارات وتمثيل قضائي تحت إشراف شريك قانوني مرخّص","en":"Legal consultations and court representation under a licensed legal partner"},
-        "subtitle3":{"ar":"دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة","en":"Multilingual support — because justice shouldn’t be bound by language"},
-        "subtitle4":{"ar":"تكامل مباشر مع 'نفاذ'، و'ناجز'، و'أبشر' لتسهيل الإجراءات","en":"Direct integration with ''Nafath'', ''Najiz'', and ''Absher'' to simplify procedures"}
-  }
-
-    },
-    
   "aboutPage": {
     "bannerTitle": {
       "ar": "من نحن",
@@ -162,22 +252,100 @@
         "en": "Our credibility stems from the strength of our partnerships. We are proud to deliver our legal services in collaboration with Takamul Legal Consultancy, a law firm officially licensed in Saudi Arabia and home to a distinguished team of lawyers and legal consultants with deep expertise across criminal, labor, commercial, family, and various other legal fields.\n\nThis partnership forms the backbone of every legal service we provide — ensuring our clients receive solutions that are high-quality, reliable, and fully compliant with the laws and regulations in force."
       }
     }
-  }
-,
-    "services":{
-        "title":{"en":"",
-        "ar": ""}
+  },
+  "services": {
+    "title": {
+      "en": " Our package philosophy... because law is not a commodity to buy when you need it",
+      "ar": "فلسفتنا في الباقات... لأن القانون ليس سلعة تُشترى عند الحاجة"
     },
-    "knowledge-center":{
-        "title":{"en":"",
-        "ar": ""}
-    },
-    "faq":{
-        "title":{"en":"",
-        "ar": ""}
-    },
-    "contact":{
-        "title":{"en":"",
-        "ar": ""}
+      "subtitle": {
+        "ar": "الباقات عندنا ليست مجرد \"عروض قانونية\"\nبل هي وسيلة لتقديم تجربة قانونية حقيقية، تبدأ بالتوجيه، وقد تنتهي بالتمثيل القضائي — ضمن باقة واضحة الشروط، معروفة المدى، ومناسبة للتكرار.\nكل باقة تم تصميمها بناءً على نماذج حقيقية من احتياجات الأفراد:\nمن لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج متابعة قانونية طوال العام",
+        "en": "Our packages are not just \"legal offers\".\nThey are a way to provide a genuine legal experience that may start with guidance and end with legal representation — within a package that has clear terms, a defined scope, and is suitable for repetition.\nEach package is designed based on real models of people’s needs:\nthose with a single case, those who expect labor disputes, or those who require ongoing legal follow-up throughout the year."
+      },
+      "expanding":{
+        "en":"Our packages are expanidng step at a time"
+        ,"ar":"باقاتنا تتوسع... خطوة بخطوة"
+      },
+      "expandingsubtitle":{
+        "en":"At Musanadah, we don’t believe in launching everything at once. We grow thoughtfully and in phases — starting with the most essential and widely needed services, and gradually expanding to serve all segments of society.",
+      "ar":"نحن في مساندة لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة — تبدأ بالأهم والأكثر شيوعًا، وتتوسع لتشمل مختلف فئات المجتمع واحتياجاته.بدأنا بالباقات الأساسية التي تغطي القضايا العمالية والأحوال الشخصية، لكونها الأكثر حضورًا في واقع الأفراد."
+      },
+
+    "info":{
+      "title":{
+        "en":"At Musanadah, we don’t sell legal services in fragmented form.",
+        "ar":"في مساندة، لا نبيع الخدمة القانونية بشكل مجزأ."
+      },
+      "subtitle":{
+        "en": " We believe that clients should not have to rely on one consultation, but rather on a comprehensive legal support coverage that accompanies them in different situations, for this we designed a range of packages.",
+        "ar": "نحن نؤمن أن المستفيد لا يحتاج إلى استشارة واحدة، بل إلى غطاء قانوني شامل يرافقه في مختلف المواقف, لهذا صممنا باقات متنوعة."
+      },
+      "title1": {
+        "en": " You’re legally protected throughout your subscription period",
+        "ar": "محمي قانونيًا طوال فترة اشتراكك."
+      },
+      "subtitle1": {
+        "en": " Packages don’t just provide you with a number of services, but they provide you with peace of mind that you are legally protected throughout your subscription period.",
+        "ar": "الباقات لا تمنحك عددًا من الخدمات فقط، بل توفر لك راحة البال بأنك محمي قانونيًا طوال فترة اشتراكك."
+      },
+      "title2": {
+        "en": "Our packages are not just legal offers",
+        "ar": "الباقات عندنا ليست مجرد عروض قانونية"
+      },
+      "subtitle2": {
+        "en": " It's a real legal experience, starting with guidance, and ending with legal representation, within a clear package of conditions, known duration, and appropriate for repetition.",
+        "ar": "بل هي وسيلة لتقديم تجربة قانونية حقيقية، تبدأ بالتوجيه، وقد تنتهي بالتمثيل القضائي, ضمن باقة واضحة الشروط، معروفة المدى، ومناسبة للتكرار."
+      },
+      "title3": {
+        "en": "Every package is designed to meet the unique needs of individuals.",
+        "ar": "كل باقة مصممة وفق احتياجات الأفراد الحقيقية."
+      },
+      "subtitle3": {
+        "en": " We offer packages that are suitable for individuals with one problem, those who expect business-related challenges, or those who need ongoing legal support for the year.",
+        "ar": "من لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج متابعة قانونية طوال العام"
+      }
+
     }
+  },
+  "knowledge-center": {
+    "title": {
+      "en": " Simplified Legal Articles",
+      "ar": "مقالات قانونية مبسطة"
+    },
+    "subtitle": {
+      "en": " At Musanadah, we don’t just offer solutions — we make sure you understand the reasoning behind them.",
+      "ar": "في مساندة، لا نكتفي بتقديم الحل، بل نحرص أن تفهم خلفيته."
+    },
+    "showall":{
+      "en": "Show All",
+      "ar": "اظهار الكل"
+    },
+    "subtitle1":{
+      "ar":"مقالات قصيرة وواضحة تشرح لك المفاهيم القانونية بلغة سهلة وبأمثلة من الحياة اليومية.",
+      "en":"Short and clear articles explain the legal concepts in a simple and everyday language."
+    }
+
+  },
+  "faq": {
+    "title": {
+      "en": "",
+      "ar": ""
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "",
+      "ar": ""
+    }
+  },
+  "terms": {
+    "title": {
+      "en": "",
+      "ar": ""
+    },
+    "important": {
+      "en": "This document constitutes a legally binding agreement between the user (whether an individual or a legal entity) and the “Legal Support Center Platform”, and defines the terms governing the use of the platform, whether through browsing, registering, or subscribing to its services. By accessing or using the platform in any form, the user expressly agrees to be fully bound by these terms and conditions. If the user does not agree with any of these provisions, they must immediately stop using the platform.",
+      "ar": "  تُعد هذه الوثيقة اتفاقية قانونية ملزمة بين المستخدم (سواء كان فردًا أو جهة اعتبارية) ومنصة مركز المساندة القانوني، وتحدد الشروط التي تحكم استخدام المنصة، سواء كان ذلك من خلال التصفح أو التسجيل أو الاشتراك في الخدمات. ويُعد الدخول إلى المنصة أو استخدامها بأي شكل من الأشكال موافقة صريحة من المستخدم على الالتزام الكامل بالشروط والأحكام المذكورة. وفي حال عدم الموافقة على أي من بنود هذه الاتفاقية، يتوجب على المستخدم التوقف الفوري عن استخدام المنصة."
+    }
+  }
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../store/slices/languageSlice";
 import { selectDirection } from "../store/slices/languageSlice";
-
+import { useTranslation } from "../hooks/useTranslation";
 export const TermsandConditions = () => {
   const links: { en: string; ar: string; path: string }[] = [
     { en: "Terms and Conditions", ar: "الشروط والأحكام", path: "/Terms" },
@@ -49,15 +49,15 @@ export const TermsandConditions = () => {
           color={"rgba(46, 54, 81, 1)"}
           textAlign={"center"}
         >
-        {activeTab.ar}
+        { Lang === "en" ? activeTab.en : activeTab.ar}
                    <svg viewBox="0 0 313 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.92189 8.42719C53.6029 2.24069 187.735 -4.79189 310.815 16.5698" stroke="#981C20" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
         </Text>
       </VStack>
-      <Text color={"rgba(95, 97, 102, 1)"} fontWeight={400} fontSize={{ base: "1rem", lg: "1.25rem" }}>
-        تُعد هذه الوثيقة اتفاقية قانونية ملزمة بين المستخدم (سواء كان فردًا أو جهة اعتبارية) ومنصة "مركز المساندة القانوني"، وتحدد الشروط التي تحكم استخدام المنصة، سواء كان ذلك من خلال التصفح أو التسجيل أو الاشتراك في الخدمات. ويُعد الدخول إلى المنصة أو استخدامها بأي شكل من الأشكال موافقة صريحة من المستخدم على الالتزام الكامل بالشروط والأحكام المذكورة. وفي حال عدم الموافقة على أي من بنود هذه الاتفاقية، يتوجب على المستخدم التوقف الفوري عن استخدام المنصة.
+      <Text textAlign={"start"} color={"rgba(95, 97, 102, 1)"} fontWeight={400} fontSize={{ base: "1rem", lg: "1.25rem" }}>
+        {useTranslation("terms.important")}
       </Text>
 
       <Tabs.Root

@@ -45,7 +45,9 @@ export const FrequentQuestions = () => {
         fontSize={{ base: "1.25rem", lg: "1.5rem" }}
         color={"rgba(46, 54, 81, 1)"}
       >
-        كل ما يشغلك… نجيبك عنه ببساطة ووضوح.
+        {Lang === "en"?
+        " Whatever is on your mind... we answer it simply and clearly.":
+          "كل ما يشغلك… نجيبك عنه ببساطة ووضوح."}
       </Text>
 
       <FaqAccordion items={faq} />

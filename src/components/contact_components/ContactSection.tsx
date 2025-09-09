@@ -14,6 +14,11 @@ import {
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
+
+
 export const ContactSection = ()=>{
     const countries = [
         { label: "🇸🇦 Saudi Arabia (+966)", value: "+966" },
@@ -24,13 +29,23 @@ export const ContactSection = ()=>{
       const collection = createListCollection({
         items: countries,
       });
+      const lang = useSelector(selectLanguage)
     
       const [selectedCode, setSelectedCode] = useState("+966");
       const [number, setNumber] = useState("");
       const items = [
-        { label: "استفسار عن اشتراك", value: "1" },
-        { label: "الباقات", value: "2" },
-        { label: "مشاكل تقنية", value: "3" },
+        { label: {
+          en:" Inquire about subscription",
+          ar: "استفسار عن اشتراك"
+        }, value: "1" },
+        { label:{
+          en:" Inquire about packages",
+          ar: "الباقات"
+        }, value: "2" },
+        { label: {
+          en:"Technical issues",
+          ar: "مشاكل تقنية"
+        }, value: "3" },
       ];
     
     return (
@@ -72,7 +87,7 @@ export const ContactSection = ()=>{
           <VStack>
             <Box display="inline-block">
               <Text fontSize={{ base: "1rem", md: "1.75rem" }}>
-                تواصل معنا... لأننا لا نكتفي بالاستماع، بل نفهم الاحتياج
+                {useTranslation("shared.ContactTitle")}
               </Text>
 
               <Box w="100%">
@@ -96,25 +111,24 @@ export const ContactSection = ()=>{
           </VStack>
           <VStack align={"start"} gap={4}>
             <Text fontSize={"1.1rem"} fontWeight={400}>
-              في "مساندة"، لا توجد أسئلة صغيرة أو استفسارات غير مهمة, كل تواصل
-              يعني لنا أن هناك من يبحث عن فهم، عن دعم، أو حتى عن طمأنينة
-              قانونية.
+              {useTranslation("shared.ContactsubTitle")}
             </Text>
             <HStack
               align={"start"}
               gap={4}
               flexDir={{ base: "column", lg: "row" }}
             >
-              <Text color="rgba(90, 119, 187, 1)">متى تتواصل معنا؟</Text>
+              <Text color="rgba(90, 119, 187, 1)" > {
+                lang === "ar"? "متى تتواصل معنا؟"  : "When should you contact us?"}</Text>
               <VStack align={"start"}>
                 <HStack>
                   <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
-                  <Text fontWeight={300}>إذا كنت غير متأكد أي باقة تناسبك</Text>
+                  <Text fontWeight={300} > {lang === "ar" ? "إذا كنت غير متأكد أي باقة تناسبك"  : "If you are not sure which package is right for you"}</Text>
                 </HStack>
                 <HStack>
                   <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
                   <Text fontWeight={300}>
-                    إذا واجهت مشكلة في التسجيل أو الدخول
+                    {lang === "ar" ? "إذا واجهت مشكلة في التسجيل أو الدخول" :" If you face a registration or login issue"} 
                   </Text>
                 </HStack>
               </VStack>
@@ -122,13 +136,13 @@ export const ContactSection = ()=>{
                 <HStack>
                   <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
                   <Text fontWeight={300}>
-                    إذا كنت بحاجة لتوضيح قانوني عام قبل بدء اشتراكك
+                    {lang === "ar" ? " إذا كنت بحاجة لتوضيح قانوني عام قبل بدء اشتراكك"  : "If you need a general legal explanation before starting your subscription"}
                   </Text>
                 </HStack>
                 <HStack>
                   <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
                   <Text fontWeight={300}>
-                    أو ببساطة... إن أردت أن تطمئن أنك في المكان الصحيح
+                    {lang === "ar" ? "أو ببساطة... إن أردت أن تطمئن أنك في المكان الصحيح"  : " Or simply... if you want to make sure you are at right place"}
                   </Text>
                 </HStack>
               </VStack>
@@ -156,16 +170,16 @@ export const ContactSection = ()=>{
                 <Field.Root>
                   <HStack width={"100%"}>
                     <VStack w={"50%"} align={"start"}>
-                      <Field.Label>الاسم الكامل</Field.Label>
+                      <Field.Label>{useTranslation("shared.fullname")}</Field.Label>
                       <Input borderRadius={"2xl"} />
                     </VStack>
                     <VStack w={"50%"} align={"start"}>
-                      <Field.Label>البريد الالكتروني</Field.Label>
+                      <Field.Label>{useTranslation("shared.email")}</Field.Label>
                       <Input borderRadius={"2xl"} />
                     </VStack>
                   </HStack>
 
-                  <Field.Label>الهاتف</Field.Label>
+                  <Field.Label>{useTranslation("shared.phone")}</Field.Label>
                   <HStack   width={"100%"} gap={2}>
                     {/* Country dropdown */}
                     <Select.Root
@@ -195,7 +209,7 @@ export const ContactSection = ()=>{
                             {collection.items.map((item) => (
                               <Select.Item                       
                               key={item.value} item={item}>
-                                {item.label}
+                                { item.label}
                                 <Select.ItemIndicator />
                               </Select.Item>
                             ))}
@@ -213,7 +227,7 @@ export const ContactSection = ()=>{
                     />
                   </HStack>
 
-                  <Field.Label>الرسالة</Field.Label>
+                  <Field.Label>{useTranslation("shared.msg")}</Field.Label>
                   <Input borderRadius={"2xl"} />
                   <RadioGroup.Root maxW={"100%"} defaultValue="1">
                     <HStack gap="6" align={"center"} alignItems={"end"} flexDir={{base:"column",md:"row"}}>
@@ -221,7 +235,7 @@ export const ContactSection = ()=>{
 
                         <RadioGroup.Item key={item.value} value={item.value}>
                           <RadioGroup.ItemText>
-                            {item.label}
+                            {lang === "ar" ? item.label.ar : item.label.en}
                           </RadioGroup.ItemText>
 
                           <RadioGroup.ItemHiddenInput />
@@ -238,8 +252,7 @@ export const ContactSection = ()=>{
                     color={"white"}
                     width={"100%"}
                   >
-                    {" "}
-                    إرسال{" "}
+                    {useTranslation("shared.send")}
                   </Box>
                 </Field.Root>
               </Group>
@@ -251,14 +264,14 @@ export const ContactSection = ()=>{
             >
               <Box textAlign={"start"}>
                 <Box>
-                  <Text p={4}>البريد الالكتروني</Text>
+                  <Text p={4}>{useTranslation("shared.email")}</Text>
                   <Text
                     p={4}
                     fontSize={"1rem"}
                     fontWeight={300}
                     color={"rgba(95, 97, 102, 1)"}
                   >
-                    أرسل استفسارك وسنرد عليك خلال 24 ساعة
+                    {useTranslation("shared.sendmsg")}
                   </Text>
                 </Box>
                 <Text
@@ -274,7 +287,7 @@ export const ContactSection = ()=>{
 
               <Box textAlign={"start"}>
                 <Text p={4} fontWeight={600}>
-                  متابعتك دعم لنا
+                  {useTranslation("shared.followus")}
                 </Text>
                 <HStack>
                   <Box gap={"1rem"}>
@@ -336,8 +349,7 @@ export const ContactSection = ()=>{
                   />
                 </svg>
                 <Text>
-                  نحن نحترم وقتك وخصوصيتك — جميع محادثاتك ومعلوماتك محفوظة
-                  ومشفرة، ولا يتم الاطلاع عليها إلا من قبل المختصين.
+                  {useTranslation("shared.respect")}
                 </Text>
               </HStack>
             </VStack>

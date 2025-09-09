@@ -4,6 +4,7 @@ import { ServicesList } from "@/components/services_components/ServicesList";
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "@/store/slices/languageSlice";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Services = () => {
   const [clamping, setClamping] = useState(true);
@@ -18,11 +19,8 @@ export const Services = () => {
       setIsClamped(el.scrollHeight < el.clientHeight);
     }
   }, [clamping]);
-  const text = `الباقات عندنا ليست مجرد "عروض قانونية"
-  ؛ بل هي وسيلة لتقديم تجربة قانونية حقيقية، تبدأ بالتوجيه، وقد تنتهي بالتمثيل القضائي — ضمن باقة واضحة الشروط، معروفة المدى، ومناسبة للتكرار.
-كل باقة تم تصميمها بناءً على نماذج حقيقية من احتياجات الأفراد: من لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج متابعة قانونية طوال العام`;
-  return (
-    <VStack gap={"5rem"} w={"100vw"}>
+   return (
+    <VStack gap={"5rem"}>
       <ContactBanner
         bgPos="0% /27%"
         img="Services.jpg"
@@ -50,12 +48,10 @@ export const Services = () => {
           fontSize={{ base: "1.25rem", lg: "1.75rem" }}
           mb={"2rem"}
         >
-          خدماتنا عبارة عن باقات تواكب احتياجك، لا تُجزّئه
-        </Text>
+          {lang === "ar" ? " خدماتنا عبارة عن باقات تواكب احتياجك، لا تُجزّئه" : "Our Package is a response to your needs, it is not a one-size-fits-all solution"}   </Text>
 
         <HStack
           flexDir={{ base: "column", lg: "row" }}
-          align={"stretch"}
           gap={4}
         >
           <VStack w={{ base: "90%", lg: "50%" }} minH="25rem">
@@ -97,7 +93,7 @@ export const Services = () => {
               <Box
                 bgImage={`url(logo-ar.png)`}
                 bgRepeat="no-repeat"
-                bgSize="contain"
+                bgSize="contain"  
                 position="absolute"
                 w="80%"
                 h="70%"
@@ -111,28 +107,27 @@ export const Services = () => {
           </VStack>
 
           <VStack
-            width={"fill"}
+            width={"75%"}
             overflow={"hidden"}
             borderRadius={"2xl"}
             gap={0}
           >
-            <HStack align={"stretch"} gap={0}>
-              <VStack w={"50%"} p={4} bgColor={"rgba(247, 248, 252, 1)"}>
+            <HStack align={"stretch"} gap={0} >
+              <VStack w={"50%"} p={4} align={"center"} bgColor={"rgba(247, 248, 252, 1)"}>
                 <Text
                   color={"rgba(46, 54, 81, 1)"}
                   fontWeight={500}
                   fontSize={{ base: "1.25rem", lg: "1.5rem" }}
                 >
-                  في "مساندة"، لا نبيع الخدمة القانونية بشكل مجزأ.
+                  {useTranslation("services.info.title")}
                 </Text>
                 <Text
                   color={"rgba(95, 97, 102, 1)"}
                   fontWeight={400}
                   fontSize={{ base: "0.9rem", lg: "1rem" }}
-                >
-                  نحن نؤمن أن المستفيد لا يحتاج إلى "استشارة واحدة"، بل إلى غطاء
-                  قانوني شامل يرافقه في مختلف المواقف, لهذا صممنا باقات متنوعة.
-                </Text>
+                  >
+                    {useTranslation("services.info.subtitle")}
+                    </Text>
               </VStack>
 
               <VStack w={"50%"} p={4} bgColor={"rgba(237, 241, 255, 1)"}>
@@ -141,15 +136,14 @@ export const Services = () => {
                   fontWeight={500}
                   fontSize={{ base: "1.25rem", lg: "1.5rem" }}
                 >
-                  محمي قانونيًا طوال فترة اشتراكك.
+                  {useTranslation("services.info.title1")}
                 </Text>
                 <Text
                   color={"rgba(95, 97, 102, 1)"}
                   fontWeight={400}
-                  fontSize={{ base: "0.9rem", lg: "1rem" }}
-                >
-                  الباقات لا تمنحك عددًا من الخدمات فقط، بل توفر لك راحة البال
-                  بأنك محمي قانونيًا طوال فترة اشتراكك.
+                  fontSize={{ base: "0.9rem", lg: "1rem" }}>
+                  {useTranslation("services.info.subtitle1")}
+
                 </Text>
               </VStack>
             </HStack>
@@ -160,16 +154,15 @@ export const Services = () => {
                   fontWeight={500}
                   fontSize={{ base: "1.25rem", lg: "1.5rem" }}
                 >
-                  الباقات عندنا ليست مجرد "عروض قانونية"
+                  {useTranslation("services.info.title2")}
                 </Text>
                 <Text
                   color={"rgba(95, 97, 102, 1)"}
                   fontWeight={400}
                   fontSize={{ base: "0.9rem", lg: "1rem" }}
-                >
-                  بل هي وسيلة لتقديم تجربة قانونية حقيقية، تبدأ بالتوجيه، وقد
-                  تنتهي بالتمثيل القضائي, ضمن باقة واضحة الشروط، معروفة المدى،
-                  ومناسبة للتكرار.
+                >                 
+                 {useTranslation("services.info.subtitle2")}
+
                 </Text>
               </VStack>
 
@@ -179,15 +172,14 @@ export const Services = () => {
                   fontWeight={500}
                   fontSize={{ base: "1.25rem", lg: "1.5rem" }}
                 >
-                  كل باقة مصممة وفق احتياجات الأفراد الحقيقية.
+              {useTranslation("services.info.title3")}
                 </Text>
                 <Text
                   color={"rgba(95, 97, 102, 1)"}
                   fontWeight={400}
-                  fontSize={{ base: "0.9rem", lg: "1rem" }}
-                >
-                  من لديه قضية واحدة فقط، من يتوقع مشكلات عمالية، أو من يحتاج
-                  متابعة قانونية طوال العام
+                  fontSize={{ base: "0.9rem", lg: "1rem" }}>
+            {useTranslation("services.info.subtitle3")}
+
                 </Text>
               </VStack>
             </HStack>
@@ -221,7 +213,7 @@ export const Services = () => {
           pr={4}
         >
           <Text fontSize={{ base: "1.25rem", md: "1.75rem" }} fontWeight={600}>
-            فلسفتنا في الباقات... لأن القانون ليس سلعة تُشترى عند الحاجة
+                  {useTranslation("services.title")}
           </Text>
 
           <Text
@@ -231,7 +223,10 @@ export const Services = () => {
             whiteSpace="pre-line"
             lineClamp={clamping ? 3 : undefined}
           >
-            {text}
+            {/* {text} */}
+            {useTranslation("services.subtitle")}
+
+
           </Text>
           {isClamped && (
             <Box
@@ -243,7 +238,7 @@ export const Services = () => {
               borderRadius="md"
               onClick={() => setClamping(!clamping)}
             >
-              {clamping ? "قراءة المزيد" : "قراءة أقل"}
+              {clamping ? useTranslation("shared.readmore") : useTranslation("shared.readless")}
             </Box>
           )}
         </VStack>
@@ -294,8 +289,9 @@ export const Services = () => {
             color={"rgba(46, 54, 81, 1)"}
             fontSize={{ base: "1.25rem", lg: "1.75rem" }}
           >
-            {" "}
-            باقاتنا تتوسع... خطوة بخطوة{" "}
+            {
+              useTranslation("services.expanding")
+            }
           </Text>
           <svg
             viewBox="0 0 371 19"
@@ -319,8 +315,7 @@ export const Services = () => {
           fontWeight={400}
           fontSize={{ base: "0.9rem", lg: "1.2rem" }}
         >
-          {`نحن في "مساندة" لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة — تبدأ بالأهم والأكثر شيوعًا، وتتوسع لتشمل مختلف فئات المجتمع واحتياجاته.
-بدأنا بالباقات الأساسية التي تغطي القضايا العمالية والأحوال الشخصية، لكونها الأكثر حضورًا في واقع الأفراد.  `}{" "}
+          {useTranslation("services.expandingsubtitle")}
         </Text>
         <HStack w={"80%"} align={"stretch"} flexDir={{ base: "column", md: "row" }} justifyContent={"space-between"}>
           <VStack w={{ base: "100%", md: "45%" }} align={"start"}>
@@ -329,7 +324,7 @@ export const Services = () => {
               fontWeight={400}
               fontSize={{ base: "0.9rem", lg: "1.25rem" }}
             >
-              نعمل حاليًا على تطوير باقات جديدة تخدم:{" "}
+               {lang === "ar" ?" نعمل حاليًا على تطوير باقات جديدة تخدم:" :"We are currently working on new packages that serve:"}
             </Text>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -337,7 +332,10 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > أصحاب الأعمال والمشاريع الناشئة</Text>
+                >
+                 {lang === "ar" ? " أصحاب الأعمال والمشاريع الناشئة" :"Entrepreneurs and small business owners"}
+                
+                </Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -345,7 +343,10 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > المستقلين والمهنيين</Text>
+                > 
+                
+                 {lang === "ar" ? " المستقلين والمهنيين" : "Freelancers and professionals"    }                
+                </Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -353,7 +354,7 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > المؤسسات والجمعيات غير الربحية</Text>
+               > {lang === "ar" ? " المؤسسات والجمعيات غير الربحية" : "Non-profit organizations and charitable entities"}</Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -361,7 +362,7 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > الفئات الضعيفة قانونيًا أو محدودي الدخل</Text>
+               > {lang === "ar" ? " الفئات الضعيفة قانونيًا أو محدودي الدخل" : "Legally vulnerable or low-income individuals"}</Text>
             </HStack>
           </VStack>
           <VStack w={{ base: "100%", md: "45%" }} align={"start"}>
@@ -370,7 +371,7 @@ export const Services = () => {
               fontWeight={400}
               fontSize={{ base: "0.9rem", lg: "1.25rem" }}
             >
-              كما سنطلق قريبًا خدمات متخصصة تشمل:{" "}
+               {lang === "ar" ? "كما سنطلق قريبًا خدمات متخصصة تشمل:" :"Soon, we’ll also offer specialized services like:"}
             </Text>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -378,7 +379,10 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > مراجعة وصياغة العقود التجارية</Text>
+                >
+{
+                   lang === "ar" ? " مراجعة وصياغة العقود التجارية" :"Contract drafting and legal review for commercial needs"
+}                </Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -386,7 +390,9 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > خدمات التحكيم والتسوية</Text>
+                > 
+                 {lang === "ar" ? "خدمات التحكيم والتسوية" : "Arbitration and dispute resolution" }
+                </Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -394,7 +400,9 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > التمثيل في القضايا العقارية والمالية والجنائية</Text>
+                > 
+                 {lang === "ar" ? " التمثيل في القضايا العقارية والمالية والجنائية" : "Representation in real estate, financial, and criminal cases"}
+                </Text>
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -402,7 +410,9 @@ export const Services = () => {
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
-                > حماية الملكية الفكرية</Text>
+                > 
+                 {lang === "ar" ? "   حماية الملكية الفكرية" : "Intellectual property protection"}                
+                </Text>
             </HStack>
           </VStack>
         </HStack>

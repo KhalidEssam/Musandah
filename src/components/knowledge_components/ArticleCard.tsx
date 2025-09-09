@@ -2,17 +2,18 @@ import { VStack, Box, Text } from "@chakra-ui/react";
 import type { articleProbs } from "@/types/types";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
+import { selectLanguage } from "@/store/slices/languageSlice";
 export const ArticleCard = ({ article }: { article: articleProbs }) => {
   const navigate = useNavigate();
   const [isTouched, setIsTouched] = useState(false);
-
+  const lang = useSelector(selectLanguage);
   return (
     <VStack
       role="group" // 👈 allows child to react to hover
       gap="1rem"
       _hover={{ cursor: "pointer" }}
-      // w={{ base: "90%", md: "40%", lg: "30%" }}
+      w={{ base: "90%", md: "40%", lg: "30%" }}
       textAlign={"start"}
       position="relative" // 👈 needed for absolute child
       overflow="hidden"
@@ -52,8 +53,8 @@ export const ArticleCard = ({ article }: { article: articleProbs }) => {
           fontSize="lg"
           fontWeight="bold"
         >
-          اقرأ المزيد{" "}
-        </Box>
+
+          {lang === "en" ? "Read More" : " اقرأ المزيد"}        </Box>
       </VStack>
 
       <Box
@@ -70,14 +71,14 @@ export const ArticleCard = ({ article }: { article: articleProbs }) => {
         fontSize={{ base: "1.1rem", lg: "1.25rem" }}
       >
         {" "}
-        {article.title.ar}
+        { lang === "en" ? article.title.en : article.title.ar}
       </Text>
       <Text
         color={"rgba(95, 97, 102, 1)"}
         fontSize={{ base: "0.9rem", lg: "1rem" }}
         fontWeight={400}
       >
-        {article.subtitle?.ar}
+        { lang === "en" ? article.subtitle?.en : article.subtitle?.ar}
       </Text>
     </VStack>
   );
